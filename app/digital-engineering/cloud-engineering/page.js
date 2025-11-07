@@ -55,7 +55,7 @@ export default function CloudEngineering() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/cloudEngineering/cloud-showcase1.jpg",
           alt: "Cloud Engineering Solutions",
           caption: "Scalable cloud infrastructure and architecture",
         },

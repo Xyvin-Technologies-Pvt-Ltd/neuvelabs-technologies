@@ -55,12 +55,12 @@ export default function DesignEngineering() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/designEngineering/design-showcase1.jpg",
           alt: "Design Engineering Solutions",
           caption: "Modern UI/UX design and implementation",
         },
         {
-          url: null,
+          url:  "/images/designEngineering/design-showcase2.jpg",
           alt: "Design System Architecture",
           caption: "Comprehensive design system and component library",
         },
