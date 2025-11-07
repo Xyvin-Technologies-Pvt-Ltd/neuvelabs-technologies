@@ -13,6 +13,7 @@ export default function CloudEngineering() {
     <ServicePageTemplate
       title="Cloud Engineering"
       subtitle="Digital Engineering"
+      heroImage={"/images/cloudEngineering/cloud-engineering.jpg"}
       description="Accelerate your digital transformation with our comprehensive cloud engineering services. From migration to optimization, we help you leverage the full power of cloud computing. Our team specializes in AWS, Azure, and GCP, delivering scalable, secure, and cost-effective cloud solutions that drive business innovation."
       features={[
         {

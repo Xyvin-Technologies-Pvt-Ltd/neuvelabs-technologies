@@ -46,7 +46,7 @@ export default function DigitalEngineering() {
       {/* Hero Section */}
       <section className="container mx-auto px-6 lg:px-8 mb-20">
         <AnimatedSection className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-400 mb-6">
             Digital Engineering
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">

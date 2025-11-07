@@ -13,7 +13,8 @@ export default function FinTechEngineering() {
     <ServicePageTemplate
       title="FinTech Engineering"
       subtitle="Digital Engineering"
-      description="Build secure, compliant, and innovative financial technology solutions with our specialized FinTech engineering services. From payment processing to banking platforms, we deliver solutions that meet the highest standards of security and regulatory compliance. Our expertise in financial regulations, security best practices, and high-performance systems ensures your FinTech products are reliable and trustworthy."
+      description ="Build secure, compliant, and innovative financial technology solutions with our specialized FinTech engineering services. From payment processing to banking platforms, we deliver solutions that meet the highest standards of security and regulatory compliance. Our expertise in financial regulations, security best practices, and high-performance systems ensures your FinTech products are reliable and trustworthy."
+      heroImage={"/images/fintechEngineering/fintech-engineering.jpg"}
       features={[
         {
           title: "Payment Processing Systems",
@@ -54,12 +55,12 @@ export default function FinTechEngineering() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/fintechEngineering/fintech-showcase1.jpg",
           alt: "FinTech Engineering Solutions",
           caption: "Secure payment processing and banking infrastructure",
         },
         {
-          url: null,
+          url: "/images/fintechEngineering/fintech-showcase2.jpg",
           alt: "Financial Platform Architecture",
           caption: "Scalable FinTech platform and transaction processing",
         },
