@@ -1,4 +1,4 @@
-import { generateMetadata } from "@/lib/metadata";
+import { generateMetadata as createMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 
 // In production, this would fetch from MDX files or a CMS
@@ -42,12 +42,12 @@ const insights = {
 export async function generateMetadata({ params }) {
   const insight = insights[params.slug];
   if (!insight) {
-    return generateMetadata({
+    return createMetadata({
       title: "Insight Not Found",
       description: "The requested insight could not be found.",
     });
   }
-  return generateMetadata({
+  return createMetadata({
     title: insight.title,
     description: insight.description,
     path: `/insights/${params.slug}`,
