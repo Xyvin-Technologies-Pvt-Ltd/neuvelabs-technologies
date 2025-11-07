@@ -15,7 +15,7 @@ export default function ServicePageTemplate({
   useCases,
 }) {
   return (
-    <div className="pt-32 pb-20 min-h-screen">
+    <div className="pt-32 pb-20 min-h-screen bg-black">
       {/* Hero Section */}
       <section className="mb-20">
         <div className="container mx-auto px-6 lg:px-8">
@@ -26,17 +26,17 @@ export default function ServicePageTemplate({
                   {subtitle || "Digital Engineering"}
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 {title}
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 {description}
               </p>
             </AnimatedSection>
 
             {/* Hero Image */}
             <AnimatedSection delay={0.2}>
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#007AFF]/10 via-[#6366F1]/10 to-[#8B5CF6]/10">
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 via-[#6366F1]/20 to-[#8B5CF6]/20 border border-gray-800">
                 {heroImage ? (
                   <Image
                     src={heroImage}
@@ -47,7 +47,7 @@ export default function ServicePageTemplate({
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-gray-400">
+                    <div className="text-center text-gray-500">
                       <svg
                         className="w-24 h-24 mx-auto mb-4"
                         fill="none"
@@ -73,14 +73,14 @@ export default function ServicePageTemplate({
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <section className="py-20 bg-[#FAFAFA]">
+        <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                   Our Services
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   Comprehensive solutions tailored to your business needs
                 </p>
               </AnimatedSection>
@@ -90,7 +90,7 @@ export default function ServicePageTemplate({
                   <AnimatedCard
                     key={index}
                     index={index}
-                    className="bg-white p-8 rounded-xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-lg"
+                    className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-[#007AFF]/10"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mb-4">
                       <svg
@@ -107,11 +107,11 @@ export default function ServicePageTemplate({
                         />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {feature.title || feature}
                     </h3>
                     {feature.description && (
-                      <p className="text-gray-600">{feature.description}</p>
+                      <p className="text-gray-300">{feature.description}</p>
                     )}
                   </AnimatedCard>
                 ))}
@@ -123,14 +123,14 @@ export default function ServicePageTemplate({
 
       {/* Image Showcase Section */}
       {showcaseImages && showcaseImages.length > 0 && (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                   Our Work
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   See how we've helped businesses transform with our solutions
                 </p>
               </AnimatedSection>
@@ -140,7 +140,7 @@ export default function ServicePageTemplate({
                   <AnimatedCard
                     key={index}
                     index={index}
-                    className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-[#007AFF]/10 to-[#8B5CF6]/10 group"
+                    className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 to-[#8B5CF6]/20 border border-gray-800 group"
                   >
                     {image.url ? (
                       <Image
@@ -151,7 +151,7 @@ export default function ServicePageTemplate({
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center text-gray-400">
+                        <div className="text-center text-gray-500">
                           <svg
                             className="w-16 h-16 mx-auto mb-2"
                             fill="none"
@@ -170,7 +170,7 @@ export default function ServicePageTemplate({
                       </div>
                     )}
                     {image.caption && (
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
                         <p className="text-white font-medium">{image.caption}</p>
                       </div>
                     )}
@@ -214,14 +214,14 @@ export default function ServicePageTemplate({
 
       {/* Use Cases Section */}
       {useCases && useCases.length > 0 && (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                   Use Cases
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   Real-world applications of our solutions
                 </p>
               </AnimatedSection>
@@ -231,7 +231,7 @@ export default function ServicePageTemplate({
                   <AnimatedCard
                     key={index}
                     index={index}
-                    className="border border-gray-200 rounded-xl p-8 hover:border-gray-300 transition-colors"
+                    className="border border-gray-700 bg-gray-800 rounded-xl p-8 hover:border-gray-600 transition-colors"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-[#007AFF] to-[#8B5CF6] rounded-lg flex items-center justify-center flex-shrink-0">
@@ -240,10 +240,10 @@ export default function ServicePageTemplate({
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        <h3 className="text-xl font-bold text-white mb-2">
                           {useCase.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed">
                           {useCase.description}
                         </p>
                       </div>
