@@ -95,14 +95,14 @@ export default function Home() {
 
             <div className="mt-16">
               <div
-                className="relative overflow-hidden rounded-[32px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
+                className="relative overflow-hidden rounded-[20px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
                 style={{ backgroundImage: "url('/images/Frame 21.png')" }}
               >
                 <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/90 via-[#1E3A8A]/80 to-[#2563EB]/70" />
                 <div className="absolute inset-0 opacity-40">
                   <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.4),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
                 </div>
-                <div className="relative max-w-3xl">
+                <div className="relative pt-15 max-w-3xl">
                   <p className="text-base sm:text-lg leading-relaxed">
                     Neuve Labs transforms ideas into powerful digital products
                     through cutting-edge technology and deep market insight. We
@@ -198,11 +198,12 @@ export default function Home() {
       </section> */}
 
       {/* Impact & Reach Section */}
-      <section className="bg-[#050A1F] text-white">
+      <section className="bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-white">
+
         <div className="container mx-auto px-6 lg:px-8 py-24">
           <div className="max-w-6xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em]">
-              <span className="h-2 w-2 rounded-full bg-[#38BDF8]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#9C9C9C] bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em]">
+              <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
               <span>Our Impact</span>
             </div>
             <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
@@ -215,12 +216,12 @@ export default function Home() {
               {impactIndustries.map((industry) => (
                 <div
                   key={industry.title}
-                  className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
+                  className="group border-l-1 border-[#474747] pl-3 pb-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
                 >
                   <h3 className="text-xl font-semibold text-white">
                     {industry.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">
+                  <p className="mt-9 text-sm leading-relaxed text-white/70">
                     {industry.description}
                   </p>
                 </div>
@@ -228,51 +229,55 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="pb-24">
+      {/* Where Expertise Meets Global Impact Section */}
+      <section  className="bg-gradient-to-r from-[#D1DCE8] to-[#FAFCFF] text-white">
+        
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] border border-white/10 bg-white text-slate-900 shadow-[0_40px_100px_-40px_rgba(15,23,42,0.6)]">
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-80"
-                style={{ backgroundImage: "url('/images/Frame 21.png')" }}
-              />
-              <div className="absolute inset-0 bg-white/85 backdrop-blur-lg" />
-              <div className="relative grid gap-12 p-10 sm:p-12 lg:grid-cols-[1.2fr,1fr]">
+            <div className="relative mx-auto  ">
+             
+              
+              <div className="relative grid gap-3 sm:p-12 items-end lg:grid"
+                style={{ gridTemplateColumns: "2fr 3fr" }}>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                    Where Expertise
-                  </p>
-                  <h3 className="mt-4 text-3xl md:text-4xl font-bold leading-tight text-slate-900">
-                    Meets Global Impact
+                  <h3 className="mt-4 p-0 text-3xl md:text-5xl leading-tight text-slate-900">
+                    Where Expertise <br />
+                     Meets Global Impact
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-slate-600">
-                    We blend deep domain knowledge with engineering excellence
-                    to build solutions that scale with confidence and deliver
-                    measurable value.
-                  </p>
+
+
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2">
+                <div className="grid gap-0 sm:grid-cols-2">
+                  
                   {impactStats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="rounded-2xl bg-white/60 p-6 text-slate-900 shadow-sm"
+                      className=" pl-10 text-slate-900 "
                     >
-                      <div className="text-4xl font-bold text-slate-900">
+                      <div className="absolute top-0 h-full w-[1px] bg-gradient-to-t from-gray-500 to-transparent sm:block hidden"></div>
+                      <div className="pl-6">
+                      <div className="text-4xl sm: text-3xl md:text-6xl font-bold text-slate-900">
                         {stat.value}
                       </div>
-                      <div className="mt-2 text-base font-semibold">
+                      <div className="mt-2 pt-6 md:text-2xl text-base font-semibold">
                         {stat.label}
                       </div>
                       <p className="mt-3 text-sm leading-relaxed text-slate-600">
                         {stat.description}
                       </p>
                     </div>
+                    </div>
                   ))}
+                  <div className="sm:col-span-2 h-[1px] w-full bg-gradient-to-r from-gray-500 to-transparent"></div>
+
                 </div>
+
+
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
 
       {/* Who We Are - Maestros Section */}
