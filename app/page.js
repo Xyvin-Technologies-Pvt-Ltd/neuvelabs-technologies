@@ -34,6 +34,22 @@ export default function Home() {
     },
   ];
 
+  const values = [
+    {
+      title: "Ethics",
+      svgUrl: "hero/ethics.svg"
+    },
+    {
+      title: "Empathy",
+      svgUrl: "hero/empathy.svg"
+    },
+    {
+      title: "Excellence",
+      svgUrl: "hero/excellence.svg"
+    }
+
+  ]
+
   const impactStats = [
     {
       value: "1650+",
@@ -206,11 +222,12 @@ export default function Home() {
               <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
               <span>Our Impact</span>
             </div>
-            <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
-              Empowering industries with{" "}
+            <h2 className="mt-8 text-4xl md:text-4xl font-bold leading-tight">
+              Empowering industries with<br></br>{" "}
               <span className="bg-linear-to-r from-[#38BDF8] via-[#4F46E5] to-[#94A3B8] bg-clip-text text-transparent">
-                innovation, technology, and measurable results.
+                innovation, technology, and measurable &nbsp;  
               </span>
+              results.
             </h2>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {impactIndustries.map((industry) => (
@@ -263,7 +280,7 @@ export default function Home() {
                       <div className="mt-2 pt-6 md:text-2xl text-base font-semibold">
                         {stat.label}
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                      <p className="mt-3 pb-5 text-sm leading-relaxed text-slate-600">
                         {stat.description}
                       </p>
                     </div>
@@ -280,17 +297,23 @@ export default function Home() {
         
       </section>
 
+
       {/* Who We Are - Maestros Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-24 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-sm uppercase tracking-wider text-[#007AFF] mb-4 font-semibold text-center">
-              Maestros
+
+          <div className="max-w-7xl mx-auto">
+
+            <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-1 text-s  ">
+              <span className="h-2 w-2 rounded-full bg-black " />
+              <span>Who We Are</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
-              Who We Are
+
+            
+            <h2 className="text-4xl md:text-4xl py-5 font-semibold text-gray-900 mb-8 text-left leading-normal">
+              A collective of passionate innovators blending of art, ethics, and technology to create meaningful digital experience.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed text-center mb-12">
+            <p className="text-xl text-gray-600 leading-relaxed text-left pb-12">
               Drawing inspiration from the captivating realms of art and
               aesthetics, we seamlessly merge our profound ardor with advanced
               technological prowess. The outcome is an exquisite fusion of a
@@ -298,12 +321,52 @@ export default function Home() {
               enterprise thrive knows no bounds, matching your unwavering
               determination every step of the way.
             </p>
-            <div className="bg-linear-to-br from-[#007AFF]/10 to-[#8B5CF6]/10 rounded-lg aspect-video flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <Play className="w-20 h-20 mx-auto mb-4" />
-                <p className="text-sm">Corporate Video Thumbnail</p>
-              </div>
+
+            {values.map((value) => (
+            <div className="inline-flex text-[#B7B7B7] items-center gap-2 rounded-[42px] border border-[#CCC9C8] bg-black px-10 py-8 mr-12 md:text-2xl ">
+                {/* SVG icon */}
+                <div className="flex items-center mr-3 justify-center w-8 h-6 ">
+                  <img src={value.svgUrl} alt={value.title} className="w-15 h-10" />
+                </div>
+              <span>{value.title}</span>
             </div>
+            ))}
+            
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+
+          <div className="max-w-7xl mx-auto">
+
+            <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-1 text-s  ">
+              <span className="h-2 w-2 rounded-full bg-black " />
+              <span>What We Do</span>
+            </div>
+
+            
+            <h2 className="text-4xl md:text-4xl py-5 font-semibold text-gray-900 mb-8 text-left leading-normal">
+              Empowering businesses through intelligent, data-driven and cloud-enabled solutions that accelerate innovation and digital transformation.
+            </h2>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {impactIndustries.map((industry) => (
+                <div
+                  key={industry.title}
+                  className="group border-l-1 border-[#474747] pl-3 pb-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
+                >
+                  <h3 className="text-xl font-semibold text-white">
+                    {industry.title}
+                  </h3>
+                  <p className="mt-9 text-sm leading-relaxed text-white/70">
+                    {industry.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            
+            
           </div>
         </div>
       </section>
