@@ -142,12 +142,12 @@ export default function Home() {
                 className="relative overflow-hidden rounded-[20px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
                 style={{ backgroundImage: "url('/images/Frame 21.png')" }}
               >
-                <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/90 via-[#1E3A8A]/80 to-[#2563EB]/70" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/10 via-[#1E3A8A]/10 to-[#2563EB]/10" />
                 <div className="absolute inset-0 opacity-40">
                   <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(134, 132, 132, 0.27),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
                 </div>
-                <div className="relative pt-15 max-w-3xl">
-                  <p className="text-base sm:text-lg leading-relaxed">
+                <div className="relative pt-20 max-w-3xl">
+                  <p className="text-base sm:text-base leading-relaxed">
                     Neuve Labs transforms ideas into powerful digital products
                     through cutting-edge technology and deep market insight. We
                     deliver innovative, high-quality solutions that drive
