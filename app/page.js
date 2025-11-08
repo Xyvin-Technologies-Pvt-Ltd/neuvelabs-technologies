@@ -34,6 +34,50 @@ export default function Home() {
     },
   ];
 
+  const values = [
+    {
+      title: "Ethics",
+      svgUrl: "hero/ethics.svg"
+    },
+    {
+      title: "Empathy",
+      svgUrl: "hero/empathy.svg"
+    },
+    {
+      title: "Excellence",
+      svgUrl: "hero/excellence.svg"
+    }
+
+  ];
+
+  const coreFields = [
+    {
+      title: "AI & Machine Learning",
+      description: 
+      "We harness the power of artificial intelligence and machine learning to create intelligent solutions that drive innovation and transform business operations",
+      imgUrl: "hero/ai.png"
+    },
+    {
+      title: "Data Analytics",
+      description: 
+      "Unlock the full potential of your data with advanced analytics, business intelligence, and data-driven insights that power strategic decision making",
+      imgUrl: "hero/data.png"
+    },
+    {
+      title: "Cloud & DevOps",
+      description: 
+      "Seamlessly modernize your infrastructure with cloud native solutions, ensure uninterrupted business operations and smooth digital transformations.",
+      imgUrl: "hero/cloud.png"
+    },
+    {
+      title: "Product Engineering",
+      description: 
+      "End to-end product development from concept to deployment, ensuring innovative solutions that meet market demands and exceed expectations.",
+      imgUrl: "hero/product.png"
+    },
+
+  ]
+
   const impactStats = [
     {
       value: "1650+",
@@ -56,18 +100,18 @@ export default function Home() {
       {/* Product Engineering Narrative Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
               <div>
-                <h2 className="mt-5 text-4xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
-                  <span className="bg-linear-to-r from-[#1E63FF] to-[#7C3AED] bg-clip-text text-transparent">
+                <h2 className="mt-5 text-4xl md:text-3xl lg:text-4xl leading-tight text-gray-900">
+                  <span className="bg-linear-to-r from-[#4B72CC] to-[#2D51A4] bg-clip-text text-transparent">
                     Transforming Businesses
                   </span>{" "}
-                  with Product Engineering
+                  with <br></br>Product Engineering
                 </h2>
               </div>
               <div className="lg:ml-auto lg:max-w-xl">
-                <p className="text-lg leading-relaxed text-gray-600 pt-6">
+                <p className="text-base leading-relaxed text-black pt-6">
                   At Neuve Labs, we combine technology, creativity, and strategy
                   to design digital products that empower businesses in the UAE
                   and Middle East to innovate, scale, and deliver exceptional
@@ -76,7 +120,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 space-y-6 text-lg leading-relaxed text-gray-600">
+            <div className="mt-8 space-y-6 text-xl leading-relaxed text-gray-600">
               <p>
                 We bring together expertise in Data & AI, Cognitive Computing,
                 DevSecOps, and Experience Design to create products that truly
@@ -95,15 +139,15 @@ export default function Home() {
 
             <div className="mt-16">
               <div
-                className="relative overflow-hidden rounded-[32px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
+                className="relative overflow-hidden rounded-[20px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
                 style={{ backgroundImage: "url('/images/Frame 21.png')" }}
               >
-                <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/90 via-[#1E3A8A]/80 to-[#2563EB]/70" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/10 via-[#1E3A8A]/10 to-[#2563EB]/10" />
                 <div className="absolute inset-0 opacity-40">
-                  <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.4),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
+                  <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(134, 132, 132, 0.27),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
                 </div>
-                <div className="relative max-w-3xl">
-                  <p className="text-base sm:text-lg leading-relaxed">
+                <div className="relative pt-20 max-w-3xl">
+                  <p className="text-base sm:text-base leading-relaxed">
                     Neuve Labs transforms ideas into powerful digital products
                     through cutting-edge technology and deep market insight. We
                     deliver innovative, high-quality solutions that drive
@@ -198,29 +242,31 @@ export default function Home() {
       </section> */}
 
       {/* Impact & Reach Section */}
-      <section className="bg-[#050A1F] text-white">
+      <section className="bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-white">
+
         <div className="container mx-auto px-6 lg:px-8 py-24">
-          <div className="max-w-6xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em]">
-              <span className="h-2 w-2 rounded-full bg-[#38BDF8]" />
+          <div className="max-w-7xl mx-auto">
+            <div className="inline-flex text-[#9C9C9C] items-center gap-2 rounded-full border border-[#9C9C9C] bg-white/5 px-4 py-2 text-xs font-semibold ">
+              <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
               <span>Our Impact</span>
             </div>
-            <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
-              Empowering industries with{" "}
-              <span className="bg-linear-to-r from-[#38BDF8] via-[#4F46E5] to-[#94A3B8] bg-clip-text text-transparent">
-                innovation, technology, and measurable results.
+            <h2 className="mt-8 text-4xl md:text-4xl leading-tight">
+              Empowering industries with<br></br>{" "}
+              <span className="bg-linear-to-r from-[#436DCC]  to-[#265AC9] bg-clip-text text-transparent">
+                innovation, technology, and measurable &nbsp;  
               </span>
+              results.
             </h2>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {impactIndustries.map((industry) => (
                 <div
                   key={industry.title}
-                  className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
+                  className="group border-l-1 border-[#474747] pl-3 pb-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
                 >
                   <h3 className="text-xl font-semibold text-white">
                     {industry.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">
+                  <p className="mt-9 text-sm leading-relaxed text-white/70">
                     {industry.description}
                   </p>
                 </div>
@@ -228,64 +274,74 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="pb-24">
+      {/* Where Expertise Meets Global Impact Section */}
+      <section  className="bg-gradient-to-r from-[#D1DCE8] to-[#FAFCFF] text-white">
+        
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] border border-white/10 bg-white text-slate-900 shadow-[0_40px_100px_-40px_rgba(15,23,42,0.6)]">
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-80"
-                style={{ backgroundImage: "url('/images/Frame 21.png')" }}
-              />
-              <div className="absolute inset-0 bg-white/85 backdrop-blur-lg" />
-              <div className="relative grid gap-12 p-10 sm:p-12 lg:grid-cols-[1.2fr,1fr]">
+            <div className="relative mx-auto  ">
+             
+              
+              <div className="relative grid gap-3 sm:p-8 items-end lg:grid"
+                style={{ gridTemplateColumns: "2fr 3fr" }}>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                    Where Expertise
-                  </p>
-                  <h3 className="mt-4 text-3xl md:text-4xl font-bold leading-tight text-slate-900">
-                    Meets Global Impact
+                  <h3 className="mt-4 p-0 text-3xl md:text-5xl leading-tight text-slate-900">
+                    Where Expertise <br />
+                     Meets Global Impact
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-slate-600">
-                    We blend deep domain knowledge with engineering excellence
-                    to build solutions that scale with confidence and deliver
-                    measurable value.
-                  </p>
+
+
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2">
+                <div className="grid gap-0 sm:grid-cols-2">
+                  
                   {impactStats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="rounded-2xl bg-white/60 p-6 text-slate-900 shadow-sm"
+                      className=" pl-10 text-slate-900 "
                     >
-                      <div className="text-4xl font-bold text-slate-900">
+                      <div className="absolute top-0 h-full w-[1px] bg-gradient-to-t from-gray-500 to-transparent sm:block hidden"></div>
+                      <div className="pl-6">
+                      <div className="text-4xl sm: text-3xl md:text-6xl font-bold text-slate-900">
                         {stat.value}
                       </div>
-                      <div className="mt-2 text-base font-semibold">
+                      <div className="mt-2 pt-6 md:text-2xl text-base font-semibold">
                         {stat.label}
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                      <p className="mt-3 pb-5 text-sm leading-relaxed text-slate-600">
                         {stat.description}
                       </p>
                     </div>
+                    </div>
                   ))}
+                  <div className="sm:col-span-2 h-[1px] w-full bg-gradient-to-r from-gray-500 to-transparent sm:block hidden"></div>
+
                 </div>
+
+
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
 
+
       {/* Who We Are - Maestros Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-24 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-sm uppercase tracking-wider text-[#007AFF] mb-4 font-semibold text-center">
-              Maestros
+
+          <div className="max-w-7xl mx-auto">
+
+          <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-2 text-xs  ">
+              <span className="h-2 w-2 rounded-full bg-black " />
+              <span>Who We Are</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
-              Who We Are
+
+            
+            <h2 className="text-4xl md:text-4xl py-5  text-gray-900 mb-3 text-left leading-normal">
+              A collective of passionate innovators blending of art, ethics, and technology to create meaningful digital experience.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed text-center mb-12">
+            <p className="text-xl text-gray-600 leading-relaxed text-left pb-12">
               Drawing inspiration from the captivating realms of art and
               aesthetics, we seamlessly merge our profound ardor with advanced
               technological prowess. The outcome is an exquisite fusion of a
@@ -293,106 +349,67 @@ export default function Home() {
               enterprise thrive knows no bounds, matching your unwavering
               determination every step of the way.
             </p>
-            <div className="bg-linear-to-br from-[#007AFF]/10 to-[#8B5CF6]/10 rounded-lg aspect-video flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <Play className="w-20 h-20 mx-auto mb-4" />
-                <p className="text-sm">Corporate Video Thumbnail</p>
-              </div>
+
+            {values.map((value) => (
+            <div className="inline-flex text-[#B7B7B7] items-center gap-2 rounded-[42px] border border-[#CCC9C8] bg-black px-10 py-8 mr-12 md:text-2xl ">
+                {/* SVG icon */}
+                <div className="flex items-center mr-3 justify-center w-8 h-6 ">
+                  <img src={value.svgUrl} alt={value.title} className="w-15 h-10" />
+                </div>
+              <span>{value.title}</span>
             </div>
+            ))}
+            
           </div>
         </div>
       </section>
-
-      {/* Ethics, Empathy, Excellence Section */}
-      <section className="py-24 bg-[#FAFAFA]">
+      <section className="py-25 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-linear-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mx-auto mb-6">
-                <ShieldCheck className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Ethics</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our commitment to ethical business practices and transparent
-                communication forms the foundation of all our interactions; we
-                are always doing what is right for our customers, partners, and
-                society.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-linear-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Empathy</h3>
-              <p className="text-gray-600 leading-relaxed">
-                At Neuve Labs, we prioritize putting ourselves in our clients
-                shoes to understand their needs and craft exceptional digital
-                solutions that truly make a difference in their lives.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-linear-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Star className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Excellence
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Continuously striving for excellence in all that we do, from
-                delivering high-quality solutions to fostering a positive work
-                environment and achieving the highest standards of quality,
-                innovation, and customer satisfaction, is at the heart of the
-                Neuve Labs DNA.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Services Section */}
-      <section className="bg-white">
-        {/* Heading Section with Azure to Violet Gradient */}
-        <div className="bg-linear-to-r from-[#007AFF] via-[#6366F1] to-[#8B5CF6] py-20">
-          <div className="container mx-auto px-6 lg:px-8 text-center">
-            <div className="text-white/80 text-sm uppercase tracking-wider mb-2">
-              Services
+          <div className="max-w-7xl mx-auto">
+
+            <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-2 text-xs  ">
+              <span className="h-2 w-2 rounded-full bg-black " />
+              <span>What We Do</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-              What We Do
+
+            
+            <h2 className="text-4xl md:text-4xl py-5  text-gray-900 text-left leading-normal">
+              Empowering businesses through intelligent, data-driven and cloud-enabled solutions that accelerate innovation and digital transformation.
             </h2>
-          </div>
-        </div>
 
-        {/* Services Carousel Section */}
-        <div className="py-20 bg-white">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <ServicesCarousel />
+            <div className="mt-5 grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
+              {coreFields.map((field) => (
+                
+                <div
+                  key={field.title}
+                  className="group  pr-3 m-1 transition-colors duration-300 hover:border-gray-100 hover:bg-gray-100"
+                >
+                  <div className="w-70 h-75 mb-4 rounded-xl overflow-hidden">
+                    <img src={field.imgUrl} alt="Example"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <h3 className="text-2xl text-black">
+                    {field.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-black/70">
+                    {field.description}
+                  </p>
+                </div>
+              ))}
             </div>
+            
+            
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-24 bg-[#FAFAFA]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Get in Touch
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Ready to transform your business? Let us discuss how our AI and
-                IT consulting services can help accelerate your digital
-                transformation.
-              </p>
-            </div>
-            <div className="bg-white p-8 md:p-12 rounded-2xl border border-gray-200 shadow-sm">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
+      
+
+      
+      
     </>
   );
 }

@@ -55,12 +55,12 @@ export default function ProductEngineering() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/productEngineering/product-showcase1.jpg",
           alt: "Product Engineering Solutions",
           caption: "Scalable product architecture and infrastructure",
         },
         {
-          url: null,
+          url: "/images/productEngineering/product-showcase2.jpg",
           alt: "Product Development Pipeline",
           caption: "End-to-end product development lifecycle",
         },
