@@ -5,7 +5,7 @@ export const metadata = generateMetadata({
   title: "FinTech Engineering",
   description:
     "Specialized FinTech engineering services for payment systems, banking solutions, and financial platforms. Secure, compliant, and scalable financial technology solutions.",
-  path: "/digital-engineering/fintech-engineering",
+  path: "/digital-engineering/FinntechEngineering",
 });
 
 export default function FinTechEngineering() {
@@ -14,7 +14,7 @@ export default function FinTechEngineering() {
       title="FinTech Engineering"
       subtitle="Digital Engineering"
       description ="Build secure, compliant, and innovative financial technology solutions with our specialized FinTech engineering services. From payment processing to banking platforms, we deliver solutions that meet the highest standards of security and regulatory compliance. Our expertise in financial regulations, security best practices, and high-performance systems ensures your FinTech products are reliable and trustworthy."
-      heroImage={"/images/fintechEngineering/fintech-engineering.jpg"}
+      heroImage={"/images/fintechEngineering/fintechE.png"}
       features={[
         {
           title: "Payment Processing Systems",

@@ -14,7 +14,7 @@ export default function QualityEngineering() {
       title="Quality Engineering"
       subtitle="Digital Engineering"
       description="Deliver flawless software with our comprehensive quality engineering services. We implement robust testing strategies, automation frameworks, and quality assurance processes that ensure your applications meet the highest standards of reliability and performance. Our quality-first approach reduces defects, accelerates releases, and builds confidence in your software."
-      heroImage={"/images/qualityEngineering/quality-engineering.jpg"}
+      heroImage={"/images/qualityEngineering/qualityE.png"}
       features={[
         {
           title: "Test Automation Framework",
@@ -55,12 +55,12 @@ export default function QualityEngineering() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/qualityEngineering/qualityS1.png",
           alt: "Quality Engineering Solutions",
           caption: "Comprehensive test automation and quality assurance",
         },
         {
-          url: null,
+          url: "/images/qualityEngineering/qualityS2.png",
           alt: "Performance Testing Platform",
           caption: "Advanced performance and load testing infrastructure",
         },

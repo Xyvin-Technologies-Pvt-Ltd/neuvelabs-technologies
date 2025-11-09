@@ -36,7 +36,7 @@ export default function ServicePageTemplate({
 
             {/* Hero Image */}
             <AnimatedSection delay={0.2}>
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 via-[#6366F1]/20 to-[#8B5CF6]/20 border border-gray-800">
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 via-[#6366F1]/20 to-[#8B5CF6]/20 ">
                 {heroImage ? (
                   <Image
                     src={heroImage}

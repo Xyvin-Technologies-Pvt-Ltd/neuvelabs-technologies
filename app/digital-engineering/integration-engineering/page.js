@@ -14,7 +14,7 @@ export default function IntegrationEngineering() {
       title="Integration Engineering"
       subtitle="Digital Engineering"
       description="Connect your systems, applications, and platforms seamlessly with our integration engineering services. We build robust integration solutions that unify your business operations and enable data flow across your entire technology ecosystem. From API development to enterprise service buses, we ensure reliable, secure, and scalable integrations."
-      heroImage={"/images/integrationEngineering/integration-engineering.jpg"}
+      heroImage={"/images/integrationEngineering/integrationE.png"}
         features={[
         {
           title: "API Integration & Development",

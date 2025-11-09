@@ -14,7 +14,7 @@ export default function ProductEngineering() {
       title="Product Engineering"
       subtitle="Digital Engineering"
       description="Transform your ideas into successful products with our comprehensive product engineering services. From concept validation to scalable deployment, we deliver end-to-end solutions that drive business growth. Our team combines technical excellence with business acumen to build products that users love and businesses rely on."
-      heroImage={"/images/productEngineering/product-engineering.jpg"}
+      heroImage={"/images/productEngineering/productE.png"}
       features={[
         {
           title: "Product Strategy & Roadmap",

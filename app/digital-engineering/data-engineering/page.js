@@ -14,7 +14,7 @@ export default function DataEngineering() {
       title="Data Engineering"
       subtitle="Digital Engineering"
       description="Transform raw data into actionable insights with our comprehensive data engineering solutions. We build scalable data pipelines, warehouses, and analytics infrastructure that power data-driven decision making. Our expertise spans from batch processing to real-time streaming, ensuring your organization has access to timely, accurate, and reliable data."
-      heroImage={"/images/dataEngineering/data-engineering.jpg"}
+      heroImage={"/images/dataEngineering/dataE.png"}
       features={[
         {
           title: "Data Pipeline Development",
