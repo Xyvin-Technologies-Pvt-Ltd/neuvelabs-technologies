@@ -14,7 +14,7 @@ export default function DesignEngineering() {
       title="Design Engineering"
       subtitle="Digital Engineering"
       description="Bridge the gap between design and engineering with our design engineering services. We combine user-centered design principles with technical expertise to create beautiful, functional, and intuitive digital experiences that users love. Our design engineers ensure pixel-perfect implementation while maintaining performance and accessibility standards."
-      heroImage={"/images/designEngineering/design.png"}
+      heroImage={"/images/designEngineering/designE.png"}
       features={[
         {
           title: "UX/UI Design & Research",
