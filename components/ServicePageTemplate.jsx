@@ -73,45 +73,36 @@ export default function ServicePageTemplate({
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <section className="py-20 bg-gray-900">
+        <section className="py-20 bg-[#303030]">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Our Services
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Comprehensive solutions tailored to your business needs
-                </p>
-              </AnimatedSection>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="inline-flex text-white items-center gap-2 rounded-full border border-[#CCC9C8]  px-4 py-3 text-xs  ">
+              <span className="h-2 w-2 rounded-full bg-white " />
+              <span>Our Services</span>
+            </div>
+
+            <h2 className="my-8 text-4xl md:text-4xl leading-tight font-semibold">
+              <span className="bg-linear-to-r from-[#4A8CCF]  to-[#3169A0] bg-clip-text text-transparent">
+                Comprehensive solutions &nbsp;  
+              </span>
+              tailored to your business needs
+            </h2>
+
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
                   <AnimatedCard
                     key={index}
                     index={index}
-                    className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-[#007AFF]/10"
+                    className="px-6 my-3 border-l-2 border-[#969696] hover:border-white transition-all duration-300  hover:bg-gradient-to-r from-white/5 to-transparent"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mb-4">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <img className="w-12 mb-3 " src="/images/productEngineering/icon1.png" alt="icon" />
+                    <h3 className="text-xl  text-white mb-2">
                       {feature.title || feature}
                     </h3>
                     {feature.description && (
-                      <p className="text-gray-300">{feature.description}</p>
+                      <p className="text-[#C4C4C4]">{feature.description}</p>
                     )}
                   </AnimatedCard>
                 ))}
@@ -123,19 +114,27 @@ export default function ServicePageTemplate({
 
       {/* Image Showcase Section */}
       {showcaseImages && showcaseImages.length > 0 && (
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Our Work
+
+            <div className="inline-flex text-black items-center gap-2 rounded-full border border-black  px-4 py-3 text-xs  ">
+              <span className="h-2 w-2 rounded-full bg-black " />
+              <span>Our Work</span>
+            </div>
+
+              <AnimatedSection className="mb-12">
+                
+                <h2 className="my-8 text-black text-4xl md:text-4xl leading-tight font-semibold">
+                  See how we've helped 
+                  <span className="bg-linear-to-r from-[#4A8CCF]  to-[#3169A0] bg-clip-text text-transparent">
+                  &nbsp; business transform with our solutions   
+                  </span>
+                  
                 </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  See how we've helped businesses transform with our solutions
-                </p>
               </AnimatedSection>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {showcaseImages.map((image, index) => (
                   <AnimatedCard
                     key={index}

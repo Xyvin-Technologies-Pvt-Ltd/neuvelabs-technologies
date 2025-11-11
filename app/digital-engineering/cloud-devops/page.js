@@ -13,6 +13,7 @@ export default function CloudDevOps() {
     <ServicePageTemplate
       title="Cloud & DevOps"
       subtitle="Digital Engineering"
+      heroImage={"/images/cloudDevops/cloudDevops.png"}
       description="Modernize your infrastructure with cloud-native solutions and DevOps best practices. Accelerate deployments, improve reliability, and scale effortlessly."
       features={[
         "Cloud Migration & Strategy",

@@ -14,7 +14,7 @@ export default function DataAnalytics() {
       title="Data Analytics"
       subtitle="Digital Engineering"
       description="Unlock the power of your data with advanced analytics, business intelligence, and data visualization solutions. Make data-driven decisions with confidence."
-      
+      heroImage={"/images/dataAnalytics/dataAnalytics.png"}
       features={[
         "Business Intelligence & Reporting",
         "Data Warehousing & ETL",

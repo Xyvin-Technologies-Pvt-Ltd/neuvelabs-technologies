@@ -14,6 +14,7 @@ export default function EnterpriseSoftware() {
       title="Enterprise Software Development"
       subtitle="Digital Engineering"
       description="Build robust, scalable enterprise applications tailored to your business needs. From custom software development to legacy system modernization."
+      heroImage={"/images/enterpriseSoftware/enterpriseSoftware.png"}
       features={[
         "Custom Application Development",
         "Legacy System Modernization",

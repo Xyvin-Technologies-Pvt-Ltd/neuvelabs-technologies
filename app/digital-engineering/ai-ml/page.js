@@ -13,6 +13,7 @@ export default function AIML() {
     <ServicePageTemplate
       title="AI & Machine Learning"
       subtitle="Digital Engineering"
+      heroImage={"/images/aiMl/aiMl.png"}
       description="Leverage the power of artificial intelligence and machine learning to transform your business operations, enhance customer experiences, and drive innovation."
       features={[
         "Predictive Analytics & Forecasting",
