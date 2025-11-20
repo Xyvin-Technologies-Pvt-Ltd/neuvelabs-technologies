@@ -3,249 +3,242 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     {
-      name: "Digital Engineering",
-      href: "/digital-engineering",
+      name: "Services",
+      href: "/services",
       hasDropdown: true,
       dropdownItems: [
         {
-          name: "Product Engineering",
-          href: "/digital-engineering/product-engineering",
-          hasSubmenu: true,
+          title: "Digital Engineering",
+          href: "/digital-engineering",
+          items: [
+            { name: "AI & Machine Learning", href: "/digital-engineering/ai-ml" },
+            { name: "Cloud & DevOps", href: "/digital-engineering/cloud-devops" },
+            { name: "Data Analytics", href: "/digital-engineering/data-analytics" },
+            { name: "Product Engineering", href: "/digital-engineering/product-engineering" },
+          ],
         },
         {
-          name: "Data Engineering",
-          href: "/digital-engineering/data-engineering",
-        },
-        {
-          name: "Cloud Engineering",
-          href: "/digital-engineering/cloud-engineering",
-        },
-        {
-          name: "Integration Engineering",
-          href: "/digital-engineering/integration-engineering",
-        },
-        {
-          name: "Quality Engineering",
-          href: "/digital-engineering/quality-engineering",
-        },
-        {
-          name: "Design Engineering",
-          href: "/digital-engineering/design-engineering",
-        },
-        {
-          name: "Fintech Engineering",
-          href: "/digital-engineering/fintech-engineering",
-          hasSubmenu: true,
+          title: "Specialist Services",
+          href: "/specialist-services",
+          items: [
+            { name: "Cyber Security", href: "/specialist-services/cyber-security" },
+            { name: "AI Engineering", href: "/specialist-services/ai-engineering" },
+            { name: "Process Automation", href: "/specialist-services/process-automation" },
+          ],
         },
       ],
     },
     {
-      name: "Specialist Services",
-      href: "/specialist-services",
+      name: "Industries",
+      href: "/industries",
       hasDropdown: true,
       dropdownItems: [
         {
-          name: "Process Automation Engineering",
-          href: "/specialist-services/process-automation",
+          title: "Key Industries",
+          href: "/industries",
+          items: [
+            { name: "Healthcare", href: "/industries/healthcare" },
+            { name: "Finance & Banking", href: "/industries/finance-banking" },
+            { name: "Retail & E-commerce", href: "/industries/retail-ecommerce" },
+          ],
         },
-        { name: "AI Engineering", href: "/specialist-services/ai-engineering" },
         {
-          name: "Cyber Security Services",
-          href: "/specialist-services/cyber-security",
+          title: "More Sectors",
+          href: "/industries",
+          items: [
+            { name: "Manufacturing", href: "/industries/manufacturing" },
+            { name: "Real Estate", href: "/industries/real-estate" },
+            { name: "Education", href: "/industries/education" },
+          ],
         },
       ],
     },
-    { name: "Industries", href: "/industries" },
     { name: "Insights", href: "/insights" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#202124]/95 backdrop-blur-md shadow-sm"
-          : "bg-[#202124]"
+        isScrolled ? "py-4 glass" : "py-6 bg-transparent"
       }`}
+      onMouseLeave={() => setActiveDropdown(null)}
     >
-      <nav className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Logo />
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="relative z-50">
+            <Logo className="h-8 w-auto text-white" />
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <div
                 key={link.name}
-                className="relative"
-                onMouseEnter={() =>
-                  link.hasDropdown && setActiveDropdown(link.name)
-                }
-                onMouseLeave={() => setActiveDropdown(null)}
+                className="relative group"
+                onMouseEnter={() => {
+                  setHoveredLink(link.name);
+                  if (link.hasDropdown) setActiveDropdown(link.name);
+                }}
+                onMouseLeave={() => setHoveredLink(null)}
               >
                 <Link
                   href={link.href}
-                  className={`text-sm font-medium transition-colors flex items-center gap-1 ${
-                    activeDropdown === link.name
-                      ? "text-white underline decoration-white"
-                      : "text-white/90 hover:text-white"
-                  }`}
+                  className="relative text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {link.name}
-                  {link.hasDropdown && (
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
+                  {link.hasDropdown && <ChevronDown size={14} />}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
                 </Link>
-                {link.hasDropdown && (
-                  <AnimatePresence>
-                    {activeDropdown === link.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden"
-                      >
-                        {/* Caret */}
-                        <div className="absolute -top-2 left-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100" />
 
-                        <div className="pt-2 pb-2">
-                          {link.dropdownItems.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors flex items-center justify-between group"
-                            >
-                              <span>{item.name}</span>
-                              {item.hasSubmenu && (
-                                <svg
-                                  className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors"
-                                  fill="none"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                >
-                                  <path d="M9 5l7 7-7 7" />
-                                </svg>
-                              )}
-                            </Link>
+                {/* Desktop Dropdown */}
+                {link.hasDropdown && activeDropdown === link.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl grid grid-cols-2 gap-8"
+                    onMouseEnter={() => setActiveDropdown(link.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    {link.dropdownItems.map((section) => (
+                      <div key={section.title}>
+                        <Link
+                          href={section.href}
+                          className="text-blue-400 font-semibold mb-4 block hover:text-blue-300 transition-colors"
+                        >
+                          {section.title}
+                        </Link>
+                        <ul className="space-y-2">
+                          {section.items.map((item) => (
+                            <li key={item.name}>
+                              <Link
+                                href={item.href}
+                                className="text-sm text-gray-400 hover:text-white transition-colors block py-1"
+                              >
+                                {item.name}
+                              </Link>
+                            </li>
                           ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                        </ul>
+                      </div>
+                    ))}
+                  </motion.div>
                 )}
               </div>
             ))}
-          </div>
+            <Link
+              href="/contact"
+              className="px-6 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white"
-            aria-label="Toggle menu"
+            className="lg:hidden relative z-50 text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden py-4 border-t border-[#202124]/20"
-            >
-              {navLinks.map((link) => (
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-24 px-6 lg:hidden overflow-y-auto"
+          >
+            <nav className="flex flex-col gap-6 pb-10">
+              {navLinks.map((link, index) => (
                 <div key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="block py-3 text-sm font-medium text-white hover:text-white/80"
-                    onClick={() => setIsOpen(false)}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    {link.name}
-                  </Link>
-                  {link.hasDropdown && link.dropdownItems && (
-                    <div className="pl-4 space-y-2">
-                      {link.dropdownItems.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="block py-2 text-sm text-white/80 hover:text-white flex items-center justify-between"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <span>{item.name}</span>
-                          {item.hasSubmenu && (
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path d="M9 5l7 7-7 7" />
-                            </svg>
-                          )}
-                        </Link>
+                    <Link
+                      href={link.href}
+                      className="text-2xl font-semibold text-white block py-2 border-b border-white/10 flex items-center justify-between"
+                      onClick={() => !link.hasDropdown && setIsMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                      {link.hasDropdown && <ChevronDown size={20} />}
+                    </Link>
+                  </motion.div>
+                  
+                  {/* Mobile Dropdown Items */}
+                  {link.hasDropdown && (
+                    <div className="pl-4 mt-4 space-y-6">
+                      {link.dropdownItems.map((section) => (
+                        <div key={section.title}>
+                          <h4 className="text-blue-400 font-medium mb-2">{section.title}</h4>
+                          <ul className="space-y-3 border-l border-white/10 pl-4">
+                            {section.items.map((item) => (
+                              <li key={item.name}>
+                                <Link
+                                  href={item.href}
+                                  className="text-gray-400 hover:text-white block text-sm"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </header>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mt-8"
+              >
+                <Link
+                  href="/contact"
+                  className="block w-full py-4 rounded-xl bg-blue-600 text-white text-center font-semibold text-lg"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get in Touch
+                </Link>
+              </motion.div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

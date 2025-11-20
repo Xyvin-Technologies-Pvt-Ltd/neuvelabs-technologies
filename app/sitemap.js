@@ -15,6 +15,12 @@ export default function sitemap() {
     "/industries",
     "/insights",
     "/contact",
+    "/industries/healthcare",
+    "/industries/finance-banking",
+    "/industries/retail-ecommerce",
+    "/industries/manufacturing",
+    "/industries/real-estate",
+    "/industries/education",
   ];
 
   return routes.map((route) => ({
