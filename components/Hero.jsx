@@ -15,7 +15,7 @@ export default function Hero() {
 
       // Handle video play promise
       const playPromise = video.play();
-      
+
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
@@ -55,7 +55,7 @@ export default function Hero() {
       video.addEventListener("error", handleError);
       video.addEventListener("loadeddata", handleLoadedData);
       video.addEventListener("timeupdate", handleTimeUpdate);
-      
+
       return () => {
         video.removeEventListener("error", handleError);
         video.removeEventListener("loadeddata", handleLoadedData);
@@ -149,27 +149,16 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
-                Unlock the power of cutting-edge AI, Cloud & DevOps, and Data Analytics to accelerate your digital journey.
+                Unlock the power of cutting-edge AI, Cloud & DevOps, and Data
+                Analytics to accelerate your digital journey.
               </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
-              >
-                <button className="px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]">
-                  Get Started
-                </button>
-                <button className="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-lg backdrop-blur-md transition-all hover:scale-105">
-                  View Our Work
-                </button>
-              </motion.div>
+         
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -188,4 +177,3 @@ export default function Hero() {
     </section>
   );
 }
-
