@@ -65,7 +65,7 @@ export default function Header() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link href="/" className="relative z-50">
-            <Logo className="h-8 w-auto text-white" />
+            <Logo className="h-8 w-auto text-gray-900" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -82,11 +82,11 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
-                  className="relative text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
+                  className="relative text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors flex items-center gap-1"
                 >
                   {link.name}
                   {link.hasDropdown && <ChevronDown size={14} />}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
                 </Link>
 
                 {/* Desktop Dropdown */}
@@ -96,7 +96,7 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl grid grid-cols-2 gap-8"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-xl grid grid-cols-2 gap-8"
                     onMouseEnter={() => setActiveDropdown(link.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -104,7 +104,7 @@ export default function Header() {
                       <div key={section.title}>
                         <Link
                           href={section.href}
-                          className="text-blue-400 font-semibold mb-4 block hover:text-blue-300 transition-colors"
+                          className="text-blue-600 font-semibold mb-4 block hover:text-blue-700 transition-colors"
                         >
                           {section.title}
                         </Link>
@@ -113,7 +113,7 @@ export default function Header() {
                             <li key={item.name}>
                               <Link
                                 href={item.href}
-                                className="text-sm text-gray-400 hover:text-white transition-colors block py-1"
+                                className="text-sm text-gray-600 hover:text-gray-900 transition-colors block py-1"
                               >
                                 {item.name}
                               </Link>
@@ -128,7 +128,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="px-6 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-blue-50 transition-colors"
+              className="px-6 py-2.5 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
               Get in Touch
             </Link>
@@ -136,7 +136,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden relative z-50 text-white"
+            className="lg:hidden relative z-50 text-gray-900"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -151,7 +151,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-24 px-6 lg:hidden overflow-y-auto"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 px-6 lg:hidden overflow-y-auto"
           >
             <nav className="flex flex-col gap-6 pb-10">
               {navLinks.map((link, index) => (
@@ -163,7 +163,7 @@ export default function Header() {
                   >
                     <Link
                       href={link.href}
-                      className="text-2xl font-semibold text-white block py-2 border-b border-white/10 flex items-center justify-between"
+                      className="text-2xl font-semibold text-gray-900 block py-2 border-b border-gray-200 flex items-center justify-between"
                       onClick={() => !link.hasDropdown && setIsMobileMenuOpen(false)}
                     >
                       {link.name}
@@ -176,13 +176,13 @@ export default function Header() {
                     <div className="pl-4 mt-4 space-y-6">
                       {link.dropdownItems.map((section) => (
                         <div key={section.title}>
-                          <h4 className="text-blue-400 font-medium mb-2">{section.title}</h4>
-                          <ul className="space-y-3 border-l border-white/10 pl-4">
+                          <h4 className="text-blue-600 font-medium mb-2">{section.title}</h4>
+                          <ul className="space-y-3 border-l border-gray-200 pl-4">
                             {section.items.map((item) => (
                               <li key={item.name}>
                                 <Link
                                   href={item.href}
-                                  className="text-gray-400 hover:text-white block text-sm"
+                                  className="text-gray-600 hover:text-gray-900 block text-sm"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   {item.name}

@@ -62,14 +62,14 @@ export default function InsightPage({ params }) {
   }
 
   return (
-    <div className="pt-32 pb-20 min-h-screen">
+    <div className="pt-32 pb-20 min-h-screen bg-white">
       <article className="container mx-auto px-6 lg:px-8 max-w-4xl">
         <div className="mb-8">
-          <span className="text-sm font-medium text-[#007AFF]">
+          <span className="text-sm font-medium text-blue-600">
             {insight.category}
           </span>
-          <span className="text-sm text-gray-400 mx-2">•</span>
-          <time className="text-sm text-gray-400">
+          <span className="text-sm text-gray-500 mx-2">•</span>
+          <time className="text-sm text-gray-600">
             {new Date(insight.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
@@ -81,7 +81,7 @@ export default function InsightPage({ params }) {
           {insight.title}
         </h1>
         <div
-          className="prose prose-lg max-w-none"
+          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700"
           dangerouslySetInnerHTML={{ __html: insight.content }}
         />
       </article>

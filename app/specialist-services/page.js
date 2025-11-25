@@ -57,21 +57,21 @@ export default function SpecialistServices() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black" />
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-              <span className="text-xs font-medium text-purple-400 uppercase tracking-wider">Specialized Expertise</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">Specialized Expertise</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight">
               Specialist <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 Services
               </span>
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               Expert consulting engineered for innovation and measurable impact. We combine deep industry insight with engineering rigor.
             </p>
           </div>
@@ -79,24 +79,22 @@ export default function SpecialistServices() {
       </section>
 
       {/* Services Grid */}
-      <SectionWrapper className="py-24 bg-[#050505]">
+      <SectionWrapper className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={service.title} className="group h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
-
+              <div key={service.title} className="group h-full p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 relative overflow-hidden">
                 <div className="relative z-10">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-50 p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-blue-600">
                       {service.icon}
                     </div>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-4">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -107,15 +105,15 @@ export default function SpecialistServices() {
       </SectionWrapper>
 
       {/* Why Choose Us */}
-      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black" />
+      <SectionWrapper className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Strategic specialists with <span className="text-blue-400">local market intelligence</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Strategic specialists with <span className="text-blue-600">local market intelligence</span>
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 From enterprise-grade automation to security strategy and AI delivery, our teams translate boardroom priorities into engineered solutions aligned with UAE Vision 2031.
               </p>
 
@@ -125,20 +123,20 @@ export default function SpecialistServices() {
                   { title: "Co-creation Approach", desc: "Embedded design studios and agile pods elevate your internal capabilities." }
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-green-400" />
+                    <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold mb-1">{item.title}</h3>
-                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                      <h3 className="text-gray-900 font-bold mb-1">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-xl font-bold text-white mb-6">Focus Areas</h3>
+            <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Focus Areas</h3>
               <ul className="space-y-4">
                 {[
                   "AI-driven process automation & predictive analytics",
@@ -147,8 +145,8 @@ export default function SpecialistServices() {
                   "Enterprise architecture & legacy modernization",
                   "Cloud migration & DevOps transformation"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-300">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                  <li key={i} className="flex items-center gap-3 text-gray-700">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                     {item}
                   </li>
                 ))}

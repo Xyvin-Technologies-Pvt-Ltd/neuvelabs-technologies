@@ -13,15 +13,15 @@ export default function Logo() {
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
         {/* Outer glow effect */}
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-400/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Main logo shape - Spark/Star icon */}
         <svg className="relative w-full h-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="neuve-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{stopColor:"#436DCC", stopOpacity:1}} />
-              <stop offset="50%" style={{stopColor:"#4B72CC", stopOpacity:1}} />
-              <stop offset="100%" style={{stopColor:"#9C27B0", stopOpacity:1}} />
+              <stop offset="0%" style={{stopColor:"#3b82f6", stopOpacity:1}} />
+              <stop offset="50%" style={{stopColor:"#2563eb", stopOpacity:1}} />
+              <stop offset="100%" style={{stopColor:"#1d4ed8", stopOpacity:1}} />
             </linearGradient>
           </defs>
           
@@ -34,7 +34,7 @@ export default function Logo() {
 
       {/* Logo Text */}
       <span
-        className="text-2xl text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300"
+        className="text-2xl text-gray-900 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300"
         style={{ fontFamily: "Goglast, sans-serif" }}
       >
         neuvelabs

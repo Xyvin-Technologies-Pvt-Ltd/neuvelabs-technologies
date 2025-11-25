@@ -9,33 +9,33 @@
 }
 
 :root {
-  /* Modern Dark Theme Palette */
-  --background: #050505;
-  --foreground: #ffffff;
+  /* Light Minimalistic Theme Palette */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
   
-  --card: #121212;
-  --card-foreground: #ffffff;
+  --card: #f8f9fa;
+  --card-foreground: #1a1a1a;
   
-  --popover: #121212;
-  --popover-foreground: #ffffff;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
   
-  --primary: #3b82f6; /* Electric Blue */
+  --primary: #3b82f6; /* Blue */
   --primary-foreground: #ffffff;
   
-  --secondary: #8b5cf6; /* Vivid Purple */
-  --secondary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1a1a1a;
   
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
   
-  --accent: #27272a;
-  --accent-foreground: #ffffff;
+  --accent: #eff6ff;
+  --accent-foreground: #1a1a1a;
   
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  --border: #27272a;
-  --input: #27272a;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
   --ring: #3b82f6;
   
   --radius: 0.75rem;
@@ -82,20 +82,21 @@ body {
 
 /* Custom Utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .glass-card {
-  background: rgba(18, 18, 18, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(to right, #3b82f6, #2563eb);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -139,8 +140,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
-  50% { opacity: 1; box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+  0%, 100% { opacity: 0.5; box-shadow: 0 0 10px rgba(59, 130, 246, 0.1); }
+  50% { opacity: 1; box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
 }
 
 .animate-pulse-glow {

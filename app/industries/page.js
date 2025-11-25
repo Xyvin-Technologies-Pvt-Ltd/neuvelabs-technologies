@@ -63,21 +63,21 @@ export default function Industries() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-              <span className="text-xs font-medium text-indigo-400 uppercase tracking-wider">Industry Expertise</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">Industry Expertise</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight">
               Industries We <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 Serve
               </span>
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               We deliver industry-specific technology solutions that understand your unique challenges and regulatory requirements. Explore our proven track record across key sectors.
             </p>
           </div>
@@ -85,33 +85,31 @@ export default function Industries() {
       </section>
 
       {/* Industries Grid */}
-      <SectionWrapper className="py-24 bg-[#050505]">
+      <SectionWrapper className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <div key={industry.title} className="group h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
-
+              <div key={industry.title} className="group h-full p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 relative overflow-hidden">
                 <div className="relative z-10">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${industry.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-50 p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-blue-600">
                       {industry.icon}
                     </div>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-4">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">
                     {industry.title}
                   </h2>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     {industry.description}
                   </p>
 
                   {/* Case Study */}
-                  <div className="pt-6 border-t border-white/5">
-                    <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">
+                  <div className="pt-6 border-t border-gray-200">
+                    <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-2">
                       Case Study
                     </div>
-                    <p className="text-gray-500 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed">
                       {industry.caseStudy}
                     </p>
                   </div>
@@ -123,19 +121,19 @@ export default function Industries() {
       </SectionWrapper>
 
       {/* CTA Section */}
-      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+      <SectionWrapper className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Industry?
             </h2>
-            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Let's discuss how our industry-specific solutions can help you achieve your business objectives and stay ahead of the competition.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
             >
               Start a Conversation
             </a>

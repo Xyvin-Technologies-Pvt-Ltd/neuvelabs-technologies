@@ -48,21 +48,21 @@ export default function DigitalEngineering() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black" />
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-              <span className="text-xs font-medium text-blue-400 uppercase tracking-wider">Core Expertise</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">Core Expertise</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight">
               Digital <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 Engineering
               </span>
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               We design, build, and deploy cutting-edge digital solutions that transform businesses and drive innovation.
             </p>
           </div>
@@ -70,29 +70,27 @@ export default function DigitalEngineering() {
       </section>
 
       {/* Services Grid */}
-      <SectionWrapper className="py-24 bg-[#050505]">
+      <SectionWrapper className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Link key={service.title} href={service.href} className="group">
-                <div className="h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
-                  <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
-
+                <div className="h-full p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 relative overflow-hidden">
                   <div className="relative z-10">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-50 p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-blue-600">
                         {service.icon}
                       </div>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                       {service.title}
                     </h2>
-                    <p className="text-gray-400 leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {service.description}
                     </p>
 
-                    <div className="flex items-center text-sm font-semibold text-white/60 group-hover:text-white transition-colors">
+                    <div className="flex items-center text-sm font-semibold text-gray-600 group-hover:text-blue-600 transition-colors">
                       Explore Solutions
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>

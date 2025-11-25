@@ -17,28 +17,28 @@ export default function ServicePageTemplate({
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-blue-50/20 via-white to-white" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                <span className="text-xs font-medium text-indigo-400 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">
                   {subtitle || "Digital Engineering"}
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight leading-tight">
                 {title}
               </h1>
-              <p className="text-xl text-gray-400 leading-relaxed mb-10">
+              <p className="text-xl text-gray-600 leading-relaxed mb-10">
                 {description}
               </p>
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 blur-3xl rounded-full" />
-              <div className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-50/20 to-blue-50/10 blur-3xl rounded-full" />
+              <div className="relative aspect-square rounded-3xl overflow-hidden border border-gray-200 bg-white shadow-sm">
                 {heroImage ? (
                   <Image
                     src={heroImage}
@@ -49,7 +49,7 @@ export default function ServicePageTemplate({
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Layers className="w-24 h-24 text-white/20" />
+                    <Layers className="w-24 h-24 text-gray-200" />
                   </div>
                 )}
               </div>
@@ -60,13 +60,13 @@ export default function ServicePageTemplate({
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <SectionWrapper className="py-24 bg-[#050505]">
+        <SectionWrapper className="py-24 bg-gray-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Key Capabilities
               </h2>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 text-lg">
                 Comprehensive solutions tailored to drive your digital transformation
               </p>
             </div>
@@ -75,16 +75,16 @@ export default function ServicePageTemplate({
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07]"
+                  className="group p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-6 h-6 text-indigo-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {typeof feature === 'string' ? feature : feature.title}
                   </h3>
                   {typeof feature !== 'string' && feature.description && (
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   )}
@@ -97,11 +97,11 @@ export default function ServicePageTemplate({
 
       {/* Benefits Section */}
       {benefits && (
-        <SectionWrapper className="py-24 bg-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-black to-black" />
+        <SectionWrapper className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-50/10 via-white to-white" />
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Neuve Labs?
               </h2>
             </div>
@@ -110,18 +110,18 @@ export default function ServicePageTemplate({
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex gap-6 p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300"
+                  className="flex gap-6 p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center border border-indigo-500/30">
-                      <CheckCircle2 className="w-6 h-6 text-indigo-400" />
+                    <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100">
+                      <CheckCircle2 className="w-6 h-6 text-blue-600" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -134,13 +134,13 @@ export default function ServicePageTemplate({
 
       {/* Use Cases Section */}
       {useCases && useCases.length > 0 && (
-        <SectionWrapper className="py-24 bg-[#050505]">
+        <SectionWrapper className="py-24 bg-gray-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Real-World Impact
               </h2>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 text-lg">
                 See how we're helping organizations solve complex challenges
               </p>
             </div>
@@ -149,22 +149,22 @@ export default function ServicePageTemplate({
               {useCases.map((useCase, index) => (
                 <div
                   key={index}
-                  className="relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/5 hover:border-white/10 transition-all duration-300 group overflow-hidden"
+                  className="relative p-8 rounded-3xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <span className="text-8xl font-bold text-white">
+                    <span className="text-8xl font-bold text-gray-200">
                       {index + 1}
                     </span>
                   </div>
                   
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                       {useCase.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                       {useCase.description}
                     </p>
-                    <div className="flex items-center text-indigo-400 font-medium text-sm">
+                    <div className="flex items-center text-blue-600 font-medium text-sm">
                       Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -177,13 +177,13 @@ export default function ServicePageTemplate({
 
       {/* Image Showcase Section */}
       {showcaseImages && showcaseImages.length > 0 && (
-        <SectionWrapper className="py-24 bg-black">
+        <SectionWrapper className="py-24 bg-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {showcaseImages.map((image, index) => (
                 <div
                   key={index}
-                  className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 group"
+                  className="relative aspect-video rounded-3xl overflow-hidden border border-gray-200 shadow-sm group"
                 >
                   {image.url ? (
                     <Image
@@ -193,12 +193,12 @@ export default function ServicePageTemplate({
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-white/5 flex items-center justify-center">
-                      <Trophy className="w-16 h-16 text-white/10" />
+                    <div className="absolute inset-0 bg-gray-50 flex items-center justify-center">
+                      <Trophy className="w-16 h-16 text-gray-200" />
                     </div>
                   )}
                   {image.caption && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                       <p className="text-white font-medium">{image.caption}</p>
                     </div>
                   )}
