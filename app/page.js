@@ -1,6 +1,7 @@
 import { generateMetadata } from "@/lib/metadata";
 import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
+import Testimonials from "@/components/Testimonials";
 import { ShieldCheck, Heart, Star, Play, ArrowRight, Zap, Globe, Users } from "lucide-react";
 
 export const metadata = generateMetadata({
@@ -312,6 +313,9 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Testimonials Section */}
+      <Testimonials />
     </>
   );
 }
