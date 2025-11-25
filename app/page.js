@@ -63,7 +63,7 @@ export default function Home() {
       {/* Spotlight Carousel */}
       <SpotlightCarousel />
 
-     
+
 
       {/* Case Studies Grid */}
       <SectionWrapper className="py-32 bg-gray-50 relative">

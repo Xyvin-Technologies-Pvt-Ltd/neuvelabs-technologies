@@ -40,8 +40,8 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-32 bg-[#050505] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_var(--tw-gradient-stops))] from-blue-900/5 via-transparent to-purple-900/5 pointer-events-none" />
+    <section className="py-32 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,var(--tw-gradient-stops))] from-blue-50/5 via-transparent to-blue-50/5 pointer-events-none" />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -53,20 +53,20 @@ export default function Testimonials() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
-              <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">
                 Testimonials
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               What Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 Clients Say
               </span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Trusted by leading organizations across industries. Here's what they have to say about working with us.
             </p>
           </motion.div>
@@ -82,11 +82,11 @@ export default function Testimonials() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="h-full p-8 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex flex-col">
+                <div className="h-full p-8 rounded-2xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col">
                   {/* Quote Icon */}
                   <div className="mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                      <Quote className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <Quote className="w-6 h-6 text-blue-600" />
                     </div>
                   </div>
 
@@ -101,23 +101,20 @@ export default function Testimonials() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-gray-300 text-lg leading-relaxed mb-8 flex-grow">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-8 flex-grow">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
 
                   {/* Author Info */}
-                  <div className="pt-6 border-t border-white/5">
-                    <div className="font-semibold text-white mb-1">
+                  <div className="pt-6 border-t border-gray-200">
+                    <div className="font-semibold text-gray-900 mb-1">
                       {testimonial.author}
                     </div>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-600">
                       {testimonial.role} • {testimonial.company}
                     </div>
                   </div>
                 </div>
-
-                {/* Decorative gradient on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-300 pointer-events-none -z-10 blur-xl" />
               </motion.div>
             ))}
           </div>

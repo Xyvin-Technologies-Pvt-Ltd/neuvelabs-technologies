@@ -1,5 +1,7 @@
 import { generateMetadata } from "@/lib/metadata";
 import SectionWrapper from "@/components/SectionWrapper";
+import Testimonials from "@/components/Testimonials";
+import ClientsLogos from "@/components/ClientsLogos";
 import { Users, Target, Lightbulb, Trophy } from "lucide-react";
 
 export const metadata = generateMetadata({
@@ -123,6 +125,12 @@ export default function About() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Clients/Partners Logos */}
+      <ClientsLogos />
     </>
   );
 }
