@@ -14,6 +14,7 @@ export default function AIML() {
       title="AI & Machine Learning"
       subtitle="Digital Engineering"
       description="Leverage the power of artificial intelligence and machine learning to transform your business operations, enhance customer experiences, and drive innovation."
+      heroImage="/hero/ai.png"
       features={[
         "Predictive Analytics & Forecasting",
         "Natural Language Processing (NLP)",
@@ -23,18 +24,7 @@ export default function AIML() {
         "Custom ML Model Development",
         "AI Strategy & Consulting",
       ]}
-      showcaseImages={[
-        {
-          url: null,
-          alt: "AI & ML Solutions",
-          caption: "Advanced AI-powered analytics dashboard",
-        },
-        {
-          url: null,
-          alt: "Machine Learning Models",
-          caption: "Custom ML model deployment pipeline",
-        },
-      ]}
+      showcaseImages={[]}
       benefits={[
         {
           title: "Expert Team",

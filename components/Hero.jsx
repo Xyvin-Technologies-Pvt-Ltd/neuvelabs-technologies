@@ -10,10 +10,39 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
+      // Ensure video is loaded
       video.load();
-      video.play().catch((error) => {
-        console.error("Error playing video:", error);
-      });
+
+      // Handle video play promise
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log("Video is playing");
+          })
+          .catch((error) => {
+            console.error("Error playing video:", error);
+            // Try to play again after a short delay
+            setTimeout(() => {
+              video.play().catch((err) => {
+                console.error("Retry play failed:", err);
+              });
+            }, 500);
+          });
+      }
+
+      // Handle video loading errors
+      const handleError = (e) => {
+        console.error("Video loading error:", e);
+      };
+
+      const handleLoadedData = () => {
+        console.log("Video loaded successfully");
+        video.play().catch((error) => {
+          console.error("Error playing after load:", error);
+        });
+      };
 
       const handleTimeUpdate = () => {
         if (video.currentTime >= 8 && video.currentTime < 20) {
@@ -23,8 +52,13 @@ export default function Hero() {
         }
       };
 
+      video.addEventListener("error", handleError);
+      video.addEventListener("loadeddata", handleLoadedData);
       video.addEventListener("timeupdate", handleTimeUpdate);
+      
       return () => {
+        video.removeEventListener("error", handleError);
+        video.removeEventListener("loadeddata", handleLoadedData);
         video.removeEventListener("timeupdate", handleTimeUpdate);
       };
     }
@@ -33,7 +67,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
@@ -41,18 +75,17 @@ export default function Hero() {
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         >
           <source src="/video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] animate-blob" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px] animate-blob animation-delay-2000" />
-        <div className="absolute top-[40%] left-[40%] w-[30%] h-[30%] bg-pink-600/10 rounded-full blur-[100px] animate-blob animation-delay-4000" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/5 rounded-full blur-[120px] animate-blob" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/5 rounded-full blur-[120px] animate-blob animation-delay-2000" />
+        <div className="absolute top-[40%] left-[40%] w-[30%] h-[30%] bg-pink-600/5 rounded-full blur-[100px] animate-blob animation-delay-4000" />
       </div>
 
       {/* Neuve Labs Reveal */}
@@ -142,7 +175,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center p-1">
           <motion.div

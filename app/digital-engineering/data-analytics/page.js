@@ -14,7 +14,7 @@ export default function DataAnalytics() {
       title="Data Analytics"
       subtitle="Digital Engineering"
       description="Unlock the power of your data with advanced analytics, business intelligence, and data visualization solutions. Make data-driven decisions with confidence."
-      
+      heroImage="/hero/data.png"
       features={[
         "Business Intelligence & Reporting",
         "Data Warehousing & ETL",
@@ -26,12 +26,12 @@ export default function DataAnalytics() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/dataEngineering/data-engineering.jpg",
           alt: "Data Analytics Dashboard",
           caption: "Interactive business intelligence dashboard",
         },
         {
-          url: null,
+          url: "/images/dataEngineering/data-engineering.png",
           alt: "Data Pipeline",
           caption: "Real-time data processing pipeline",
         },

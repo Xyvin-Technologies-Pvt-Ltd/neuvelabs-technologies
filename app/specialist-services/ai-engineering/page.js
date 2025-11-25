@@ -1,5 +1,6 @@
 import { generateMetadata } from "@/lib/metadata";
-import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
+import SectionWrapper from "@/components/SectionWrapper";
+import { Brain, Cpu, Settings } from "lucide-react";
 
 export const metadata = generateMetadata({
   title: "AI Engineering Services UAE | Machine Learning Solutions Dubai",
@@ -13,16 +14,22 @@ const aiServices = [
     title: "AI Strategy & Roadmaps",
     description:
       "Co-create adoption roadmaps, governance frameworks, and investment cases aligned with UAE Vision 2031 priorities.",
+    icon: <Brain className="w-8 h-8" />,
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     title: "ML & GenAI Engineering",
     description:
       "Design and deploy machine learning and generative AI solutions for intelligent automation, personalization, and decisioning.",
+    icon: <Cpu className="w-8 h-8" />,
+    gradient: "from-purple-500 to-pink-500",
   },
   {
     title: "AI Platform Operations",
     description:
       "Operationalise AI with MLOps, model monitoring, and responsible AI controls across hybrid cloud environments.",
+    icon: <Settings className="w-8 h-8" />,
+    gradient: "from-amber-500 to-orange-500",
   },
 ];
 
@@ -55,178 +62,142 @@ const frameworks = [
 
 export default function AiEngineering() {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-white">
-      {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-8">
-        <AnimatedSection className="max-w-5xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#9C9C9C]/40 bg-white/20 px-4 py-2 text-xs uppercase tracking-wide text-[#9C9C9C]">
-            <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
-            Specialist Services · AI Engineering
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl leading-tight text-gray-900">
-            Build AI experiences that{" "}
-            <span className="bg-linear-to-r from-[#436DCC] via-[#2D51A4] to-[#4B72CC] bg-clip-text text-transparent">
-              accelerate national innovation
-            </span>{" "}
-            across the UAE.
-          </h1>
-          <p className="mt-6 text-xl leading-relaxed text-gray-600">
-            From strategy to production, we engineer AI solutions that enhance
-            citizen services, optimise enterprise operations, and create new
-            digital products for ambitious organisations in the Middle East.
-          </p>
-        </AnimatedSection>
-      </section>
-
-      {/* Services */}
-      <section className="container mx-auto px-6 lg:px-8 mt-16">
-        <AnimatedSection>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-            <span className="h-2 w-2 rounded-full bg-black" />
-            How we help
-          </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {aiServices.map((service, index) => (
-              <AnimatedCard
-                key={service.title}
-                index={index}
-                className="rounded-[24px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4B72CC]/40 hover:shadow-lg"
-              >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-[#436DCC] via-[#2D51A4] to-[#4B72CC] text-white text-lg font-semibold">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-                <h2 className="mt-6 text-2xl font-semibold text-gray-900">
-                  {service.title}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  {service.description}
-                </p>
-              </AnimatedCard>
-            ))}
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Vision alignment */}
-      <section className="mt-24 bg-gradient-to-r from-[#0F1A36] via-[#1E3261] to-[#2D51A4] text-white">
-        <div className="container mx-auto px-6 lg:px-8 py-24">
-          <AnimatedSection className="max-w-6xl mx-auto">
-            <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] items-start">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-white/70">
-                  <span className="h-2 w-2 rounded-full bg-white/70" />
-                  UAE Vision 2031
-                </div>
-                <h2 className="mt-6 text-4xl md:text-5xl leading-tight">
-                  Responsible AI engineered with national policies at the core.
-                </h2>
-                <p className="mt-5 text-lg leading-relaxed text-white/80">
-                  We design human-centred AI that respects data sovereignty, Arabic
-                  language needs, and ethical standards defined by the UAE National
-                  AI Strategy.
-                </p>
-              </div>
-              <div className="rounded-[28px] border border-white/10 bg-white/10 p-8 backdrop-blur-md">
-                <h3 className="text-lg font-semibold text-white">
-                  Delivery accelerators
-                </h3>
-                <ul className="mt-5 space-y-4 text-sm text-white/75">
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      Responsible AI framework covering governance, explainability,
-                      and bias mitigation.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      Reusable component library for data pipelines, model ops, and
-                      chatbot orchestration.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      Innovation sprints co-hosted with government accelerators and
-                      enterprise R&D teams.
-                    </span>
-                  </li>
-                </ul>
-              </div>
+    <>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <span className="text-xs font-medium text-blue-400 uppercase tracking-wider">Specialist Services</span>
             </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {aiUseCases.map((useCase, index) => (
-                <AnimatedCard
-                  key={useCase.title}
-                  index={index}
-                  className="rounded-[24px] border border-white/15 bg-white/10 p-6"
-                >
-                  <div className="text-sm uppercase tracking-wide text-white/70">
-                    {useCase.title}
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/80">
-                    {useCase.description}
-                  </p>
-                </AnimatedCard>
-              ))}
-            </div>
-          </AnimatedSection>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              AI <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Engineering
+              </span>
+            </h1>
+            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+              From strategy to production, we engineer AI solutions that enhance citizen services, optimise enterprise operations, and create new digital products for ambitious organisations in the Middle East.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Frameworks */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection className="rounded-[32px] border border-gray-200 bg-white px-8 py-14 shadow-sm">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] items-start">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-                <span className="h-2 w-2 rounded-full bg-black" />
-                Tech stack
-              </div>
-              <h2 className="mt-6 text-4xl font-semibold text-gray-900">
-                Partnerships with leading AI platforms.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
-                Certified consulting teams integrate enterprise data platforms,
-                model lifecycle tooling, and secure AI infrastructure to deliver
-                production-grade capabilities.
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {frameworks.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-gray-200 bg-[#F7F9FF] px-6 py-4 text-sm font-medium text-gray-700"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+      {/* Services Grid */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              How We Help
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Comprehensive AI solutions aligned with UAE Vision 2031 priorities
+            </p>
           </div>
-        </AnimatedSection>
-      </section>
 
-      {/* CTA */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection className="rounded-[32px] bg-gradient-to-r from-[#D1DCE8] via-[#EEF3FF] to-[#FAFCFF] px-10 py-14 text-center">
-          <h2 className="text-4xl font-semibold text-gray-900">
-            Launch your next AI venture with confidence.
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">
-            Engage our AI leaders for a discovery workshop, opportunity mapping,
-            and MVP plan built around your unique data estate and customer vision.
-          </p>
-          <a
-            href="/contact"
-            className="mt-8 inline-flex items-center rounded-full bg-[#2D51A4] px-8 py-4 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#1f3f86]"
-          >
-            Start an AI workshop
-          </a>
-        </AnimatedSection>
-      </section>
-    </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div key={service.title} className="group h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
+                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
+
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                      {service.icon}
+                    </div>
+                  </div>
+
+                  <h2 className="text-xl font-bold text-white mb-4">
+                    {service.title}
+                  </h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Use Cases Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Real-World Impact
+            </h2>
+            <p className="text-gray-400 text-lg">
+              AI solutions designed for UAE's unique challenges and opportunities
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {aiUseCases.map((useCase, index) => (
+              <div key={useCase.title} className="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {useCase.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Frameworks Section */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Leading AI Platforms
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Certified consulting teams integrate enterprise data platforms and secure AI infrastructure
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+            {frameworks.map((item) => (
+              <div
+                key={item}
+                className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300"
+              >
+                <p className="text-white font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CTA Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Launch Your Next AI Venture
+            </h2>
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+              Engage our AI leaders for a discovery workshop, opportunity mapping, and MVP plan built around your unique data estate and customer vision.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Start an AI Workshop
+            </a>
+          </div>
+        </div>
+      </SectionWrapper>
+    </>
   );
 }
+
 
 

@@ -1,5 +1,6 @@
 import { generateMetadata } from "@/lib/metadata";
-import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
+import SectionWrapper from "@/components/SectionWrapper";
+import { Bot, Workflow, FileText } from "lucide-react";
 
 export const metadata = generateMetadata({
   title: "Process Automation Services in UAE | RPA & Workflow Automation Dubai",
@@ -13,16 +14,22 @@ const automationBenefits = [
     title: "AI-Augmented RPA",
     description:
       "Design, build, and manage digital workers powered by machine learning to streamline finance, HR, and customer operations.",
+    icon: <Bot className="w-8 h-8" />,
+    gradient: "from-green-500 to-emerald-500",
   },
   {
     title: "Workflow Orchestration",
     description:
       "Connect legacy systems with modern SaaS platforms to orchestrate end-to-end processes with governance and audit trails.",
+    icon: <Workflow className="w-8 h-8" />,
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     title: "Intelligent Document Processing",
     description:
       "Use computer vision and LLM-based extraction to digitise invoices, contracts, and high-volume documents at scale.",
+    icon: <FileText className="w-8 h-8" />,
+    gradient: "from-purple-500 to-pink-500",
   },
 ];
 
@@ -55,180 +62,140 @@ const toolset = [
 
 export default function ProcessAutomation() {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-white">
-      {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-8">
-        <AnimatedSection className="max-w-5xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#9C9C9C]/40 bg-white/20 px-4 py-2 text-xs uppercase tracking-wide text-[#9C9C9C]">
-            <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
-            Specialist Services · Process Automation
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl leading-tight text-gray-900">
-            RPA and intelligent automation engineered for{" "}
-            <span className="bg-linear-to-r from-[#436DCC] via-[#2D51A4] to-[#4B72CC] bg-clip-text text-transparent">
-              Dubai&apos;s high-performing enterprises
-            </span>
-            .
-          </h1>
-          <p className="mt-6 text-xl leading-relaxed text-gray-600">
-            We build automation programmes that combine robotics, AI, and
-            orchestration to modernise operations across banking, government, and
-            large-scale enterprises in the UAE.
-          </p>
-        </AnimatedSection>
-      </section>
-
-      {/* Benefits */}
-      <section className="container mx-auto px-6 lg:px-8 mt-16">
-        <AnimatedSection>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-            <span className="h-2 w-2 rounded-full bg-black" />
-            Core capabilities
-          </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {automationBenefits.map((benefit, index) => (
-              <AnimatedCard
-                key={benefit.title}
-                index={index}
-                className="rounded-[24px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4B72CC]/40 hover:shadow-lg"
-              >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-[#436DCC] via-[#2D51A4] to-[#4B72CC] text-white text-lg font-semibold">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-                <h2 className="mt-6 text-2xl font-semibold text-gray-900">
-                  {benefit.title}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  {benefit.description}
-                </p>
-              </AnimatedCard>
-            ))}
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Industry use cases */}
-      <section className="mt-24 bg-gradient-to-r from-[#0F1A36] via-[#1E3261] to-[#2D51A4] text-white">
-        <div className="container mx-auto px-6 lg:px-8 py-24">
-          <AnimatedSection className="max-w-6xl mx-auto">
-            <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] items-start">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-white/70">
-                  <span className="h-2 w-2 rounded-full bg-white/70" />
-                  UAE impact
-                </div>
-                <h2 className="mt-6 text-4xl md:text-5xl leading-tight">
-                  Automation blueprints tailored to regulated sectors and smart
-                  city ambitions.
-                </h2>
-                <p className="mt-5 text-lg leading-relaxed text-white/80">
-                  Our delivery pods combine process consultants, solution
-                  architects, and AI engineers to implement secure automation at
-                  scale without disrupting mission-critical operations.
-                </p>
-              </div>
-              <div className="rounded-[28px] border border-white/10 bg-white/10 p-8 backdrop-blur-md">
-                <h3 className="text-lg font-semibold text-white">
-                  Programme highlights
-                </h3>
-                <ul className="mt-5 space-y-4 text-sm text-white/75">
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      80% reduction in back-office processing time for regional
-                      banking client using UiPath and Azure AI services.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      Automated 12 citizen service journeys for UAE government
-                      agency with ServiceNow orchestration.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                    <span>
-                      Established automation centre of excellence with governance
-                      and KPI suite for logistics leader in JAFZA.
-                    </span>
-                  </li>
-                </ul>
-              </div>
+    <>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+              <span className="text-xs font-medium text-green-400 uppercase tracking-wider">Specialist Services</span>
             </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {industryUseCases.map((item, index) => (
-                <AnimatedCard
-                  key={item.industry}
-                  index={index}
-                  className="rounded-[24px] border border-white/15 bg-white/10 p-6"
-                >
-                  <div className="text-sm uppercase tracking-wide text-white/70">
-                    {item.industry}
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/80">
-                    {item.highlight}
-                  </p>
-                </AnimatedCard>
-              ))}
-            </div>
-          </AnimatedSection>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              Process <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                Automation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+              We build automation programmes that combine robotics, AI, and orchestration to modernise operations across banking, government, and large-scale enterprises in the UAE.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Toolstack */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection className="rounded-[32px] border border-gray-200 bg-white px-8 py-14 shadow-sm">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] items-start">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-                <span className="h-2 w-2 rounded-full bg-black" />
-                Accredited toolset
-              </div>
-              <h2 className="mt-6 text-4xl font-semibold text-gray-900">
-                Certified across enterprise automation & AI platforms.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
-                We operate vendor-agnostic but carry deep partnerships for
-                accelerated deployments, licensing optimisation, and capability
-                uplift.
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {toolset.map((tool) => (
-                <div
-                  key={tool}
-                  className="rounded-2xl border border-gray-200 bg-[#F7F9FF] px-6 py-4 text-sm font-medium text-gray-700"
-                >
-                  {tool}
-                </div>
-              ))}
-            </div>
+      {/* Benefits Grid */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Core Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Intelligent automation engineered for high-performing enterprises
+            </p>
           </div>
-        </AnimatedSection>
-      </section>
 
-      {/* CTA */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection className="rounded-[32px] bg-gradient-to-r from-[#D1DCE8] via-[#EEF3FF] to-[#FAFCFF] px-10 py-14 text-center">
-          <h2 className="text-4xl font-semibold text-gray-900">
-            Ready to launch your automation roadmap?
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">
-            Book a discovery workshop with our automation strategists to evaluate
-            opportunity areas, design governance, and build a 90-day execution
-            plan.
-          </p>
-          <a
-            href="/contact"
-            className="mt-8 inline-flex items-center rounded-full bg-[#2D51A4] px-8 py-4 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#1f3f86]"
-          >
-            Schedule a consultation
-          </a>
-        </AnimatedSection>
-      </section>
-    </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {automationBenefits.map((benefit, index) => (
+              <div key={benefit.title} className="group h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
+                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
+
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${benefit.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                      {benefit.icon}
+                    </div>
+                  </div>
+
+                  <h2 className="text-xl font-bold text-white mb-4">
+                    {benefit.title}
+                  </h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Use Cases Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-900/10 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              UAE Impact
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Automation blueprints tailored to regulated sectors and smart city ambitions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {industryUseCases.map((item, index) => (
+              <div key={item.industry} className="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {item.industry}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {item.highlight}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Toolset Section */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Accredited Toolset
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Certified across enterprise automation & AI platforms
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+            {toolset.map((tool) => (
+              <div
+                key={tool}
+                className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300"
+              >
+                <p className="text-white font-medium">{tool}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CTA Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Launch Your Automation Roadmap
+            </h2>
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+              Book a discovery workshop with our automation strategists to evaluate opportunity areas, design governance, and build a 90-day execution plan.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+        </div>
+      </SectionWrapper>
+    </>
   );
 }
-
 

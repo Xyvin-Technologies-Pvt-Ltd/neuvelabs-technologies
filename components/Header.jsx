@@ -47,34 +47,9 @@ export default function Header() {
         },
       ],
     },
-    {
-      name: "Industries",
-      href: "/industries",
-      hasDropdown: true,
-      dropdownItems: [
-        {
-          title: "Key Industries",
-          href: "/industries",
-          items: [
-            { name: "Healthcare", href: "/industries/healthcare" },
-            { name: "Finance & Banking", href: "/industries/finance-banking" },
-            { name: "Retail & E-commerce", href: "/industries/retail-ecommerce" },
-          ],
-        },
-        {
-          title: "More Sectors",
-          href: "/industries",
-          items: [
-            { name: "Manufacturing", href: "/industries/manufacturing" },
-            { name: "Real Estate", href: "/industries/real-estate" },
-            { name: "Education", href: "/industries/education" },
-          ],
-        },
-      ],
-    },
+    { name: "Industries", href: "/industries" },
     { name: "Insights", href: "/insights" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (

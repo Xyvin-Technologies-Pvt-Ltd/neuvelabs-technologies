@@ -14,6 +14,7 @@ export default function EnterpriseSoftware() {
       title="Enterprise Software Development"
       subtitle="Digital Engineering"
       description="Build robust, scalable enterprise applications tailored to your business needs. From custom software development to legacy system modernization."
+      heroImage="/hero/product.png"
       features={[
         "Custom Application Development",
         "Legacy System Modernization",
@@ -23,18 +24,7 @@ export default function EnterpriseSoftware() {
         "Quality Assurance & Testing",
         "Maintenance & Support",
       ]}
-      showcaseImages={[
-        {
-          url: null,
-          alt: "Enterprise Software",
-          caption: "Custom enterprise application interface",
-        },
-        {
-          url: null,
-          alt: "System Architecture",
-          caption: "Scalable microservices architecture",
-        },
-      ]}
+      showcaseImages={[]}
       benefits={[
         {
           title: "Scalable Solutions",

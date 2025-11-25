@@ -1,5 +1,6 @@
 import { generateMetadata } from "@/lib/metadata";
-import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
+import SectionWrapper from "@/components/SectionWrapper";
+import { Shield, Eye, Target } from "lucide-react";
 
 export const metadata = generateMetadata({
   title: "Cyber Security Services UAE | Information Security Consulting Dubai",
@@ -13,16 +14,22 @@ const securityDomains = [
     title: "Security Strategy & Governance",
     description:
       "Mature your cyber posture with assessments, policy frameworks, and executive scorecards aligned with UAE Information Assurance Standards.",
+    icon: <Shield className="w-8 h-8" />,
+    gradient: "from-indigo-500 to-violet-500",
   },
   {
     title: "Threat Detection & Response",
     description:
       "Build 24/7 SOC capabilities, deploy SIEM/XDR platforms, and orchestrate automated response playbooks across hybrid environments.",
+    icon: <Eye className="w-8 h-8" />,
+    gradient: "from-red-500 to-rose-500",
   },
   {
     title: "Offensive Security",
     description:
       "Conduct red teaming, penetration testing, and adversary emulation to expose vulnerabilities before malicious actors do.",
+    icon: <Target className="w-8 h-8" />,
+    gradient: "from-orange-500 to-amber-500",
   },
 ];
 
@@ -55,167 +62,160 @@ const industryProtection = [
 
 export default function CyberSecurity() {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-white">
-      {/* Hero */}
-      <section className="container mx-auto px-6 lg:px-8">
-        <AnimatedSection className="max-w-5xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#9C9C9C]/40 bg-white/20 px-4 py-2 text-xs uppercase tracking-wide text-[#9C9C9C]">
-            <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
-            Specialist Services · Cyber Security
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl leading-tight text-gray-900">
-            Proactive cyber defence for{" "}
-            <span className="bg-linear-to-r from-[#436DCC] via-[#2D51A4] to-[#4B72CC] bg-clip-text text-transparent">
-              mission-critical UAE enterprises
-            </span>
-            .
-          </h1>
-          <p className="mt-6 text-xl leading-relaxed text-gray-600">
-            We secure digital infrastructures across banking, government, aviation,
-            and energy sectors through holistic cyber programmes built on global
-            best practice and UAE regulatory compliance.
-          </p>
-        </AnimatedSection>
-      </section>
-
-      {/* Security domains */}
-      <section className="container mx-auto px-6 lg:px-8 mt-16">
-        <AnimatedSection>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-            <span className="h-2 w-2 rounded-full bg-black" />
-            Defence pillars
-          </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {securityDomains.map((domain, index) => (
-              <AnimatedCard
-                key={domain.title}
-                index={index}
-                className="rounded-[24px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4B72CC]/40 hover:shadow-lg"
-              >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-[#436DCC] via-[#2D51A4] to-[#4B72CC] text-white text-lg font-semibold">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-                <h2 className="mt-6 text-2xl font-semibold text-gray-900">
-                  {domain.title}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  {domain.description}
-                </p>
-              </AnimatedCard>
-            ))}
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Compliance and assurance */}
-      <section className="mt-24 bg-gradient-to-r from-[#0F1A36] via-[#1E3261] to-[#2D51A4] text-white">
-        <div className="container mx-auto px-6 lg:px-8 py-24">
-          <AnimatedSection className="max-w-6xl mx-auto">
-            <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] items-start">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-white/70">
-                  <span className="h-2 w-2 rounded-full bg-white/70" />
-                  Compliance & assurance
-                </div>
-                <h2 className="mt-6 text-4xl md:text-5xl leading-tight">
-                  Navigate UAE cyber regulations with confidence.
-                </h2>
-                <p className="mt-5 text-lg leading-relaxed text-white/80">
-                  Our compliance squads partner with CISOs and risk officers to
-                  translate regulatory mandates into pragmatic controls, automated
-                  reporting, and continuous assurance programmes.
-                </p>
-              </div>
-              <div className="rounded-[28px] border border-white/10 bg-white/10 p-8 backdrop-blur-md">
-                <h3 className="text-lg font-semibold text-white">
-                  Certification expertise
-                </h3>
-                <ul className="mt-5 grid gap-3 text-sm text-white/75">
-                  {complianceFocus.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-white/80" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+              <span className="text-xs font-medium text-indigo-400 uppercase tracking-wider">Specialist Services</span>
             </div>
-            <div className="mt-12 rounded-[28px] border border-white/10 bg-white/5 p-8">
-              <div className="grid gap-6 md:grid-cols-3 text-sm text-white/80">
-                <div>
-                  <div className="text-3xl font-semibold text-white">30%</div>
-                  <p className="mt-3 text-white/70">
-                    Reduction in compliance audit timelines through automated
-                    evidence collection.
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-semibold text-white">24/7</div>
-                  <p className="mt-3 text-white/70">
-                    Managed SOC coverage with bilingual analysts across Dubai and
-                    Riyadh.
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-semibold text-white">4 hrs</div>
-                  <p className="mt-3 text-white/70">
-                    Average incident response activation time for high-severity
-                    alerts.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+              Cyber <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">
+                Security
+              </span>
+            </h1>
+            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+              We secure digital infrastructures across banking, government, aviation, and energy sectors through holistic cyber programmes built on global best practice and UAE regulatory compliance.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Industry protection */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#CCC9C8] bg-white px-4 py-2 text-xs text-black">
-            <span className="h-2 w-2 rounded-full bg-black" />
-            Industry programmes
+      {/* Security Domains Grid */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Defence Pillars
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Comprehensive security solutions for mission-critical enterprises
+            </p>
           </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {industryProtection.map((item, index) => (
-              <AnimatedCard
-                key={item.industry}
-                index={index}
-                className="rounded-[24px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4B72CC]/40 hover:shadow-lg"
-              >
-                <div className="text-sm uppercase tracking-wide text-[#2D51A4]">
-                  {item.industry}
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {securityDomains.map((domain, index) => (
+              <div key={domain.title} className="group h-full p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07] relative overflow-hidden">
+                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${domain.gradient} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`} />
+
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${domain.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-full h-full bg-black rounded-[14px] flex items-center justify-center text-white">
+                      {domain.icon}
+                    </div>
+                  </div>
+
+                  <h2 className="text-xl font-bold text-white mb-4">
+                    {domain.title}
+                  </h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {domain.description}
+                  </p>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-gray-600">
-                  {item.highlight}
-                </p>
-              </AnimatedCard>
+              </div>
             ))}
           </div>
-        </AnimatedSection>
-      </section>
+        </div>
+      </SectionWrapper>
 
-      {/* CTA */}
-      <section className="container mx-auto px-6 lg:px-8 mt-20">
-        <AnimatedSection className="rounded-[32px] bg-gradient-to-r from-[#D1DCE8] via-[#EEF3FF] to-[#FAFCFF] px-10 py-14 text-center">
-          <h2 className="text-4xl font-semibold text-gray-900">
-            Secure your next transformation initiative.
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">
-            Engage our cyber threat leads for a readiness assessment, red team
-            campaign, or SOC modernisation roadmap tailored to your regulatory
-            landscape.
-          </p>
-          <a
-            href="/contact"
-            className="mt-8 inline-flex items-center rounded-full bg-[#2D51A4] px-8 py-4 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#1f3f86]"
-          >
-            Arrange a cyber consultation
-          </a>
-        </AnimatedSection>
-      </section>
-    </div>
+      {/* Compliance Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              UAE Regulatory Compliance
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Navigate UAE cyber regulations with confidence
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 mb-12">
+            {complianceFocus.map((item) => (
+              <div key={item} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300">
+                <p className="text-white font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/5">
+              <div className="text-4xl font-bold text-white mb-4">30%</div>
+              <p className="text-gray-400">
+                Reduction in compliance audit timelines through automated evidence collection.
+              </p>
+            </div>
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/5">
+              <div className="text-4xl font-bold text-white mb-4">24/7</div>
+              <p className="text-gray-400">
+                Managed SOC coverage with bilingual analysts across Dubai and Riyadh.
+              </p>
+            </div>
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/5">
+              <div className="text-4xl font-bold text-white mb-4">4 hrs</div>
+              <p className="text-gray-400">
+                Average incident response activation time for high-severity alerts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Industry Protection */}
+      <SectionWrapper className="py-24 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry Programmes
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Tailored security solutions for regulated sectors
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {industryProtection.map((item, index) => (
+              <div key={item.industry} className="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {item.industry}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {item.highlight}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CTA Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Secure Your Transformation
+            </h2>
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+              Engage our cyber threat leads for a readiness assessment, red team campaign, or SOC modernisation roadmap tailored to your regulatory landscape.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+            >
+              Arrange a Cyber Consultation
+            </a>
+          </div>
+        </div>
+      </SectionWrapper>
+    </>
   );
 }
+
 
 

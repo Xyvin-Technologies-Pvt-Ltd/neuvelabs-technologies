@@ -13,6 +13,7 @@ const industries = [
     title: "Healthcare",
     description:
       "Transform patient care with AI-powered diagnostics, telemedicine platforms, and healthcare data analytics solutions.",
+    caseStudy: "Implemented AI-driven patient management system for leading UAE hospital network, reducing wait times by 40% and improving diagnostic accuracy.",
     icon: <Stethoscope className="w-8 h-8" />,
     gradient: "from-emerald-500 to-teal-500",
   },
@@ -20,6 +21,7 @@ const industries = [
     title: "Finance & Banking",
     description:
       "Secure, compliant financial technology solutions including fraud detection, risk analytics, and digital banking platforms.",
+    caseStudy: "Deployed real-time fraud detection system for major UAE bank, processing 2M+ transactions daily with 99.9% accuracy and UAE Central Bank compliance.",
     icon: <Building2 className="w-8 h-8" />,
     gradient: "from-blue-500 to-indigo-500",
   },
@@ -27,6 +29,7 @@ const industries = [
     title: "Retail & E-commerce",
     description:
       "Enhance customer experiences with personalized recommendations, inventory management, and omnichannel solutions.",
+    caseStudy: "Built AI-powered recommendation engine for regional e-commerce platform, increasing conversion rates by 35% and customer lifetime value by 50%.",
     icon: <ShoppingBag className="w-8 h-8" />,
     gradient: "from-pink-500 to-rose-500",
   },
@@ -34,6 +37,7 @@ const industries = [
     title: "Manufacturing",
     description:
       "Optimize operations with IoT integration, predictive maintenance, and supply chain automation solutions.",
+    caseStudy: "Delivered predictive maintenance platform for JAFZA manufacturing facility, reducing equipment downtime by 60% and maintenance costs by 45%.",
     icon: <Factory className="w-8 h-8" />,
     gradient: "from-orange-500 to-amber-500",
   },
@@ -41,6 +45,7 @@ const industries = [
     title: "Real Estate",
     description:
       "Modernize property management with smart building solutions, virtual tours, and real estate analytics platforms.",
+    caseStudy: "Developed smart building management system for Dubai Marina property, optimizing energy consumption by 30% and enhancing tenant satisfaction.",
     icon: <Home className="w-8 h-8" />,
     gradient: "from-purple-500 to-violet-500",
   },
@@ -48,6 +53,7 @@ const industries = [
     title: "Education",
     description:
       "Enhance learning experiences with e-learning platforms, student analytics, and educational technology solutions.",
+    caseStudy: "Created adaptive learning platform for UAE university, personalizing education for 10,000+ students and improving completion rates by 25%.",
     icon: <GraduationCap className="w-8 h-8" />,
     gradient: "from-cyan-500 to-sky-500",
   },
@@ -72,7 +78,7 @@ export default function Industries() {
               </span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
-              We deliver industry-specific technology solutions that understand your unique challenges and regulatory requirements.
+              We deliver industry-specific technology solutions that understand your unique challenges and regulatory requirements. Explore our proven track record across key sectors.
             </p>
           </div>
         </div>
@@ -96,16 +102,48 @@ export default function Industries() {
                   <h2 className="text-xl font-bold text-white mb-4">
                     {industry.title}
                   </h2>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
                     {industry.description}
                   </p>
+
+                  {/* Case Study */}
+                  <div className="pt-6 border-t border-white/5">
+                    <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">
+                      Case Study
+                    </div>
+                    <p className="text-gray-500 text-xs leading-relaxed">
+                      {industry.caseStudy}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </SectionWrapper>
+
+      {/* CTA Section */}
+      <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Industry?
+            </h2>
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+              Let's discuss how our industry-specific solutions can help you achieve your business objectives and stay ahead of the competition.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+            >
+              Start a Conversation
+            </a>
+          </div>
+        </div>
+      </SectionWrapper>
     </>
   );
 }
+
 
