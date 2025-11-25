@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
+import SectionWrapper from "@/components/SectionWrapper";
 import Image from "next/image";
+import { CheckCircle2, ArrowRight, Layers, Zap, Trophy, Users } from "lucide-react";
 
 export default function ServicePageTemplate({
   title,
@@ -15,28 +15,30 @@ export default function ServicePageTemplate({
   useCases,
 }) {
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-black">
+    <>
       {/* Hero Section */}
-      <section className="mb-20">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            <AnimatedSection>
-              <div className="mb-4">
-                <span className="text-sm uppercase tracking-wider text-[#007AFF] font-semibold">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                <span className="text-xs font-medium text-indigo-400 uppercase tracking-wider">
                   {subtitle || "Digital Engineering"}
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
                 {title}
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl text-gray-400 leading-relaxed mb-10">
                 {description}
               </p>
-            </AnimatedSection>
-
-            {/* Hero Image */}
-            <AnimatedSection delay={0.2}>
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 via-[#6366F1]/20 to-[#8B5CF6]/20 ">
+            </div>
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 blur-3xl rounded-full" />
+              <div className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
                 {heroImage ? (
                   <Image
                     src={heroImage}
@@ -47,215 +49,166 @@ export default function ServicePageTemplate({
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <svg
-                        className="w-24 h-24 mx-auto mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.5"
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <p className="text-sm">Hero Image Placeholder</p>
-                    </div>
+                    <Layers className="w-24 h-24 text-white/20" />
                   </div>
                 )}
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <section className="py-20 bg-gray-900">
+        <SectionWrapper className="py-24 bg-[#050505]">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Our Services
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Comprehensive solutions tailored to your business needs
-                </p>
-              </AnimatedSection>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Key Capabilities
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Comprehensive solutions tailored to drive your digital transformation
+              </p>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <AnimatedCard
-                    key={index}
-                    index={index}
-                    className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-[#007AFF]/10"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#007AFF] via-[#6366F1] to-[#8B5CF6] rounded-lg flex items-center justify-center mb-4">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {feature.title || feature}
-                    </h3>
-                    {feature.description && (
-                      <p className="text-gray-300">{feature.description}</p>
-                    )}
-                  </AnimatedCard>
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-white/[0.07]"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-6 h-6 text-indigo-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {typeof feature === 'string' ? feature : feature.title}
+                  </h3>
+                  {typeof feature !== 'string' && feature.description && (
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-        </section>
-      )}
-
-      {/* Image Showcase Section */}
-      {showcaseImages && showcaseImages.length > 0 && (
-        <section className="py-20 bg-black">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Our Work
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  See how we've helped businesses transform with our solutions
-                </p>
-              </AnimatedSection>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {showcaseImages.map((image, index) => (
-                  <AnimatedCard
-                    key={index}
-                    index={index}
-                    className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-[#007AFF]/20 to-[#8B5CF6]/20 border border-gray-800 group"
-                  >
-                    {image.url ? (
-                      <Image
-                        src={image.url}
-                        alt={image.alt || `${title} showcase ${index + 1}`}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center text-gray-500">
-                          <svg
-                            className="w-16 h-16 mx-auto mb-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                          <p className="text-sm">Showcase Image {index + 1}</p>
-                        </div>
-                      </div>
-                    )}
-                    {image.caption && (
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                        <p className="text-white font-medium">{image.caption}</p>
-                      </div>
-                    )}
-                  </AnimatedCard>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        </SectionWrapper>
       )}
 
       {/* Benefits Section */}
       {benefits && (
-        <section className="py-20 bg-gradient-to-r from-[#007AFF] via-[#6366F1] to-[#8B5CF6] text-white">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  Why Choose Neuve Labs?
-                </h2>
-              </AnimatedSection>
+        <SectionWrapper className="py-24 bg-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-black to-black" />
+          <div className="container mx-auto px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Neuve Labs?
+              </h2>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <AnimatedCard
-                    key={index}
-                    index={index}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                  >
-                    <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                    <p className="text-white/90 leading-relaxed">
+            <div className="grid md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="flex gap-6 p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300"
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center border border-indigo-500/30">
+                      <CheckCircle2 className="w-6 h-6 text-indigo-400" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
                       {benefit.description}
                     </p>
-                  </AnimatedCard>
-                ))}
-              </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       )}
 
       {/* Use Cases Section */}
       {useCases && useCases.length > 0 && (
-        <section className="py-20 bg-gray-900">
+        <SectionWrapper className="py-24 bg-[#050505]">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Use Cases
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Real-world applications of our solutions
-                </p>
-              </AnimatedSection>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Real-World Impact
+              </h2>
+              <p className="text-gray-400 text-lg">
+                See how we're helping organizations solve complex challenges
+              </p>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {useCases.map((useCase, index) => (
-                  <AnimatedCard
-                    key={index}
-                    index={index}
-                    className="border border-gray-700 bg-gray-800 rounded-xl p-8 hover:border-gray-600 transition-colors"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#007AFF] to-[#8B5CF6] rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-lg">
-                          {index + 1}
-                        </span>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-2">
-                          {useCase.title}
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                          {useCase.description}
-                        </p>
-                      </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div
+                  key={index}
+                  className="relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/5 hover:border-white/10 transition-all duration-300 group overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span className="text-8xl font-bold text-white">
+                      {index + 1}
+                    </span>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed mb-6">
+                      {useCase.description}
+                    </p>
+                    <div className="flex items-center text-indigo-400 font-medium text-sm">
+                      Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
-                  </AnimatedCard>
-                ))}
-              </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       )}
-    </div>
+
+      {/* Image Showcase Section */}
+      {showcaseImages && showcaseImages.length > 0 && (
+        <SectionWrapper className="py-24 bg-black">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {showcaseImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 group"
+                >
+                  {image.url ? (
+                    <Image
+                      src={image.url}
+                      alt={image.alt || `${title} showcase ${index + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-white/5 flex items-center justify-center">
+                      <Trophy className="w-16 h-16 text-white/10" />
+                    </div>
+                  )}
+                  {image.caption && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="text-white font-medium">{image.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+    </>
   );
 }
 

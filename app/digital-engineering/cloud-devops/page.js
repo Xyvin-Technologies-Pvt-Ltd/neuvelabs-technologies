@@ -14,6 +14,7 @@ export default function CloudDevOps() {
       title="Cloud & DevOps"
       subtitle="Digital Engineering"
       description="Modernize your infrastructure with cloud-native solutions and DevOps best practices. Accelerate deployments, improve reliability, and scale effortlessly."
+      heroImage="/hero/cloud.png"
       features={[
         "Cloud Migration & Strategy",
         "AWS, Azure, GCP Implementation",
@@ -25,12 +26,12 @@ export default function CloudDevOps() {
       ]}
       showcaseImages={[
         {
-          url: null,
+          url: "/images/cloudEngineering/cloud-engineering.jpg",
           alt: "Cloud Infrastructure",
           caption: "Scalable cloud architecture deployment",
         },
         {
-          url: null,
+          url: "/images/cloudEngineering/cloud-showcase1.jpg",
           alt: "DevOps Pipeline",
           caption: "Automated CI/CD pipeline workflow",
         },

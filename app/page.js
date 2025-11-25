@@ -1,8 +1,7 @@
 import { generateMetadata } from "@/lib/metadata";
 import Hero from "@/components/Hero";
-import ServicesCarousel from "@/components/ServicesCarousel";
-import ContactForm from "@/components/ContactForm";
-import { ShieldCheck, Heart, Star, Play } from "lucide-react";
+import SectionWrapper from "@/components/SectionWrapper";
+import { ShieldCheck, Heart, Star, Play, ArrowRight, Zap, Globe, Users } from "lucide-react";
 
 export const metadata = generateMetadata({
   title: "Home",
@@ -16,67 +15,76 @@ export default function Home() {
       title: "Retail",
       description:
         "Walk into any independent supermarket in the UAE. When you self-checkout, 7 times out of 10 you could be using a Neuve Labs solution.",
+      icon: <Star className="w-6 h-6 text-blue-400" />,
     },
     {
       title: "Financial Services",
       description:
         "Our advanced expertise helps leading organizations manage risk, detect fraud, improve operational efficiency, and increase profitability.",
+      icon: <ShieldCheck className="w-6 h-6 text-purple-400" />,
     },
     {
       title: "Transport",
       description:
         "Our experience in road asset management contributes significantly to the upkeep of highway infrastructure around the world.",
+      icon: <Globe className="w-6 h-6 text-green-400" />,
     },
     {
       title: "Insurance",
       description:
         "Prominent insurance providers rely on our solutions for policy assistance, claims processing, property and casualty, and workers compensation.",
+      icon: <Heart className="w-6 h-6 text-red-400" />,
     },
   ];
 
   const values = [
     {
       title: "Ethics",
-      svgUrl: "hero/ethics.svg"
+      description: "We operate with unwavering integrity and transparency.",
+      icon: <ShieldCheck className="w-8 h-8" />,
     },
     {
       title: "Empathy",
-      svgUrl: "hero/empathy.svg"
+      description: "We design with the human experience at the center.",
+      icon: <Heart className="w-8 h-8" />,
     },
     {
       title: "Excellence",
-      svgUrl: "hero/excellence.svg"
-    }
-
+      description: "We pursue perfection in every line of code.",
+      icon: <Star className="w-8 h-8" />,
+    },
   ];
 
   const coreFields = [
     {
       title: "AI & Machine Learning",
-      description: 
-      "We harness the power of artificial intelligence and machine learning to create intelligent solutions that drive innovation and transform business operations",
-      imgUrl: "hero/ai.png"
+      description:
+        "We harness the power of artificial intelligence and machine learning to create intelligent solutions that drive innovation and transform business operations",
+      imgUrl: "hero/ai.png",
+      gradient: "from-blue-500/20 to-purple-500/20",
     },
     {
       title: "Data Analytics",
-      description: 
-      "Unlock the full potential of your data with advanced analytics, business intelligence, and data-driven insights that power strategic decision making",
-      imgUrl: "hero/data.png"
+      description:
+        "Unlock the full potential of your data with advanced analytics, business intelligence, and data-driven insights that power strategic decision making",
+      imgUrl: "hero/data.png",
+      gradient: "from-green-500/20 to-teal-500/20",
     },
     {
       title: "Cloud & DevOps",
-      description: 
-      "Seamlessly modernize your infrastructure with cloud native solutions, ensure uninterrupted business operations and smooth digital transformations.",
-      imgUrl: "hero/cloud.png"
+      description:
+        "Seamlessly modernize your infrastructure with cloud native solutions, ensure uninterrupted business operations and smooth digital transformations.",
+      imgUrl: "hero/cloud.png",
+      gradient: "from-orange-500/20 to-red-500/20",
     },
     {
       title: "Product Engineering",
-      description: 
-      "End to-end product development from concept to deployment, ensuring innovative solutions that meet market demands and exceed expectations.",
-      imgUrl: "hero/product.png"
+      description:
+        "End to-end product development from concept to deployment, ensuring innovative solutions that meet market demands and exceed expectations.",
+      imgUrl: "hero/product.png",
+      gradient: "from-pink-500/20 to-rose-500/20",
     },
-
-  ]
+  ];
 
   const impactStats = [
     {
@@ -98,175 +106,88 @@ export default function Home() {
       <Hero />
 
       {/* Product Engineering Narrative Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
+      <SectionWrapper className="py-32 bg-black relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-900/10 to-transparent pointer-events-none" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="mt-5 text-4xl md:text-3xl lg:text-4xl leading-tight text-gray-900">
-                  <span className="bg-linear-to-r from-[#4B72CC] to-[#2D51A4] bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                     Transforming Businesses
                   </span>{" "}
-                  with <br></br>Product Engineering
+                  with Product Engineering
                 </h2>
-              </div>
-              <div className="lg:ml-auto lg:max-w-xl">
-                <p className="text-base leading-relaxed text-black pt-6">
-                  At Neuve Labs, we combine technology, creativity, and strategy
-                  to design digital products that empower businesses in the UAE
-                  and Middle East to innovate, scale, and deliver exceptional
-                  user experiences.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 space-y-6 text-xl leading-relaxed text-gray-600">
-              <p>
-                We bring together expertise in Data & AI, Cognitive Computing,
-                DevSecOps, and Experience Design to create products that truly
-                stand out. Our end-to-end product engineering approach spans
-                ideation to deployment, ensuring innovation, scalability, and
-                quality throughout the lifecycle.
-              </p>
-              <p>
-                With a deep understanding of regional markets, we deliver
-                solutions tailored to every client&apos;s needs—helping them
-                grow, adapt, and stay competitive. Beyond driving business
-                outcomes, we believe in building digital experiences that create
-                lasting value for customers, partners, and society.
-              </p>
-            </div>
-
-            <div className="mt-16">
-              <div
-                className="relative overflow-hidden rounded-[20px] bg-cover bg-center p-10 sm:p-12 text-white shadow-2xl"
-                style={{ backgroundImage: "url('/images/Frame 21.png')" }}
-              >
-                <div className="absolute inset-0 bg-linear-to-r from-[#0B2A68]/10 via-[#1E3A8A]/10 to-[#2563EB]/10" />
-                <div className="absolute inset-0 opacity-40">
-                  <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(134, 132, 132, 0.27),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
-                </div>
-                <div className="relative pt-20 max-w-3xl">
-                  <p className="text-base sm:text-base leading-relaxed">
-                    Neuve Labs transforms ideas into powerful digital products
-                    through cutting-edge technology and deep market insight. We
-                    deliver innovative, high-quality solutions that drive
-                    business growth and meaningful impact across the UAE and
-                    beyond.
+                <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+                  <p>
+                    At Neuve Labs, we combine technology, creativity, and strategy
+                    to design digital products that empower businesses in the UAE
+                    and Middle East to innovate, scale, and deliver exceptional
+                    user experiences.
+                  </p>
+                  <p>
+                    We bring together expertise in Data & AI, Cognitive Computing,
+                    DevSecOps, and Experience Design to create products that truly
+                    stand out. Our end-to-end product engineering approach spans
+                    ideation to deployment.
                   </p>
                 </div>
+                <div className="mt-10">
+                  <button className="group flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+                    Learn more about our approach <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 glass-card p-2">
+                  <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-gray-900 to-black overflow-hidden relative">
+                    <div className="absolute inset-0 bg-[url('/images/Frame 21.png')] bg-cover bg-center opacity-50 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div className="absolute bottom-8 left-8 right-8">
+                      <p className="text-white/90 text-lg font-medium leading-relaxed">
+                        "Neuve Labs transforms ideas into powerful digital products through cutting-edge technology and deep market insight."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000" />
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Transforming Businesses Section */}
-      {/* <section className="py-24 bg-[#FAFAFA]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            <div>
-              <div className="text-sm uppercase tracking-wider text-[#007AFF] mb-4 font-semibold">
-                Transforming Businesses
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                With Product Engineering
-              </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                At Neuve Labs, we bring together the latest technology expertise
-                to craft exceptional product experiences that truly stand out.
-                With our deep understanding of Data and AI, Cognitive Computing,
-                DevSecOps, and Experience Design across various domains, we
-                offer comprehensive product engineering services helping many
-                leading businesses in the UAE and Middle East grow
-                exponentially.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                We understand the regional market and the unique challenges and
-                opportunities it presents. From ideation to deployment, we cover
-                the entire product development lifecycle, ensuring innovative
-                and high quality solutions tailored to our client's unique
-                requirements. We believe in creating meaningful value and
-                driving innovation that extends beyond business success. Through
-                digitally driven programs, we aim to make a positive impact on
-                our customers, partners, and society.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                With Neuve Labs, you can expect nothing less than exceptional
-                products that captivate users and drive success. Let us join
-                forces to unlock the full potential of your ideas and create
-                remarkable digital experiences that make a lasting impression in
-                the UAE market and beyond.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-gradient-to-br from-[#007AFF]/20 to-[#8B5CF6]/20 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <p className="text-sm">Image Placeholder</p>
-                </div>
-              </div>
-              <div className="aspect-square bg-gradient-to-br from-[#007AFF]/20 to-[#8B5CF6]/20 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                  <p className="text-sm">Image Placeholder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      </SectionWrapper>
 
       {/* Impact & Reach Section */}
-      <section className="bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-white">
-
-        <div className="container mx-auto px-6 lg:px-8 py-24">
+      <SectionWrapper className="py-32 bg-[#050505] relative">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="inline-flex text-[#9C9C9C] items-center gap-2 rounded-full border border-[#9C9C9C] bg-white/5 px-4 py-2 text-xs font-semibold ">
-              <span className="h-2 w-2 rounded-full bg-[#9C9C9C]" />
-              <span>Our Impact</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">Our Impact</span>
             </div>
-            <h2 className="mt-8 text-4xl md:text-4xl leading-tight">
-              Empowering industries with<br></br>{" "}
-              <span className="bg-linear-to-r from-[#436DCC]  to-[#265AC9] bg-clip-text text-transparent">
-                innovation, technology, and measurable &nbsp;  
+
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 max-w-4xl">
+              Empowering industries with{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                innovation, technology, and measurable results.
               </span>
-              results.
             </h2>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {impactIndustries.map((industry) => (
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {impactIndustries.map((industry, index) => (
                 <div
                   key={industry.title}
-                  className="group border-l-1 border-[#474747] pl-3 pb-6 transition-colors duration-300 hover:border-white/30 hover:bg-white/10"
+                  className="group p-8 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <h3 className="text-xl font-semibold text-white">
+                  <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {industry.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">
                     {industry.title}
                   </h3>
-                  <p className="mt-9 text-sm leading-relaxed text-white/70">
+                  <p className="text-sm text-gray-400 leading-relaxed">
                     {industry.description}
                   </p>
                 </div>
@@ -274,142 +195,124 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      {/* Where Expertise Meets Global Impact Section */}
-      <section  className="bg-gradient-to-r from-[#D1DCE8] to-[#FAFCFF] text-white">
-        
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="relative mx-auto  ">
-             
-              
-              <div className="relative grid gap-3 sm:p-8 items-end lg:grid"
-                style={{ gridTemplateColumns: "2fr 3fr" }}>
-                <div>
-                  <h3 className="mt-4 p-0 text-3xl md:text-5xl leading-tight text-slate-900">
-                    Where Expertise <br />
-                     Meets Global Impact
-                  </h3>
-
-
-                </div>
-                <div className="grid gap-0 sm:grid-cols-2">
-                  
-                  {impactStats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className=" pl-10 text-slate-900 "
-                    >
-                      <div className="absolute top-0 h-full w-[1px] bg-gradient-to-t from-gray-500 to-transparent sm:block hidden"></div>
-                      <div className="pl-6">
-                      <div className="text-4xl sm: text-3xl md:text-6xl font-bold text-slate-900">
-                        {stat.value}
-                      </div>
-                      <div className="mt-2 pt-6 md:text-2xl text-base font-semibold">
-                        {stat.label}
-                      </div>
-                      <p className="mt-3 pb-5 text-sm leading-relaxed text-slate-600">
-                        {stat.description}
-                      </p>
-                    </div>
-                    </div>
-                  ))}
-                  <div className="sm:col-span-2 h-[1px] w-full bg-gradient-to-r from-gray-500 to-transparent sm:block hidden"></div>
-
-                </div>
-
-
-              </div>
+      {/* Global Impact Stats */}
+      <SectionWrapper className="py-32 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent" />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h3 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Where Expertise <br />
+                <span className="text-gray-500">Meets Global Impact</span>
+              </h3>
+              <p className="text-gray-400 text-lg max-w-md">
+                We are a global team of innovators, engineers, and strategists dedicated to driving digital transformation.
+              </p>
             </div>
-          </div>
-        
-      </section>
-
-
-      {/* Who We Are - Maestros Section */}
-      <section className="pt-24 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-
-          <div className="max-w-7xl mx-auto">
-
-          <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-2 text-xs  ">
-              <span className="h-2 w-2 rounded-full bg-black " />
-              <span>Who We Are</span>
-            </div>
-
-            
-            <h2 className="text-4xl md:text-4xl py-5  text-gray-900 mb-3 text-left leading-normal">
-              A collective of passionate innovators blending of art, ethics, and technology to create meaningful digital experience.
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed text-left pb-12">
-              Drawing inspiration from the captivating realms of art and
-              aesthetics, we seamlessly merge our profound ardor with advanced
-              technological prowess. The outcome is an exquisite fusion of a
-              collective of remarkable minds whose zeal to witness your
-              enterprise thrive knows no bounds, matching your unwavering
-              determination every step of the way.
-            </p>
-
-            {values.map((value) => (
-            <div className="inline-flex text-[#B7B7B7] items-center gap-2 rounded-[42px] border border-[#CCC9C8] bg-black px-10 py-8 mr-12 md:text-2xl ">
-                {/* SVG icon */}
-                <div className="flex items-center mr-3 justify-center w-8 h-6 ">
-                  <img src={value.svgUrl} alt={value.title} className="w-15 h-10" />
-                </div>
-              <span>{value.title}</span>
-            </div>
-            ))}
-            
-          </div>
-        </div>
-      </section>
-      <section className="py-25 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-
-          <div className="max-w-7xl mx-auto">
-
-            <div className="inline-flex text-black items-center gap-2 rounded-full border border-[#CCC9C8] bg-white/5 px-4 py-2 text-xs  ">
-              <span className="h-2 w-2 rounded-full bg-black " />
-              <span>What We Do</span>
-            </div>
-
-            
-            <h2 className="text-4xl md:text-4xl py-5  text-gray-900 text-left leading-normal">
-              Empowering businesses through intelligent, data-driven and cloud-enabled solutions that accelerate innovation and digital transformation.
-            </h2>
-
-            <div className="mt-5 grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
-              {coreFields.map((field) => (
-                
-                <div
-                  key={field.title}
-                  className="group  pr-3 m-1 transition-colors duration-300 hover:border-gray-100 hover:bg-gray-100"
-                >
-                  <div className="w-70 h-75 mb-4 rounded-xl overflow-hidden">
-                    <img src={field.imgUrl} alt="Example"
-                      className="w-full h-full object-cover"
-                    />
+            <div className="grid sm:grid-cols-2 gap-8">
+              {impactStats.map((stat) => (
+                <div key={stat.label} className="relative pl-8 border-l border-white/10">
+                  <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+                    {stat.value}
                   </div>
-
-                  <h3 className="text-2xl text-black">
-                    {field.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-black/70">
-                    {field.description}
+                  <div className="text-lg font-semibold text-blue-400 mb-2">
+                    {stat.label}
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    {stat.description}
                   </p>
                 </div>
               ))}
             </div>
-            
-            
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      
+      {/* Who We Are */}
+      <SectionWrapper className="py-32 bg-[#050505]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+              <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">Who We Are</span>
+            </div>
 
-      
-      
+            <div className="grid lg:grid-cols-2 gap-16 mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-snug">
+                A collective of passionate innovators blending art, ethics, and technology to create meaningful digital experiences.
+              </h2>
+              <p className="text-lg text-gray-400 leading-relaxed">
+                Drawing inspiration from the captivating realms of art and
+                aesthetics, we seamlessly merge our profound ardor with advanced
+                technological prowess. The outcome is an exquisite fusion of a
+                collective of remarkable minds.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {values.map((value) => (
+                <div key={value.title} className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors text-center group">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-white/5 flex items-center justify-center mb-6 text-white group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
+                  <p className="text-gray-400">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* What We Do */}
+      <SectionWrapper className="py-32 bg-black">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+              <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">What We Do</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 max-w-4xl leading-snug">
+              Empowering businesses through intelligent, data-driven and cloud-enabled solutions that accelerate innovation.
+            </h2>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {coreFields.map((field) => (
+                <div
+                  key={field.title}
+                  className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/5 hover:border-white/20 transition-all duration-500"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${field.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                  <div className="relative p-6 h-full flex flex-col">
+                    <div className="w-full aspect-video rounded-lg overflow-hidden mb-6 bg-black/50">
+                      {/* Placeholder for actual images, using colored blocks for now if images fail */}
+                      <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/20">
+                        <Zap className="w-8 h-8" />
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:translate-x-1 transition-transform">
+                      {field.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-grow">
+                      {field.description}
+                    </p>
+
+                    <div className="flex items-center text-sm font-medium text-white/50 group-hover:text-white transition-colors">
+                      Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
     </>
   );
 }
+
