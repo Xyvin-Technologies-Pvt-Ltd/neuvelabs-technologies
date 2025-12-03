@@ -6,24 +6,24 @@ import { useTranslations } from "next-intl";
 import RetroCard, { RetroBadge } from "@/components/ui/RetroCard";
 import { industryStories } from "@/lib/caseStudiesData";
 import { 
-  ShoppingCart, 
+  Radio, 
   CreditCard, 
-  Shield, 
   Car, 
   HeartPulse, 
-  Factory,
+  Users,
+  GraduationCap,
   AlertTriangle,
   ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 
 const industryIcons = {
-  "Retail": ShoppingCart,
-  "Financial Services": CreditCard,
-  "Insurance": Shield,
+  "Telecommunications": Radio,
   "Transport": Car,
+  "Financial Services": CreditCard,
+  "Community": Users,
+  "Education": GraduationCap,
   "Healthcare": HeartPulse,
-  "Manufacturing": Factory,
 };
 
 const cardColors = ["green", "magenta", "cyan", "green", "magenta", "cyan"];
