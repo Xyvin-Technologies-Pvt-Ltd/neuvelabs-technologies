@@ -22,11 +22,11 @@ const colorStyles = {
     borderTop: "border-t-neon-cyan",
     hoverGlow: "hover:shadow-[0_0_20px_rgba(0,255,255,0.3)]",
   },
-  magenta: {
-    text: "text-neon-magenta",
-    border: "border-neon-magenta",
-    borderTop: "border-t-neon-magenta",
-    hoverGlow: "hover:shadow-[0_0_20px_rgba(255,0,255,0.3)]",
+  cyan: {
+    text: "text-neon-cyan",
+    border: "border-neon-cyan",
+    borderTop: "border-t-neon-cyan",
+    hoverGlow: "hover:shadow-[0_0_20px_rgba(0,255,255,0.3)]",
   },
 };
 
@@ -91,7 +91,7 @@ export default function ContactPageClient() {
       title: "Visit Us",
       value: "Dubai Silicon Oasis",
       description: "Dubai, UAE",
-      colorKey: "magenta",
+      colorKey: "cyan",
     },
   ];
 
@@ -101,7 +101,7 @@ export default function ContactPageClient() {
       <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-background">
         <div className="absolute inset-0 grid-background opacity-50" />
         <CornerGlow position="top-left" color="cyan" />
-        <CornerGlow position="bottom-right" color="magenta" />
+        <CornerGlow position="bottom-right" color="cyan" />
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -192,7 +192,7 @@ export default function ContactPageClient() {
                 {/* Terminal header */}
                 <div className="flex items-center gap-3 px-6 py-4 border-b-2 border-border bg-surface">
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-neon-magenta" />
+                    <div className="w-3 h-3 rounded-full bg-neon-cyan" />
                     <div className="w-3 h-3 rounded-full bg-neon-yellow" />
                     <div className="w-3 h-3 rounded-full bg-neon-green" />
                   </div>
@@ -271,7 +271,7 @@ export default function ContactPageClient() {
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
-                          className="flex items-center gap-2 text-neon-magenta text-sm font-mono p-4 border-2 border-neon-magenta/50 bg-neon-magenta/10"
+                          className="flex items-center gap-2 text-neon-cyan text-sm font-mono p-4 border-2 border-neon-cyan/50 bg-neon-cyan/10"
                         >
                           <AlertCircle className="w-5 h-5" />
                           TRANSMISSION FAILED. RETRY?

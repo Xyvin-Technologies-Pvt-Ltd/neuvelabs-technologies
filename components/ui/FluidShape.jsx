@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function FluidShape({
-  color = "green", // green | magenta | cyan
+  color = "green", // green | cyan
   size = 400,
   className = "",
   blur = 60,
@@ -12,7 +12,6 @@ export default function FluidShape({
 }) {
   const colors = {
     green: "#00ff88",
-    magenta: "#ff00ff",
     cyan: "#00ffff",
   };
 
@@ -52,7 +51,7 @@ export function FluidShapeGroup({ className = "" }) {
         delay={0}
       />
       <FluidShape
-        color="magenta"
+        color="cyan"
         size={350}
         className="bottom-[-150px] right-[-150px]"
         blur={80}
@@ -82,7 +81,6 @@ export function CornerGlow({ position = "top-left", color = "green", className =
 
   const colors = {
     green: "#00ff88",
-    magenta: "#ff00ff",
     cyan: "#00ffff",
   };
 

@@ -34,7 +34,7 @@ const services = [
     key: "dataEngineering",
     icon: Database,
     href: "/digital-engineering/data-engineering",
-    colorKey: "magenta",
+    colorKey: "cyan",
   },
   {
     key: "productEngineering",
@@ -46,7 +46,7 @@ const services = [
     key: "cyberSecurity",
     icon: Shield,
     href: "/specialist-services/cyber-security",
-    colorKey: "magenta",
+    colorKey: "cyan",
   },
   {
     key: "processAutomation",
@@ -72,13 +72,6 @@ const colorStyles = {
     iconShadow: "shadow-[0_0_20px_rgba(0,255,255,0.3)]",
     bgGradient: "from-neon-cyan/10",
   },
-  magenta: {
-    border: "border-neon-magenta",
-    text: "text-neon-magenta",
-    shadow: "shadow-[0_0_30px_rgba(255,0,255,0.3)]",
-    iconShadow: "shadow-[0_0_20px_rgba(255,0,255,0.3)]",
-    bgGradient: "from-neon-magenta/10",
-  },
 };
 
 export default function ChapterVision() {
@@ -102,7 +95,7 @@ export default function ChapterVision() {
         opacity={0.2}
       />
       <FluidShape
-        color="magenta"
+        color="cyan"
         size={600}
         className="bottom-[-300px] left-[-300px]"
         blur={80}

@@ -7,7 +7,7 @@ export default function RetroCard({
   children,
   href,
   className = "",
-  color = "green", // green | magenta | cyan
+  color = "green", // green | cyan
   variant = "default", // default | accent | bordered
   hoverable = true,
   onClick,
@@ -19,13 +19,6 @@ export default function RetroCard({
       glow: "hover:shadow-[0_0_30px_rgba(0,255,136,0.4)]",
       accent: "border-t-4 border-t-neon-green",
       bg: "bg-neon-green",
-    },
-    magenta: {
-      border: "border-neon-magenta/30",
-      hoverBorder: "hover:border-neon-magenta",
-      glow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-      accent: "border-t-4 border-t-neon-magenta",
-      bg: "bg-neon-magenta",
     },
     cyan: {
       border: "border-neon-cyan/30",
@@ -87,13 +80,11 @@ export function MetricCard({
 }) {
   const colorClasses = {
     green: "text-neon-green",
-    magenta: "text-neon-magenta",
     cyan: "text-neon-cyan",
   };
 
   const glowClasses = {
     green: "text-glow-green",
-    magenta: "text-glow-magenta",
     cyan: "text-glow-cyan",
   };
 
@@ -126,7 +117,6 @@ export function RetroBadge({
 }) {
   const colorClasses = {
     green: "border-neon-green text-neon-green bg-neon-green/10",
-    magenta: "border-neon-magenta text-neon-magenta bg-neon-magenta/10",
     cyan: "border-neon-cyan text-neon-cyan bg-neon-cyan/10",
   };
 
@@ -152,11 +142,6 @@ const featureColorStyles = {
     text: "text-neon-green",
     border: "border-neon-green",
     groupHoverText: "group-hover:text-neon-green",
-  },
-  magenta: {
-    text: "text-neon-magenta",
-    border: "border-neon-magenta",
-    groupHoverText: "group-hover:text-neon-magenta",
   },
   cyan: {
     text: "text-neon-cyan",

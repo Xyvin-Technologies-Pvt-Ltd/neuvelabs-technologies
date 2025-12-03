@@ -54,7 +54,7 @@ export default function AboutPageClient() {
       description:
         "We believe in the power of human potential, creativity, and collaboration.",
       icon: Users,
-      colorClass: "magenta",
+      colorClass: "cyan",
     },
     {
       title: "Integrity",
@@ -101,13 +101,6 @@ export default function AboutPageClient() {
       iconHoverBorder: "group-hover:border-neon-cyan",
       iconHoverShadow: "group-hover:shadow-[0_0_15px_rgba(0,255,255,0.3)]",
       iconHoverText: "group-hover:text-neon-cyan",
-    },
-    magenta: {
-      hoverBorder: "hover:border-neon-magenta",
-      hoverShadow: "hover:shadow-[0_0_20px_rgba(255,0,255,0.3)]",
-      iconHoverBorder: "group-hover:border-neon-magenta",
-      iconHoverShadow: "group-hover:shadow-[0_0_15px_rgba(255,0,255,0.3)]",
-      iconHoverText: "group-hover:text-neon-magenta",
     },
   };
 
@@ -256,7 +249,7 @@ export default function AboutPageClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <RetroBadge color="magenta" className="mb-6">
+            <RetroBadge color="cyan" className="mb-6">
               <Zap className="w-3 h-3" />
               Core Protocols
             </RetroBadge>
@@ -315,7 +308,7 @@ export default function AboutPageClient() {
       {/* Global Presence */}
       <RetroSection variant="grid">
         <FluidShape
-          color="magenta"
+          color="cyan"
           size={400}
           className="top-[-200px] left-[-200px]"
           blur={80}

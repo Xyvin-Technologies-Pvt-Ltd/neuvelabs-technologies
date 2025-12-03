@@ -40,7 +40,7 @@ export default function LanguageSwitcher({ className = "" }) {
         relative w-10 h-10 rounded-full
         flex items-center justify-center
         bg-surface border border-border
-        hover:border-neon-magenta hover:shadow-[0_0_15px_rgba(255,0,255,0.3)]
+        hover:border-neon-cyan hover:shadow-[0_0_15px_rgba(0,255,255,0.3)]
         transition-all duration-300
         ${className}
       `}

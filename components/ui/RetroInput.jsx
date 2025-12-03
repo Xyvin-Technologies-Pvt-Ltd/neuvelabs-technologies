@@ -24,7 +24,7 @@ export default function RetroInput({
           className="block text-xs font-mono font-bold uppercase tracking-widest text-muted mb-3"
         >
           {label}
-          {required && <span className="text-neon-magenta ml-1">*</span>}
+          {required && <span className="text-neon-cyan ml-1">*</span>}
         </label>
       )}
       <div className="relative">
@@ -49,7 +49,7 @@ export default function RetroInput({
               ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
               : "border-border hover:border-muted"
             }
-            ${error ? "border-neon-magenta shadow-[0_0_15px_rgba(255,0,255,0.3)]" : ""}
+            ${error ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]" : ""}
           `}
         />
         {/* Corner accents when focused */}
@@ -61,7 +61,7 @@ export default function RetroInput({
         )}
       </div>
       {error && (
-        <p className="mt-2 text-xs text-neon-magenta font-mono">&gt; {error}</p>
+        <p className="mt-2 text-xs text-neon-cyan font-mono">&gt; {error}</p>
       )}
     </div>
   );
@@ -89,7 +89,7 @@ export function RetroTextarea({
           className="block text-xs font-mono font-bold uppercase tracking-widest text-muted mb-3"
         >
           {label}
-          {required && <span className="text-neon-magenta ml-1">*</span>}
+          {required && <span className="text-neon-cyan ml-1">*</span>}
         </label>
       )}
       <div className="relative">
@@ -114,7 +114,7 @@ export function RetroTextarea({
               ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
               : "border-border hover:border-muted"
             }
-            ${error ? "border-neon-magenta shadow-[0_0_15px_rgba(255,0,255,0.3)]" : ""}
+            ${error ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]" : ""}
           `}
         />
         {/* Corner accents when focused */}
@@ -126,7 +126,7 @@ export function RetroTextarea({
         )}
       </div>
       {error && (
-        <p className="mt-2 text-xs text-neon-magenta font-mono">&gt; {error}</p>
+        <p className="mt-2 text-xs text-neon-cyan font-mono">&gt; {error}</p>
       )}
     </div>
   );

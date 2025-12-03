@@ -139,8 +139,8 @@ export default function Header() {
                       {/* Terminal header decoration */}
                       <div className="col-span-2 flex items-center gap-2 pb-4 mb-4 border-b border-border">
                         <div className="flex gap-1.5">
-                          <div className="w-2.5 h-2.5 rounded-full bg-neon-magenta/60" />
-                          <div className="w-2.5 h-2.5 rounded-full bg-neon-yellow/60" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-neon-cyan/60" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-neon-green/60" />
                           <div className="w-2.5 h-2.5 rounded-full bg-neon-green/60" />
                         </div>
                         <span className="text-xs font-mono text-muted ml-2">

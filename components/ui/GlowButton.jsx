@@ -14,15 +14,6 @@ const colorClasses = {
     primaryHover: "hover:bg-neon-green hover:text-background",
     filledHover: "hover:bg-transparent hover:text-neon-green",
   },
-  magenta: {
-    border: "border-neon-magenta",
-    text: "text-neon-magenta",
-    bg: "bg-neon-magenta",
-    hoverGlow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.5)]",
-    hoverBg: "hover:bg-neon-magenta",
-    primaryHover: "hover:bg-neon-magenta hover:text-background",
-    filledHover: "hover:bg-transparent hover:text-neon-magenta",
-  },
   cyan: {
     border: "border-neon-cyan",
     text: "text-neon-cyan",
@@ -40,7 +31,7 @@ export default function GlowButton({
   onClick,
   type = "button",
   variant = "primary", // primary | secondary | ghost | filled
-  color = "green", // green | magenta | cyan
+  color = "green", // green | cyan
   size = "md", // sm | md | lg
   className = "",
   disabled = false,

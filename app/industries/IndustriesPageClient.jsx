@@ -39,7 +39,7 @@ const industries = [
       "Enhance customer experiences with personalized recommendations, inventory management, and omnichannel solutions.",
     caseStudy: "Built AI-powered recommendation engine for regional e-commerce platform, increasing conversion rates.",
     icon: ShoppingBag,
-    colorKey: "magenta",
+    colorKey: "cyan",
     stats: { value: "35%", label: "Conversion increase" },
   },
   {
@@ -69,7 +69,7 @@ const industries = [
       "Enhance learning experiences with e-learning platforms, student analytics, and educational technology solutions.",
     caseStudy: "Created adaptive learning platform for UAE university, personalizing education for 10,000+ students.",
     icon: GraduationCap,
-    colorKey: "magenta",
+    colorKey: "cyan",
     stats: { value: "25%", label: "Completion rate increase" },
   },
 ];
@@ -91,14 +91,6 @@ const colorStyles = {
     hoverBorder: "hover:border-neon-cyan",
     hoverGlow: "hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]",
     groupHoverText: "group-hover:text-neon-cyan",
-  },
-  magenta: {
-    text: "text-neon-magenta",
-    border: "border-neon-magenta",
-    borderTop: "border-t-neon-magenta",
-    hoverBorder: "hover:border-neon-magenta",
-    hoverGlow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-    groupHoverText: "group-hover:text-neon-magenta",
   },
 };
 

@@ -36,7 +36,7 @@ const insights = [
     date: "2024-01-05",
     category: "Data Analytics",
     slug: "data-driven-decision-making",
-    colorKey: "magenta",
+    colorKey: "cyan",
     featured: false,
   },
   {
@@ -72,14 +72,6 @@ const colorStyles = {
     hoverGlow: "hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]",
     groupHoverText: "group-hover:text-neon-cyan",
   },
-  magenta: {
-    text: "text-neon-magenta",
-    border: "border-neon-magenta",
-    borderLeft: "border-l-neon-magenta",
-    hoverBorder: "hover:border-neon-magenta",
-    hoverGlow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-    groupHoverText: "group-hover:text-neon-magenta",
-  },
 };
 
 export default function InsightsPageClient() {
@@ -91,7 +83,7 @@ export default function InsightsPageClient() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-background">
         <div className="absolute inset-0 grid-background opacity-50" />
-        <CornerGlow position="top-left" color="magenta" />
+        <CornerGlow position="top-left" color="cyan" />
         <CornerGlow position="bottom-right" color="green" />
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -101,7 +93,7 @@ export default function InsightsPageClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <RetroBadge color="magenta" className="mb-8">
+              <RetroBadge color="cyan" className="mb-8">
                 <FileText className="w-3 h-3" />
                 Mission Logs
               </RetroBadge>
@@ -109,7 +101,7 @@ export default function InsightsPageClient() {
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">Latest</span>
                 <br />
-                <span className="text-neon-magenta text-glow-magenta">Insights</span>
+                <span className="text-neon-cyan text-glow-cyan">Insights</span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
@@ -255,7 +247,7 @@ export default function InsightsPageClient() {
               {/* Terminal header */}
               <div className="flex items-center gap-3 mb-8 pb-4 border-b border-border">
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-neon-magenta" />
+                  <div className="w-3 h-3 rounded-full bg-neon-cyan" />
                   <div className="w-3 h-3 rounded-full bg-neon-yellow" />
                   <div className="w-3 h-3 rounded-full bg-neon-green" />
                 </div>

@@ -68,7 +68,7 @@ export default function ChapterContact() {
         opacity={0.15}
       />
       <FluidShape
-        color="magenta"
+        color="cyan"
         size={400}
         className="bottom-[-150px] right-[-150px]"
         blur={60}
@@ -108,8 +108,8 @@ export default function ChapterContact() {
               {/* Terminal header */}
               <div className="flex items-center gap-3 mb-8 pb-4 border-b border-border">
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-neon-magenta/60" />
-                  <div className="w-3 h-3 rounded-full bg-neon-yellow/60" />
+                  <div className="w-3 h-3 rounded-full bg-neon-cyan/60" />
+                  <div className="w-3 h-3 rounded-full bg-neon-green/60" />
                   <div className="w-3 h-3 rounded-full bg-neon-green/60" />
                 </div>
                 <span className="text-xs font-mono text-muted ml-4">
@@ -177,7 +177,7 @@ export default function ChapterContact() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="flex items-center gap-2 text-neon-magenta text-sm font-mono"
+                      className="flex items-center gap-2 text-neon-cyan text-sm font-mono"
                     >
                       <AlertCircle className="w-4 h-4" />
                       {t("form.error")}

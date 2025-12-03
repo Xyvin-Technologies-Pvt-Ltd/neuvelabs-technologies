@@ -31,7 +31,7 @@ const services = [
       "Build robust data pipelines and infrastructure. Transform raw data into actionable insights with modern data architecture.",
     href: "/digital-engineering/data-engineering",
     icon: Database,
-    colorKey: "magenta",
+    colorKey: "cyan",
   },
   {
     title: "Product Engineering",
@@ -55,7 +55,7 @@ const services = [
       "Build robust, scalable enterprise applications tailored to your business needs. Custom software and legacy modernization.",
     href: "/digital-engineering/enterprise-software",
     icon: Code2,
-    colorKey: "magenta",
+    colorKey: "cyan",
   },
 ];
 
@@ -77,14 +77,6 @@ const colorStyles = {
     hoverGlow: "hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]",
     groupHoverText: "group-hover:text-neon-cyan",
   },
-  magenta: {
-    text: "text-neon-magenta",
-    border: "border-neon-magenta",
-    borderTop: "border-t-neon-magenta",
-    hoverBorder: "hover:border-neon-magenta",
-    hoverGlow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-    groupHoverText: "group-hover:text-neon-magenta",
-  },
 };
 
 export default function DigitalEngineeringClient() {
@@ -97,7 +89,7 @@ export default function DigitalEngineeringClient() {
       <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-background">
         <div className="absolute inset-0 grid-background opacity-50" />
         <CornerGlow position="top-left" color="green" />
-        <CornerGlow position="bottom-right" color="magenta" />
+        <CornerGlow position="bottom-right" color="cyan" />
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

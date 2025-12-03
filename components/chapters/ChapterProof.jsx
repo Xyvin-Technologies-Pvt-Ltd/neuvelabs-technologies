@@ -163,7 +163,7 @@ export default function ChapterProof() {
             >
               <Link href={`/insights/${study.slug}`} className="block group h-full">
                 <RetroCard
-                  color={index === 0 ? "magenta" : index === 1 ? "cyan" : "green"}
+                  color={index === 0 ? "cyan" : index === 1 ? "green" : "cyan"}
                   className="p-6 h-full"
                 >
                   <div className="flex items-center gap-2 mb-4">
@@ -180,7 +180,7 @@ export default function ChapterProof() {
                   <div className="flex items-baseline gap-2 mb-4">
                     <span className={`
                       text-2xl font-bold font-mono
-                      ${index === 0 ? 'text-neon-magenta' : index === 1 ? 'text-neon-cyan' : 'text-neon-green'}
+                      ${index === 0 ? 'text-neon-cyan' : index === 1 ? 'text-neon-green' : 'text-neon-cyan'}
                     `}>
                       {study.metrics.primary}
                     </span>

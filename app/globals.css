@@ -30,18 +30,13 @@
   /* Neon Accents - BOLD & BRIGHT */
   --neon-green: #00ff88;
   --neon-green-rgb: 0, 255, 136;
-  --neon-magenta: #ff00ff;
-  --neon-magenta-rgb: 255, 0, 255;
   --neon-cyan: #00ffff;
   --neon-cyan-rgb: 0, 255, 255;
-  --neon-yellow: #ffff00;
-  --neon-orange: #ff6600;
-  --neon-red: #ff0055;
   
   /* Semantic Colors */
   --primary: var(--neon-green);
   --primary-rgb: var(--neon-green-rgb);
-  --secondary: var(--neon-magenta);
+  --secondary: var(--neon-cyan);
   --tertiary: var(--neon-cyan);
   
   /* Card & UI - Darker with Bold Borders */
@@ -56,7 +51,6 @@
   
   /* Shadows & Glows - STRONGER */
   --glow-green: 0 0 30px rgba(0, 255, 136, 0.5), 0 0 60px rgba(0, 255, 136, 0.2);
-  --glow-magenta: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(255, 0, 255, 0.2);
   --glow-cyan: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.2);
   
   /* CRT Effects */
@@ -83,13 +77,8 @@
   /* Adjusted Neon for Light - Still Bold */
   --neon-green: #00aa55;
   --neon-green-rgb: 0, 170, 85;
-  --neon-magenta: #cc00cc;
-  --neon-magenta-rgb: 204, 0, 204;
   --neon-cyan: #0099aa;
   --neon-cyan-rgb: 0, 153, 170;
-  --neon-yellow: #aa8800;
-  --neon-orange: #cc4400;
-  --neon-red: #cc0044;
   
   /* Card & UI */
   --card: #ffffff;
@@ -103,7 +92,6 @@
   
   /* Shadows & Glows */
   --glow-green: 0 0 20px rgba(0, 170, 85, 0.3), 0 0 40px rgba(0, 170, 85, 0.15);
-  --glow-magenta: 0 0 20px rgba(204, 0, 204, 0.3), 0 0 40px rgba(204, 0, 204, 0.15);
   --glow-cyan: 0 0 20px rgba(0, 153, 170, 0.3), 0 0 40px rgba(0, 153, 170, 0.15);
   
   /* CRT Effects - Subtler */
@@ -131,7 +119,6 @@
   --color-muted: var(--foreground-muted);
   --color-border: var(--border);
   --color-neon-green: var(--neon-green);
-  --color-neon-magenta: var(--neon-magenta);
   --color-neon-cyan: var(--neon-cyan);
   --font-sans: var(--font-manrope);
   --font-display: "Goglast", "Orbitron", sans-serif;
@@ -238,10 +225,6 @@ body {
   box-shadow: var(--glow-green);
 }
 
-.glow-magenta {
-  box-shadow: var(--glow-magenta);
-}
-
 .glow-cyan {
   box-shadow: var(--glow-cyan);
 }
@@ -250,12 +233,6 @@ body {
   text-shadow: 0 0 10px rgba(var(--neon-green-rgb), 0.8),
                0 0 30px rgba(var(--neon-green-rgb), 0.5),
                0 0 50px rgba(var(--neon-green-rgb), 0.3);
-}
-
-.text-glow-magenta {
-  text-shadow: 0 0 10px rgba(var(--neon-magenta-rgb), 0.8),
-               0 0 30px rgba(var(--neon-magenta-rgb), 0.5),
-               0 0 50px rgba(var(--neon-magenta-rgb), 0.3);
 }
 
 .text-glow-cyan {
@@ -277,15 +254,6 @@ body {
   box-shadow: var(--glow-green);
 }
 
-.neon-border-magenta {
-  border-color: rgba(var(--neon-magenta-rgb), 0.25);
-}
-
-.neon-border-magenta:hover {
-  border-color: rgba(var(--neon-magenta-rgb), 0.7);
-  box-shadow: var(--glow-magenta);
-}
-
 .neon-border-cyan {
   border-color: rgba(var(--neon-cyan-rgb), 0.25);
 }
@@ -300,10 +268,6 @@ body {
    ============================================ */
 .bg-neon-green-solid {
   background-color: var(--neon-green);
-}
-
-.bg-neon-magenta-solid {
-  background-color: var(--neon-magenta);
 }
 
 .bg-neon-cyan-solid {
@@ -321,13 +285,13 @@ body {
   );
 }
 
-.striped-magenta {
+.striped-cyan {
   background: repeating-linear-gradient(
     -45deg,
     transparent,
     transparent 10px,
-    rgba(var(--neon-magenta-rgb), 0.1) 10px,
-    rgba(var(--neon-magenta-rgb), 0.1) 20px
+    rgba(var(--neon-cyan-rgb), 0.1) 10px,
+    rgba(var(--neon-cyan-rgb), 0.1) 20px
   );
 }
 
@@ -366,10 +330,6 @@ body {
 /* Card with colored top bar */
 .retro-card-accent {
   border-top: 4px solid var(--neon-green);
-}
-
-.retro-card-accent-magenta {
-  border-top: 4px solid var(--neon-magenta);
 }
 
 .retro-card-accent-cyan {
@@ -503,7 +463,7 @@ body {
 
 .glitch:hover::after {
   animation: glitch-2 0.3s linear infinite;
-  color: var(--neon-magenta);
+  color: var(--neon-green);
   z-index: -2;
   opacity: 0.8;
 }

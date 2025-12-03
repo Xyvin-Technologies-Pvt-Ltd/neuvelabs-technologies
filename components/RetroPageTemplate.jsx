@@ -56,7 +56,7 @@ export function RetroHero({
         opacity={0.2}
       />
       <FluidShape
-        color="magenta"
+        color="cyan"
         size={400}
         className="bottom-[-200px] left-[-200px]"
         blur={80}
@@ -132,7 +132,7 @@ export function RetroFeatureGrid({ title, subtitle, badge, features }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const colors = ["green", "cyan", "magenta"];
+  const colors = ["green", "cyan", "green"];
 
   return (
     <RetroSection ref={ref} variant="surface">
@@ -256,7 +256,7 @@ export function RetroUseCases({ title, subtitle, useCases }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <RetroBadge color="magenta" className="mb-6">
+          <RetroBadge color="cyan" className="mb-6">
             Mission Logs
           </RetroBadge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -272,21 +272,21 @@ export function RetroUseCases({ title, subtitle, useCases }) {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-8 rounded bg-card border border-border hover:border-neon-magenta transition-all duration-300 group overflow-hidden"
+              className="relative p-8 rounded bg-card border border-border hover:border-neon-cyan transition-all duration-300 group overflow-hidden"
             >
               {/* Index number */}
-              <div className="absolute top-4 right-4 font-mono text-6xl font-bold text-border group-hover:text-neon-magenta/20 transition-colors">
+              <div className="absolute top-4 right-4 font-mono text-6xl font-bold text-border group-hover:text-neon-cyan/20 transition-colors">
                 {String(index + 1).padStart(2, "0")}
               </div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-neon-magenta transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-neon-cyan transition-colors">
                   {useCase.title}
                 </h3>
                 <p className="text-muted leading-relaxed mb-6">
                   {useCase.description}
                 </p>
-                <div className="flex items-center gap-2 text-sm font-mono text-muted group-hover:text-neon-magenta transition-colors">
+                <div className="flex items-center gap-2 text-sm font-mono text-muted group-hover:text-neon-cyan transition-colors">
                   <span>Access log</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -304,7 +304,7 @@ export function RetroStats({ stats }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const colors = ["green", "cyan", "magenta", "green"];
+  const colors = ["green", "cyan", "green", "cyan"];
 
   return (
     <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-4">

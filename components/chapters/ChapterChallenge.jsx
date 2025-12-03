@@ -26,7 +26,7 @@ const industryIcons = {
   "Healthcare": HeartPulse,
 };
 
-const cardColors = ["green", "magenta", "cyan", "green", "magenta", "cyan"];
+const cardColors = ["green", "cyan", "green", "cyan", "green", "cyan"];
 
 export default function ChapterChallenge() {
   const t = useTranslations("challenge");
@@ -50,7 +50,7 @@ export default function ChapterChallenge() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <RetroBadge color="magenta" className="mb-6">
+          <RetroBadge color="cyan" className="mb-6">
             {t("badge")}
           </RetroBadge>
           
@@ -88,7 +88,6 @@ export default function ChapterChallenge() {
                       <div className={`
                         p-3 rounded bg-background/50
                         ${color === 'green' ? 'text-neon-green' : ''}
-                        ${color === 'magenta' ? 'text-neon-magenta' : ''}
                         ${color === 'cyan' ? 'text-neon-cyan' : ''}
                       `}>
                         <Icon className="w-6 h-6" />
@@ -103,7 +102,6 @@ export default function ChapterChallenge() {
                         <div className={`
                           text-sm font-mono
                           ${color === 'green' ? 'text-neon-green' : ''}
-                          ${color === 'magenta' ? 'text-neon-magenta' : ''}
                           ${color === 'cyan' ? 'text-neon-cyan' : ''}
                         `}>
                           → {story.outcome}
@@ -140,7 +138,6 @@ export default function ChapterChallenge() {
                         <div className={`
                           p-3 rounded bg-background/50 w-fit
                           ${color === 'green' ? 'text-neon-green' : ''}
-                          ${color === 'magenta' ? 'text-neon-magenta' : ''}
                           ${color === 'cyan' ? 'text-neon-cyan' : ''}
                         `}>
                           <Icon className="w-6 h-6" />
@@ -155,7 +152,6 @@ export default function ChapterChallenge() {
                           <div className={`
                             text-sm font-mono
                             ${color === 'green' ? 'text-neon-green' : ''}
-                            ${color === 'magenta' ? 'text-neon-magenta' : ''}
                             ${color === 'cyan' ? 'text-neon-cyan' : ''}
                           `}>
                             → {story.outcome}

@@ -31,16 +31,6 @@ const colorStyles = {
     hoverShadow: "hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]",
     groupHoverText: "group-hover:text-neon-cyan",
   },
-  magenta: {
-    text: "text-neon-magenta",
-    glow: "text-glow-magenta",
-    border: "border-neon-magenta",
-    borderTop: "border-t-neon-magenta",
-    shadow: "shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-    hoverBorder: "hover:border-neon-magenta",
-    hoverShadow: "hover:shadow-[0_0_30px_rgba(255,0,255,0.4)]",
-    groupHoverText: "group-hover:text-neon-magenta",
-  },
 };
 
 export default function ServicePageTemplate({
@@ -52,7 +42,7 @@ export default function ServicePageTemplate({
   benefits,
   showcaseImages = [],
   useCases,
-  accentColor = "green", // green | cyan | magenta
+  accentColor = "green", // green | cyan
 }) {
   const featuresRef = useRef(null);
   const benefitsRef = useRef(null);
@@ -62,7 +52,7 @@ export default function ServicePageTemplate({
   const useCasesInView = useInView(useCasesRef, { once: true, margin: "-100px" });
 
   const colors = colorStyles[accentColor];
-  const featureColors = ["green", "cyan", "magenta"];
+  const featureColors = ["green", "cyan", "green"];
 
   return (
     <>
@@ -234,7 +224,7 @@ export default function ServicePageTemplate({
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <RetroBadge color="magenta" className="mb-6">
+              <RetroBadge color="cyan" className="mb-6">
                 <Target className="w-3 h-3" />
                 Mission Logs
               </RetroBadge>
@@ -253,19 +243,19 @@ export default function ServicePageTemplate({
                   initial={{ opacity: 0, y: 30 }}
                   animate={useCasesInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative p-8 bg-card border-2 border-border hover:border-neon-magenta hover:shadow-[0_0_30px_rgba(255,0,255,0.3)] transition-all duration-300 group overflow-hidden"
+                  className="relative p-8 bg-card border-2 border-border hover:border-neon-cyan hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] transition-all duration-300 group overflow-hidden"
                 >
                   {/* Index number */}
-                  <div className="absolute top-4 right-4 font-mono text-6xl font-bold text-border group-hover:text-neon-magenta/20 transition-colors">
+                  <div className="absolute top-4 right-4 font-mono text-6xl font-bold text-border group-hover:text-neon-cyan/20 transition-colors">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-neon-magenta transition-colors">
+                    <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-neon-cyan transition-colors">
                       {useCase.title}
                     </h3>
                     <p className="text-muted leading-relaxed mb-6">{useCase.description}</p>
-                    <div className="flex items-center gap-2 text-sm font-mono text-muted group-hover:text-neon-magenta transition-colors">
+                    <div className="flex items-center gap-2 text-sm font-mono text-muted group-hover:text-neon-cyan transition-colors">
                       <span>Access log</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
