@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "Neuve Labs Technology",
+    "description": "Where extraordinary minds shape the future of technology"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "insights": "Insights",
+    "contact": "Contact",
+    "digitalEngineering": "Digital Engineering",
+    "specialistServices": "Specialist Services",
+    "industries": "Industries"
+  },
+  "hero": {
+    "preTitle": "Initializing transmission...",
+    "title": "The future isn't coming.",
+    "titleHighlight": "It's already here.",
+    "subtitle": "We don't just build technology. We engineer tomorrow's possibilities today.",
+    "scrollIndicator": "Enter the future",
+    "cta": "Begin transmission"
+  },
+  "challenge": {
+    "badge": "Transmission Log",
+    "title": "The Challenges",
+    "subtitle": "Industries facing the storm of digital transformation",
+    "viewAll": "View all case files"
+  },
+  "vision": {
+    "badge": "Technologies Unlocked",
+    "title": "The Vision",
+    "subtitle": "Our constellation of solutions powering tomorrow's enterprises",
+    "explore": "Explore technology"
+  },
+  "proof": {
+    "badge": "Mission Logs",
+    "title": "Proof of Transmission",
+    "subtitle": "Verified transformations across industries",
+    "readMore": "Access full log",
+    "metrics": {
+      "improvement": "improvement",
+      "reduction": "reduction",
+      "increase": "increase"
+    }
+  },
+  "contact": {
+    "badge": "Open Channel",
+    "title": "Join the Future",
+    "subtitle": "Ready to transform your digital landscape?",
+    "form": {
+      "name": "Your designation",
+      "email": "Communication frequency",
+      "company": "Organization",
+      "message": "Transmission content",
+      "submit": "Transmit message",
+      "sending": "Transmitting...",
+      "success": "Transmission successful",
+      "error": "Transmission failed. Retry?"
+    }
+  },
+  "footer": {
+    "tagline": "Engineering the future, one transmission at a time.",
+    "copyright": "All rights reserved.",
+    "links": {
+      "privacy": "Privacy Protocol",
+      "terms": "Terms of Service",
+      "careers": "Join the Crew"
+    }
+  },
+  "services": {
+    "aiEngineering": {
+      "title": "AI Engineering",
+      "description": "Machine learning systems that think beyond boundaries"
+    },
+    "cloudEngineering": {
+      "title": "Cloud Engineering",
+      "description": "Infinite scale infrastructure for limitless ambition"
+    },
+    "dataEngineering": {
+      "title": "Data Engineering",
+      "description": "Transform raw signals into strategic intelligence"
+    },
+    "productEngineering": {
+      "title": "Product Engineering",
+      "description": "Build experiences that define the next generation"
+    },
+    "cyberSecurity": {
+      "title": "Cyber Security",
+      "description": "Fortress-grade protection for your digital assets"
+    },
+    "processAutomation": {
+      "title": "Process Automation",
+      "description": "Streamline operations with intelligent workflows"
+    }
+  },
+  "industries": {
+    "retail": "Retail",
+    "finance": "Financial Services",
+    "healthcare": "Healthcare",
+    "transport": "Transport",
+    "manufacturing": "Manufacturing",
+    "energy": "Energy"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "back": "Go back",
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "switch": "Switch language",
+    "en": "English",
+    "ar": "العربية"
+  }
+}
+
