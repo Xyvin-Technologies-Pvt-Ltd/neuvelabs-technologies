@@ -32,19 +32,40 @@ export default function Header() {
           title: t("digitalEngineering"),
           href: "/digital-engineering",
           items: [
-            { name: "AI & Machine Learning", href: "/digital-engineering/ai-ml" },
-            { name: "Cloud & DevOps", href: "/digital-engineering/cloud-devops" },
-            { name: "Data Analytics", href: "/digital-engineering/data-analytics" },
-            { name: "Product Engineering", href: "/digital-engineering/product-engineering" },
+            {
+              name: "AI & Machine Learning",
+              href: "/digital-engineering/ai-ml",
+            },
+            {
+              name: "Cloud & DevOps",
+              href: "/digital-engineering/cloud-devops",
+            },
+            {
+              name: "Data Analytics",
+              href: "/digital-engineering/data-analytics",
+            },
+            {
+              name: "Product Engineering",
+              href: "/digital-engineering/product-engineering",
+            },
           ],
         },
         {
           title: t("specialistServices"),
           href: "/specialist-services",
           items: [
-            { name: "Cyber Security", href: "/specialist-services/cyber-security" },
-            { name: "AI Engineering", href: "/specialist-services/ai-engineering" },
-            { name: "Process Automation", href: "/specialist-services/process-automation" },
+            {
+              name: "Cyber Security",
+              href: "/specialist-services/cyber-security",
+            },
+            {
+              name: "AI Engineering",
+              href: "/specialist-services/ai-engineering",
+            },
+            {
+              name: "Process Automation",
+              href: "/specialist-services/process-automation",
+            },
           ],
         },
       ],

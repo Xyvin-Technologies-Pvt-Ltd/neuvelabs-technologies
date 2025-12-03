@@ -20,15 +20,15 @@ export default function LanguageSwitcher({ className = "" }) {
   const handleToggle = () => {
     toggleLocale();
     // Set cookie for server-side detection
-    document.cookie = `NEXT_LOCALE=${locale === 'en' ? 'ar' : 'en'}; path=/; max-age=31536000`;
+    document.cookie = `NEXT_LOCALE=${
+      locale === "en" ? "ar" : "en"
+    }; path=/; max-age=31536000`;
     // Refresh to apply new locale
     router.refresh();
   };
 
   if (!mounted) {
-    return (
-      <div className={`w-10 h-10 rounded-full bg-surface ${className}`} />
-    );
+    return <div className={`w-10 h-10 rounded-full bg-surface ${className}`} />;
   }
 
   return (
@@ -44,7 +44,7 @@ export default function LanguageSwitcher({ className = "" }) {
         transition-all duration-300
         ${className}
       `}
-      aria-label={`Switch to ${locale === 'en' ? 'Arabic' : 'English'}`}
+      aria-label={`Switch to ${locale === "en" ? "Arabic" : "English"}`}
     >
       <span className="font-mono text-xs font-bold">
         {locale === "en" ? "AR" : "EN"}
@@ -80,9 +80,10 @@ export function LanguageSwitcherExpanded({ className = "" }) {
         className={`
           px-2 py-1 text-xs font-mono uppercase
           border transition-all duration-300
-          ${locale === "en"
-            ? "border-neon-green text-neon-green shadow-[0_0_10px_rgba(0,255,136,0.3)]"
-            : "border-border text-muted hover:border-neon-green hover:text-foreground"
+          ${
+            locale === "en"
+              ? "border-neon-green text-neon-green shadow-[0_0_10px_rgba(0,255,136,0.3)]"
+              : "border-border text-muted hover:border-neon-green hover:text-foreground"
           }
         `}
       >
@@ -93,9 +94,10 @@ export function LanguageSwitcherExpanded({ className = "" }) {
         className={`
           px-2 py-1 text-xs font-mono
           border transition-all duration-300
-          ${locale === "ar"
-            ? "border-neon-green text-neon-green shadow-[0_0_10px_rgba(0,255,136,0.3)]"
-            : "border-border text-muted hover:border-neon-green hover:text-foreground"
+          ${
+            locale === "ar"
+              ? "border-neon-green text-neon-green shadow-[0_0_10px_rgba(0,255,136,0.3)]"
+              : "border-border text-muted hover:border-neon-green hover:text-foreground"
           }
         `}
       >
@@ -104,4 +106,3 @@ export function LanguageSwitcherExpanded({ className = "" }) {
     </div>
   );
 }
-

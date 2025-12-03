@@ -3,9 +3,15 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { 
-  Stethoscope, Building2, ShoppingBag, Factory, Home, GraduationCap, 
-  ArrowRight, Layers 
+import {
+  Stethoscope,
+  Building2,
+  ShoppingBag,
+  Factory,
+  Home,
+  GraduationCap,
+  ArrowRight,
+  Layers,
 } from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
@@ -17,7 +23,8 @@ const industries = [
     slug: "healthcare",
     description:
       "Transform patient care with AI-powered diagnostics, telemedicine platforms, and healthcare data analytics solutions.",
-    caseStudy: "Implemented AI-driven patient management system for leading UAE hospital network, reducing wait times by 40%.",
+    caseStudy:
+      "Implemented AI-driven patient management system for leading UAE hospital network, reducing wait times by 40%.",
     icon: Stethoscope,
     colorKey: "green",
     stats: { value: "40%", label: "Wait time reduction" },
@@ -27,7 +34,8 @@ const industries = [
     slug: "finance-banking",
     description:
       "Secure, compliant financial technology solutions including fraud detection, risk analytics, and digital banking platforms.",
-    caseStudy: "Deployed real-time fraud detection system for major UAE bank, processing 2M+ transactions daily.",
+    caseStudy:
+      "Deployed real-time fraud detection system for major UAE bank, processing 2M+ transactions daily.",
     icon: Building2,
     colorKey: "cyan",
     stats: { value: "99.9%", label: "Detection accuracy" },
@@ -37,7 +45,8 @@ const industries = [
     slug: "retail-ecommerce",
     description:
       "Enhance customer experiences with personalized recommendations, inventory management, and omnichannel solutions.",
-    caseStudy: "Built AI-powered recommendation engine for regional e-commerce platform, increasing conversion rates.",
+    caseStudy:
+      "Built AI-powered recommendation engine for regional e-commerce platform, increasing conversion rates.",
     icon: ShoppingBag,
     colorKey: "cyan",
     stats: { value: "35%", label: "Conversion increase" },
@@ -47,7 +56,8 @@ const industries = [
     slug: "manufacturing",
     description:
       "Optimize operations with IoT integration, predictive maintenance, and supply chain automation solutions.",
-    caseStudy: "Delivered predictive maintenance platform for JAFZA manufacturing facility.",
+    caseStudy:
+      "Delivered predictive maintenance platform for JAFZA manufacturing facility.",
     icon: Factory,
     colorKey: "green",
     stats: { value: "60%", label: "Downtime reduction" },
@@ -57,7 +67,8 @@ const industries = [
     slug: "real-estate",
     description:
       "Modernize property management with smart building solutions, virtual tours, and real estate analytics platforms.",
-    caseStudy: "Developed smart building management system for Dubai Marina property.",
+    caseStudy:
+      "Developed smart building management system for Dubai Marina property.",
     icon: Home,
     colorKey: "cyan",
     stats: { value: "30%", label: "Energy savings" },
@@ -67,7 +78,8 @@ const industries = [
     slug: "education",
     description:
       "Enhance learning experiences with e-learning platforms, student analytics, and educational technology solutions.",
-    caseStudy: "Created adaptive learning platform for UAE university, personalizing education for 10,000+ students.",
+    caseStudy:
+      "Created adaptive learning platform for UAE university, personalizing education for 10,000+ students.",
     icon: GraduationCap,
     colorKey: "cyan",
     stats: { value: "25%", label: "Completion rate increase" },
@@ -121,13 +133,15 @@ export default function IndustriesPageClient() {
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">Industries We</span>
                 <br />
-                <span className="text-neon-green text-glow-green">Transform</span>
+                <span className="text-neon-green text-glow-green">
+                  Transform
+                </span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                We deliver industry-specific technology solutions that understand your unique
-                challenges and regulatory requirements. Explore our proven track record across key
-                sectors.
+                We deliver industry-specific technology solutions that
+                understand your unique challenges and regulatory requirements.
+                Explore our proven track record across key sectors.
               </p>
             </motion.div>
           </div>
@@ -135,7 +149,10 @@ export default function IndustriesPageClient() {
       </section>
 
       {/* Industries Grid */}
-      <section ref={gridRef} className="py-24 bg-surface border-y-2 border-border">
+      <section
+        ref={gridRef}
+        className="py-24 bg-surface border-y-2 border-border"
+      >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => {
@@ -159,16 +176,20 @@ export default function IndustriesPageClient() {
                     `}
                   >
                     {/* Icon */}
-                    <div className={`
+                    <div
+                      className={`
                       w-14 h-14 mb-6 border-2 ${styles.border}
                       flex items-center justify-center
                       transition-all duration-300
-                    `}>
+                    `}
+                    >
                       <Icon className={`w-7 h-7 ${styles.text}`} />
                     </div>
 
                     {/* Title & Description */}
-                    <h2 className={`text-xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}>
+                    <h2
+                      className={`text-xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}
+                    >
                       {industry.title}
                     </h2>
                     <p className="text-muted text-sm leading-relaxed mb-6">
@@ -177,7 +198,9 @@ export default function IndustriesPageClient() {
 
                     {/* Stats */}
                     <div className="mb-6 p-4 bg-background border-2 border-border">
-                      <div className={`text-3xl font-bold font-mono ${styles.text}`}>
+                      <div
+                        className={`text-3xl font-bold font-mono ${styles.text}`}
+                      >
                         {industry.stats.value}
                       </div>
                       <div className="text-xs text-muted uppercase tracking-wider">
@@ -187,13 +210,17 @@ export default function IndustriesPageClient() {
 
                     {/* Case Study */}
                     <div className="pt-6 border-t-2 border-border">
-                      <div className={`text-xs font-mono font-bold ${styles.text} uppercase tracking-wider mb-2`}>
+                      <div
+                        className={`text-xs font-mono font-bold ${styles.text} uppercase tracking-wider mb-2`}
+                      >
                         &gt; Case Study
                       </div>
                       <p className="text-muted text-xs leading-relaxed mb-4">
                         {industry.caseStudy}
                       </p>
-                      <div className={`flex items-center gap-2 text-xs font-mono ${styles.text} group-hover:translate-x-2 transition-transform`}>
+                      <div
+                        className={`flex items-center gap-2 text-xs font-mono ${styles.text} group-hover:translate-x-2 transition-transform`}
+                      >
                         Access Sector Data
                         <ArrowRight className="w-3 h-3" />
                       </div>

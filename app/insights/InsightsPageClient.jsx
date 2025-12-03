@@ -40,7 +40,8 @@ const insights = [
     featured: false,
   },
   {
-    title: "Digital Transformation in the Middle East: Opportunities and Challenges",
+    title:
+      "Digital Transformation in the Middle East: Opportunities and Challenges",
     description:
       "An analysis of the digital transformation landscape in the Middle East, highlighting opportunities and addressing common challenges.",
     date: "2023-12-20",
@@ -105,8 +106,9 @@ export default function InsightsPageClient() {
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                Data-rich analysis, playbooks, and perspectives from our consultants working with
-                government entities, banking leaders, and innovators.
+                Data-rich analysis, playbooks, and perspectives from our
+                consultants working with government entities, banking leaders,
+                and innovators.
               </p>
             </motion.div>
           </div>
@@ -114,7 +116,10 @@ export default function InsightsPageClient() {
       </section>
 
       {/* Featured Insights */}
-      <section ref={gridRef} className="py-24 bg-surface border-y-2 border-border">
+      <section
+        ref={gridRef}
+        className="py-24 bg-surface border-y-2 border-border"
+      >
         <div className="container mx-auto px-6 lg:px-8">
           {/* Featured Grid */}
           <div className="grid lg:grid-cols-2 gap-6 mb-12">
@@ -139,7 +144,9 @@ export default function InsightsPageClient() {
                   >
                     {/* Meta */}
                     <div className="flex flex-wrap items-center gap-4 text-sm mb-6">
-                      <span className={`px-3 py-1 border-2 ${styles.border} ${styles.text} font-mono text-xs uppercase`}>
+                      <span
+                        className={`px-3 py-1 border-2 ${styles.border} ${styles.text} font-mono text-xs uppercase`}
+                      >
                         {insight.category}
                       </span>
                       <span className="flex items-center gap-2 text-muted font-mono text-xs">
@@ -153,7 +160,9 @@ export default function InsightsPageClient() {
                     </div>
 
                     {/* Title */}
-                    <h2 className={`text-2xl md:text-3xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}>
+                    <h2
+                      className={`text-2xl md:text-3xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}
+                    >
                       {insight.title}
                     </h2>
 
@@ -163,7 +172,9 @@ export default function InsightsPageClient() {
                     </p>
 
                     {/* CTA */}
-                    <div className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}>
+                    <div
+                      className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
+                    >
                       Access Full Log
                       <ArrowRight className="w-4 h-4" />
                     </div>
@@ -195,7 +206,9 @@ export default function InsightsPageClient() {
                   >
                     {/* Meta */}
                     <div className="flex flex-wrap items-center gap-3 text-xs mb-4">
-                      <span className={`px-2 py-1 border-2 ${styles.border} ${styles.text} font-mono uppercase`}>
+                      <span
+                        className={`px-2 py-1 border-2 ${styles.border} ${styles.text} font-mono uppercase`}
+                      >
                         {insight.category}
                       </span>
                       <span className="text-muted font-mono">
@@ -208,7 +221,9 @@ export default function InsightsPageClient() {
                     </div>
 
                     {/* Title */}
-                    <h3 className={`text-xl font-bold text-foreground mb-3 ${styles.groupHoverText} transition-colors`}>
+                    <h3
+                      className={`text-xl font-bold text-foreground mb-3 ${styles.groupHoverText} transition-colors`}
+                    >
                       {insight.title}
                     </h3>
 
@@ -218,7 +233,9 @@ export default function InsightsPageClient() {
                     </p>
 
                     {/* CTA */}
-                    <div className={`flex items-center gap-2 font-mono text-xs ${styles.text} group-hover:translate-x-2 transition-transform`}>
+                    <div
+                      className={`flex items-center gap-2 font-mono text-xs ${styles.text} group-hover:translate-x-2 transition-transform`}
+                    >
                       Read Article
                       <ArrowRight className="w-3 h-3" />
                     </div>
@@ -266,8 +283,8 @@ export default function InsightsPageClient() {
                   Insights Delivered to Your Inbox
                 </h2>
                 <p className="text-muted mb-8">
-                  Subscribe for strategic updates on AI, cyber security, and automation shaping
-                  the UAE & GCC technology landscape.
+                  Subscribe for strategic updates on AI, cyber security, and
+                  automation shaping the UAE & GCC technology landscape.
                 </p>
 
                 <form className="flex flex-col sm:flex-row gap-4">

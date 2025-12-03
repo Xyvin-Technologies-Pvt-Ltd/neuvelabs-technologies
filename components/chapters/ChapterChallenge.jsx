@@ -5,25 +5,25 @@ import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import RetroCard, { RetroBadge } from "@/components/ui/RetroCard";
 import { industryStories } from "@/lib/caseStudiesData";
-import { 
-  Radio, 
-  CreditCard, 
-  Car, 
-  HeartPulse, 
+import {
+  Radio,
+  CreditCard,
+  Car,
+  HeartPulse,
   Users,
   GraduationCap,
   AlertTriangle,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
 const industryIcons = {
-  "Telecommunications": Radio,
-  "Transport": Car,
+  Telecommunications: Radio,
+  Transport: Car,
   "Financial Services": CreditCard,
-  "Community": Users,
-  "Education": GraduationCap,
-  "Healthcare": HeartPulse,
+  Community: Users,
+  Education: GraduationCap,
+  Healthcare: HeartPulse,
 };
 
 const cardColors = ["green", "cyan", "green", "cyan", "green", "cyan"];
@@ -34,14 +34,14 @@ export default function ChapterChallenge() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section 
+    <section
       id="challenges"
       ref={ref}
       className="relative py-32 bg-surface overflow-hidden"
     >
       {/* Background grid */}
       <div className="absolute inset-0 grid-background opacity-30" />
-      
+
       {/* Section header */}
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
@@ -53,11 +53,11 @@ export default function ChapterChallenge() {
           <RetroBadge color="cyan" className="mb-6">
             {t("badge")}
           </RetroBadge>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-foreground">{t("title")}</span>
           </h2>
-          
+
           <p className="text-lg text-muted max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
@@ -70,7 +70,7 @@ export default function ChapterChallenge() {
             {industryStories.map((story, index) => {
               const Icon = industryIcons[story.industry] || AlertTriangle;
               const color = cardColors[index % cardColors.length];
-              
+
               return (
                 <motion.div
                   key={story.industry}
@@ -82,14 +82,18 @@ export default function ChapterChallenge() {
                     color={color}
                     variant="scanlines"
                     className="p-6 h-full"
-                    href={`/industries/${story.industry.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/industries/${story.industry
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`
+                      <div
+                        className={`
                         p-3 rounded bg-background/50
-                        ${color === 'green' ? 'text-neon-green' : ''}
-                        ${color === 'cyan' ? 'text-neon-cyan' : ''}
-                      `}>
+                        ${color === "green" ? "text-neon-green" : ""}
+                        ${color === "cyan" ? "text-neon-cyan" : ""}
+                      `}
+                      >
                         <Icon className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
@@ -99,11 +103,13 @@ export default function ChapterChallenge() {
                         <h3 className="text-lg font-semibold text-foreground mb-3 leading-tight">
                           {story.challenge}
                         </h3>
-                        <div className={`
+                        <div
+                          className={`
                           text-sm font-mono
-                          ${color === 'green' ? 'text-neon-green' : ''}
-                          ${color === 'cyan' ? 'text-neon-cyan' : ''}
-                        `}>
+                          ${color === "green" ? "text-neon-green" : ""}
+                          ${color === "cyan" ? "text-neon-cyan" : ""}
+                        `}
+                        >
                           → {story.outcome}
                         </div>
                       </div>
@@ -120,7 +126,7 @@ export default function ChapterChallenge() {
               {industryStories.map((story, index) => {
                 const Icon = industryIcons[story.industry] || AlertTriangle;
                 const color = cardColors[index % cardColors.length];
-                
+
                 return (
                   <motion.div
                     key={story.industry}
@@ -135,11 +141,13 @@ export default function ChapterChallenge() {
                       className="p-6 h-full"
                     >
                       <div className="flex flex-col gap-4">
-                        <div className={`
+                        <div
+                          className={`
                           p-3 rounded bg-background/50 w-fit
-                          ${color === 'green' ? 'text-neon-green' : ''}
-                          ${color === 'cyan' ? 'text-neon-cyan' : ''}
-                        `}>
+                          ${color === "green" ? "text-neon-green" : ""}
+                          ${color === "cyan" ? "text-neon-cyan" : ""}
+                        `}
+                        >
                           <Icon className="w-6 h-6" />
                         </div>
                         <div>
@@ -149,11 +157,13 @@ export default function ChapterChallenge() {
                           <h3 className="text-lg font-semibold text-foreground mb-3">
                             {story.challenge}
                           </h3>
-                          <div className={`
+                          <div
+                            className={`
                             text-sm font-mono
-                            ${color === 'green' ? 'text-neon-green' : ''}
-                            ${color === 'cyan' ? 'text-neon-cyan' : ''}
-                          `}>
+                            ${color === "green" ? "text-neon-green" : ""}
+                            ${color === "cyan" ? "text-neon-cyan" : ""}
+                          `}
+                          >
                             → {story.outcome}
                           </div>
                         </div>
@@ -185,4 +195,3 @@ export default function ChapterChallenge() {
     </section>
   );
 }
-

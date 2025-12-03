@@ -3,7 +3,18 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { Shield, Cpu, Settings, Layers, CheckCircle2, Terminal, Brain, Workflow, ArrowRight, Zap } from "lucide-react";
+import {
+  Shield,
+  Cpu,
+  Settings,
+  Layers,
+  CheckCircle2,
+  Terminal,
+  Brain,
+  Workflow,
+  ArrowRight,
+  Zap,
+} from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
 import FluidShape from "@/components/ui/FluidShape";
@@ -97,8 +108,8 @@ export default function SpecialistServicesClient() {
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                Expert consulting engineered for innovation and measurable impact. We combine deep
-                industry insight with engineering rigor.
+                Expert consulting engineered for innovation and measurable
+                impact. We combine deep industry insight with engineering rigor.
               </p>
             </motion.div>
           </div>
@@ -106,7 +117,10 @@ export default function SpecialistServicesClient() {
       </section>
 
       {/* Services Grid */}
-      <section ref={gridRef} className="py-24 bg-surface border-y-2 border-border">
+      <section
+        ref={gridRef}
+        className="py-24 bg-surface border-y-2 border-border"
+      >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service, index) => {
@@ -130,16 +144,20 @@ export default function SpecialistServicesClient() {
                     `}
                   >
                     {/* Icon */}
-                    <div className={`
+                    <div
+                      className={`
                       w-16 h-16 mb-6 border-2 ${styles.border}
                       flex items-center justify-center
                       transition-all duration-300
-                    `}>
+                    `}
+                    >
                       <Icon className={`w-8 h-8 ${styles.text}`} />
                     </div>
 
                     {/* Title & Description */}
-                    <h2 className={`text-2xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}>
+                    <h2
+                      className={`text-2xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}
+                    >
                       {service.title}
                     </h2>
                     <p className="text-muted leading-relaxed mb-6">
@@ -147,7 +165,9 @@ export default function SpecialistServicesClient() {
                     </p>
 
                     {/* CTA */}
-                    <div className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}>
+                    <div
+                      className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4" />
                     </div>
@@ -160,9 +180,18 @@ export default function SpecialistServicesClient() {
       </section>
 
       {/* Why Choose Us */}
-      <section ref={whyRef} className="py-24 bg-background relative overflow-hidden">
+      <section
+        ref={whyRef}
+        className="py-24 bg-background relative overflow-hidden"
+      >
         <div className="absolute inset-0 grid-background opacity-30" />
-        <FluidShape color="cyan" size={400} className="top-[-200px] left-[-200px]" blur={100} opacity={0.15} />
+        <FluidShape
+          color="cyan"
+          size={400}
+          className="top-[-200px] left-[-200px]"
+          blur={100}
+          opacity={0.15}
+        />
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -178,13 +207,15 @@ export default function SpecialistServicesClient() {
 
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Strategic specialists with{" "}
-                <span className="text-neon-cyan">local market intelligence</span>
+                <span className="text-neon-cyan">
+                  local market intelligence
+                </span>
               </h2>
 
               <p className="text-muted text-lg leading-relaxed mb-8">
-                From enterprise-grade automation to security strategy and AI delivery, our teams
-                translate boardroom priorities into engineered solutions aligned with UAE Vision
-                2031.
+                From enterprise-grade automation to security strategy and AI
+                delivery, our teams translate boardroom priorities into
+                engineered solutions aligned with UAE Vision 2031.
               </p>
 
               <div className="space-y-6">
@@ -232,15 +263,24 @@ export default function SpecialistServicesClient() {
                   <div className="w-3 h-3 rounded-full bg-neon-yellow" />
                   <div className="w-3 h-3 rounded-full bg-neon-green" />
                 </div>
-                <span className="text-xs font-mono text-muted ml-4">focus_areas.txt</span>
+                <span className="text-xs font-mono text-muted ml-4">
+                  focus_areas.txt
+                </span>
               </div>
 
-              <h3 className="text-xl font-bold text-foreground mb-6">Focus Areas</h3>
+              <h3 className="text-xl font-bold text-foreground mb-6">
+                Focus Areas
+              </h3>
               <ul className="space-y-4">
                 {focusAreas.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted group">
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-muted group"
+                  >
                     <span className="text-neon-green font-mono">&gt;</span>
-                    <span className="group-hover:text-foreground transition-colors">{item}</span>
+                    <span className="group-hover:text-foreground transition-colors">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>

@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Get featured case studies
-const featuredCases = caseStudies.filter(c => c.featured).slice(0, 4);
+const featuredCases = caseStudies.filter((c) => c.featured).slice(0, 4);
 
 export default function ChapterProof() {
   const t = useTranslations("proof");
@@ -19,13 +19,10 @@ export default function ChapterProof() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      ref={ref}
-      className="relative py-32 bg-surface overflow-hidden"
-    >
+    <section ref={ref} className="relative py-32 bg-surface overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 grid-background opacity-20" />
-      
+
       {/* Diagonal accent line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-green/30 to-transparent" />
 
@@ -47,11 +44,9 @@ export default function ChapterProof() {
               <h2 className="text-4xl md:text-6xl font-bold mb-4">
                 <span className="text-foreground">{t("title")}</span>
               </h2>
-              <p className="text-lg text-muted max-w-2xl">
-                {t("subtitle")}
-              </p>
+              <p className="text-lg text-muted max-w-2xl">{t("subtitle")}</p>
             </div>
-            
+
             <GlowButton
               href="/insights"
               variant="secondary"
@@ -161,7 +156,10 @@ export default function ChapterProof() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
             >
-              <Link href={`/insights/${study.slug}`} className="block group h-full">
+              <Link
+                href={`/insights/${study.slug}`}
+                className="block group h-full"
+              >
                 <RetroCard
                   color={index === 0 ? "cyan" : index === 1 ? "green" : "cyan"}
                   className="p-6 h-full"
@@ -178,10 +176,18 @@ export default function ChapterProof() {
                   </h3>
 
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className={`
+                    <span
+                      className={`
                       text-2xl font-bold font-mono
-                      ${index === 0 ? 'text-neon-cyan' : index === 1 ? 'text-neon-green' : 'text-neon-cyan'}
-                    `}>
+                      ${
+                        index === 0
+                          ? "text-neon-cyan"
+                          : index === 1
+                          ? "text-neon-green"
+                          : "text-neon-cyan"
+                      }
+                    `}
+                    >
                       {study.metrics.primary}
                     </span>
                     <span className="text-xs text-muted">
@@ -202,4 +208,3 @@ export default function ChapterProof() {
     </section>
   );
 }
-

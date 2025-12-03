@@ -39,7 +39,11 @@ export default function RetroCard({
     relative bg-card
     transition-all duration-300
     ${variants[variant]}
-    ${hoverable ? `${colorStyles[color].hoverBorder} ${colorStyles[color].glow} hover:-translate-y-1` : ""}
+    ${
+      hoverable
+        ? `${colorStyles[color].hoverBorder} ${colorStyles[color].glow} hover:-translate-y-1`
+        : ""
+    }
     ${className}
   `;
 
@@ -92,12 +96,12 @@ export function MetricCard({
     <RetroCard color={color} variant="accent" className={`p-6 ${className}`}>
       <div className="flex items-start gap-4 relative z-10">
         {icon && (
-          <div className={`${colorClasses[color]} opacity-60`}>
-            {icon}
-          </div>
+          <div className={`${colorClasses[color]} opacity-60`}>{icon}</div>
         )}
         <div>
-          <div className={`text-5xl font-bold font-mono ${colorClasses[color]} ${glowClasses[color]}`}>
+          <div
+            className={`text-5xl font-bold font-mono ${colorClasses[color]} ${glowClasses[color]}`}
+          >
             {value}
           </div>
           <div className="text-sm text-muted mt-2 uppercase tracking-wider font-mono">
@@ -110,11 +114,7 @@ export function MetricCard({
 }
 
 // Badge/Tag component - BOLD
-export function RetroBadge({
-  children,
-  color = "green",
-  className = "",
-}) {
+export function RetroBadge({ children, color = "green", className = "" }) {
   const colorClasses = {
     green: "border-neon-green text-neon-green bg-neon-green/10",
     cyan: "border-neon-cyan text-neon-cyan bg-neon-cyan/10",
@@ -161,26 +161,32 @@ export function FeatureCard({
   const styles = featureColorStyles[color];
 
   return (
-    <RetroCard color={color} variant="default" className={`p-8 group ${className}`}>
+    <RetroCard
+      color={color}
+      variant="default"
+      className={`p-8 group ${className}`}
+    >
       <div className="relative z-10">
         {/* Icon with bold border */}
-        <div className={`
+        <div
+          className={`
           w-14 h-14 mb-6
           border-2 ${styles.border}
           flex items-center justify-center
           transition-all duration-300
-        `}>
+        `}
+        >
           {Icon && <Icon className={`w-7 h-7 ${styles.text}`} />}
         </div>
-        
-        <h3 className={`text-xl font-bold text-foreground mb-3 ${styles.groupHoverText} transition-colors`}>
+
+        <h3
+          className={`text-xl font-bold text-foreground mb-3 ${styles.groupHoverText} transition-colors`}
+        >
           {title}
         </h3>
-        
+
         {description && (
-          <p className="text-muted text-sm leading-relaxed">
-            {description}
-          </p>
+          <p className="text-muted text-sm leading-relaxed">{description}</p>
         )}
       </div>
     </RetroCard>

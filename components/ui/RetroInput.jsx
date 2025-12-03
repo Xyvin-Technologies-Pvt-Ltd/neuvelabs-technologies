@@ -45,11 +45,16 @@ export default function RetroInput({
             placeholder:text-muted/40
             outline-none
             transition-all duration-300
-            ${focused
-              ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
-              : "border-border hover:border-muted"
+            ${
+              focused
+                ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
+                : "border-border hover:border-muted"
             }
-            ${error ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]" : ""}
+            ${
+              error
+                ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]"
+                : ""
+            }
           `}
         />
         {/* Corner accents when focused */}
@@ -110,11 +115,16 @@ export function RetroTextarea({
             placeholder:text-muted/40
             outline-none resize-none
             transition-all duration-300
-            ${focused
-              ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
-              : "border-border hover:border-muted"
+            ${
+              focused
+                ? "border-neon-green shadow-[0_0_20px_rgba(0,255,136,0.3)]"
+                : "border-border hover:border-muted"
             }
-            ${error ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]" : ""}
+            ${
+              error
+                ? "border-neon-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)]"
+                : ""
+            }
           `}
         />
         {/* Corner accents when focused */}

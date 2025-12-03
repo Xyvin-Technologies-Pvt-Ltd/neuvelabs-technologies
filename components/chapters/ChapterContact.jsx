@@ -13,7 +13,7 @@ export default function ChapterContact() {
   const t = useTranslations("contact");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,13 +52,10 @@ export default function ChapterContact() {
   };
 
   return (
-    <section
-      ref={ref}
-      className="relative py-32 bg-background overflow-hidden"
-    >
+    <section ref={ref} className="relative py-32 bg-background overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 grid-background opacity-30" />
-      
+
       {/* Fluid shapes */}
       <FluidShape
         color="cyan"
@@ -93,9 +90,7 @@ export default function ChapterContact() {
               <span className="text-foreground">{t("title")}</span>
             </h2>
 
-            <p className="text-lg text-muted">
-              {t("subtitle")}
-            </p>
+            <p className="text-lg text-muted">{t("subtitle")}</p>
           </motion.div>
 
           {/* Contact form */}
@@ -198,7 +193,9 @@ export default function ChapterContact() {
                         )
                       }
                     >
-                      {status === "loading" ? t("form.sending") : t("form.submit")}
+                      {status === "loading"
+                        ? t("form.sending")
+                        : t("form.submit")}
                     </GlowButton>
                   </div>
                 </form>
@@ -228,4 +225,3 @@ export default function ChapterContact() {
     </section>
   );
 }
-

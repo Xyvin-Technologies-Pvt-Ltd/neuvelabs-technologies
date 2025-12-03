@@ -2,7 +2,16 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Terminal, Radio } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Terminal,
+  Radio,
+} from "lucide-react";
 import FluidShape, { CornerGlow } from "@/components/ui/FluidShape";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import RetroInput, { RetroTextarea } from "@/components/ui/RetroInput";
@@ -118,12 +127,14 @@ export default function ContactPageClient() {
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">Let's Build Something</span>
                 <br />
-                <span className="text-neon-cyan text-glow-cyan">Extraordinary</span>
+                <span className="text-neon-cyan text-glow-cyan">
+                  Extraordinary
+                </span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                Have a project in mind? We'd love to hear from you. Let's discuss how we can help
-                you achieve your business goals.
+                Have a project in mind? We'd love to hear from you. Let's
+                discuss how we can help you achieve your business goals.
               </p>
             </motion.div>
           </div>
@@ -151,13 +162,17 @@ export default function ContactPageClient() {
                     transition-all duration-300 group
                   `}
                 >
-                  <div className={`
+                  <div
+                    className={`
                     w-12 h-12 mb-4 border-2 ${styles.border}
                     flex items-center justify-center
-                  `}>
+                  `}
+                  >
                     <Icon className={`w-6 h-6 ${styles.text}`} />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    {item.title}
+                  </h3>
                   <p className={`font-mono font-bold ${styles.text} mb-1`}>
                     {item.value}
                   </p>
@@ -170,7 +185,10 @@ export default function ContactPageClient() {
       </section>
 
       {/* Contact Form Section */}
-      <section ref={formRef} className="py-24 bg-background relative overflow-hidden">
+      <section
+        ref={formRef}
+        className="py-24 bg-background relative overflow-hidden"
+      >
         <div className="absolute inset-0 grid-background opacity-30" />
         <FluidShape
           color="green"
@@ -223,7 +241,8 @@ export default function ContactPageClient() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       {/* Terminal prompt */}
                       <div className="font-mono text-sm text-neon-green mb-8">
-                        <span className="text-muted">&gt;</span> Initialize contact protocol...
+                        <span className="text-muted">&gt;</span> Initialize
+                        contact protocol...
                         <span className="terminal-cursor" />
                       </div>
 
@@ -286,7 +305,9 @@ export default function ContactPageClient() {
                           disabled={status === "loading"}
                           icon={<Send className="w-5 h-5" />}
                         >
-                          {status === "loading" ? "TRANSMITTING..." : "TRANSMIT MESSAGE"}
+                          {status === "loading"
+                            ? "TRANSMITTING..."
+                            : "TRANSMIT MESSAGE"}
                         </GlowButton>
                       </div>
                     </form>

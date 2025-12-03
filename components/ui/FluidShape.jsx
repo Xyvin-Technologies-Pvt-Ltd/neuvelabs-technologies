@@ -41,7 +41,9 @@ export default function FluidShape({
 // Multiple fluid shapes composition - BOLDER
 export function FluidShapeGroup({ className = "" }) {
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+    >
       <FluidShape
         color="green"
         size={500}
@@ -71,7 +73,11 @@ export function FluidShapeGroup({ className = "" }) {
 }
 
 // Corner glow accent
-export function CornerGlow({ position = "top-left", color = "green", className = "" }) {
+export function CornerGlow({
+  position = "top-left",
+  color = "green",
+  className = "",
+}) {
   const positions = {
     "top-left": "top-0 left-0",
     "top-right": "top-0 right-0",
@@ -85,10 +91,14 @@ export function CornerGlow({ position = "top-left", color = "green", className =
   };
 
   return (
-    <div 
+    <div
       className={`absolute w-[300px] h-[300px] pointer-events-none ${positions[position]} ${className}`}
       style={{
-        background: `radial-gradient(circle at ${position.includes('left') ? '0%' : '100%'} ${position.includes('top') ? '0%' : '100%'}, ${colors[color]}40 0%, transparent 70%)`,
+        background: `radial-gradient(circle at ${
+          position.includes("left") ? "0%" : "100%"
+        } ${position.includes("top") ? "0%" : "100%"}, ${
+          colors[color]
+        }40 0%, transparent 70%)`,
       }}
     />
   );

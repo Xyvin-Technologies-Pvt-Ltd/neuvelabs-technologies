@@ -3,7 +3,19 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { Brain, Cloud, BarChart3, Code2, Database, Layers, Cpu, Workflow, ArrowRight, Terminal, Zap } from "lucide-react";
+import {
+  Brain,
+  Cloud,
+  BarChart3,
+  Code2,
+  Database,
+  Layers,
+  Cpu,
+  Workflow,
+  ArrowRight,
+  Terminal,
+  Zap,
+} from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
 import { RetroCTA } from "@/components/RetroPageTemplate";
@@ -106,12 +118,14 @@ export default function DigitalEngineeringClient() {
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">Digital</span>
                 <br />
-                <span className="text-neon-green text-glow-green">Engineering</span>
+                <span className="text-neon-green text-glow-green">
+                  Engineering
+                </span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                We design, build, and deploy cutting-edge digital solutions that transform
-                businesses and drive innovation.
+                We design, build, and deploy cutting-edge digital solutions that
+                transform businesses and drive innovation.
               </p>
             </motion.div>
           </div>
@@ -119,7 +133,10 @@ export default function DigitalEngineeringClient() {
       </section>
 
       {/* Services Grid */}
-      <section ref={gridRef} className="py-24 bg-surface border-y-2 border-border">
+      <section
+        ref={gridRef}
+        className="py-24 bg-surface border-y-2 border-border"
+      >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
@@ -143,16 +160,20 @@ export default function DigitalEngineeringClient() {
                     `}
                   >
                     {/* Icon */}
-                    <div className={`
+                    <div
+                      className={`
                       w-14 h-14 mb-6 border-2 ${styles.border}
                       flex items-center justify-center
                       transition-all duration-300
-                    `}>
+                    `}
+                    >
                       <Icon className={`w-7 h-7 ${styles.text}`} />
                     </div>
 
                     {/* Title & Description */}
-                    <h2 className={`text-2xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}>
+                    <h2
+                      className={`text-2xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}
+                    >
                       {service.title}
                     </h2>
                     <p className="text-muted leading-relaxed mb-6">
@@ -160,7 +181,9 @@ export default function DigitalEngineeringClient() {
                     </p>
 
                     {/* CTA */}
-                    <div className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}>
+                    <div
+                      className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
+                    >
                       Explore Solutions
                       <ArrowRight className="w-4 h-4" />
                     </div>

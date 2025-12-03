@@ -6,15 +6,15 @@ import { useTranslations } from "next-intl";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import FluidShape from "@/components/ui/FluidShape";
 import GlowButton from "@/components/ui/GlowButton";
-import { 
-  Brain, 
-  Cloud, 
-  Database, 
-  Cpu, 
-  Shield, 
+import {
+  Brain,
+  Cloud,
+  Database,
+  Cpu,
+  Shield,
   Workflow,
   ArrowRight,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 
 const services = [
@@ -82,10 +82,7 @@ export default function ChapterVision() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section
-      ref={ref}
-      className="relative py-32 bg-background overflow-hidden"
-    >
+    <section ref={ref} className="relative py-32 bg-background overflow-hidden">
       {/* Fluid shape background */}
       <FluidShape
         color="green"
@@ -135,10 +132,28 @@ export default function ChapterVision() {
             style={{ zIndex: 0 }}
           >
             <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="var(--neon-green)" stopOpacity="0" />
-                <stop offset="50%" stopColor="var(--neon-green)" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="var(--neon-green)" stopOpacity="0" />
+              <linearGradient
+                id="lineGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  stopColor="var(--neon-green)"
+                  stopOpacity="0"
+                />
+                <stop
+                  offset="50%"
+                  stopColor="var(--neon-green)"
+                  stopOpacity="0.3"
+                />
+                <stop
+                  offset="100%"
+                  stopColor="var(--neon-green)"
+                  stopOpacity="0"
+                />
               </linearGradient>
             </defs>
           </svg>
@@ -149,7 +164,7 @@ export default function ChapterVision() {
               const Icon = service.icon;
               const isHovered = hoveredIndex === index;
               const styles = colorStyles[service.colorKey];
-              
+
               return (
                 <motion.a
                   key={service.key}
@@ -164,9 +179,10 @@ export default function ChapterVision() {
                     bg-surface/50 backdrop-blur-sm
                     border-2 transition-all duration-500
                     group cursor-pointer
-                    ${isHovered 
-                      ? `${styles.border} ${styles.shadow}` 
-                      : 'border-border hover:border-muted'
+                    ${
+                      isHovered
+                        ? `${styles.border} ${styles.shadow}`
+                        : "border-border hover:border-muted"
                     }
                   `}
                 >
@@ -181,47 +197,61 @@ export default function ChapterVision() {
                   />
 
                   {/* Icon */}
-                  <div className={`
+                  <div
+                    className={`
                     w-16 h-16 rounded-lg mb-6
                     flex items-center justify-center
                     bg-background/80 border-2 transition-all duration-300
-                    ${isHovered ? `${styles.border} ${styles.iconShadow}` : 'border-border'}
-                  `}>
-                    <Icon className={`
+                    ${
+                      isHovered
+                        ? `${styles.border} ${styles.iconShadow}`
+                        : "border-border"
+                    }
+                  `}
+                  >
+                    <Icon
+                      className={`
                       w-8 h-8 transition-colors duration-300
-                      ${isHovered ? styles.text : 'text-muted'}
-                    `} />
+                      ${isHovered ? styles.text : "text-muted"}
+                    `}
+                    />
                   </div>
 
                   {/* Content */}
-                  <h3 className={`
+                  <h3
+                    className={`
                     text-xl font-bold mb-3 transition-colors duration-300
-                    ${isHovered ? styles.text : 'text-foreground'}
-                  `}>
+                    ${isHovered ? styles.text : "text-foreground"}
+                  `}
+                  >
                     {tServices(`${service.key}.title`)}
                   </h3>
-                  
+
                   <p className="text-sm text-muted leading-relaxed mb-4">
                     {tServices(`${service.key}.description`)}
                   </p>
 
                   {/* Arrow indicator */}
-                  <div className={`
+                  <div
+                    className={`
                     flex items-center gap-2 text-xs font-mono uppercase tracking-wider
                     transition-all duration-300
-                    ${isHovered ? `${styles.text} translate-x-2` : 'text-muted'}
-                  `}>
+                    ${isHovered ? `${styles.text} translate-x-2` : "text-muted"}
+                  `}
+                  >
                     {t("explore")}
                     <ArrowRight className="w-4 h-4" />
                   </div>
 
                   {/* Corner accent */}
-                  <div className={`
+                  <div
+                    className={`
                     absolute top-0 right-0 w-8 h-8
                     border-t-2 border-r-2 rounded-tr-lg
                     transition-all duration-300
-                    ${isHovered ? styles.border : 'border-border'}
-                  `} />
+                    ${isHovered ? styles.border : "border-border"}
+                  `}
+                  />
                 </motion.a>
               );
             })}

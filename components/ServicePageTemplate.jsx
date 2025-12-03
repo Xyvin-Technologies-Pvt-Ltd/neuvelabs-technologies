@@ -3,7 +3,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle2, ArrowRight, Zap, Trophy, Target, Terminal } from "lucide-react";
+import {
+  CheckCircle2,
+  ArrowRight,
+  Zap,
+  Trophy,
+  Target,
+  Terminal,
+} from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import FluidShape, { CornerGlow } from "@/components/ui/FluidShape";
 import GlowButton from "@/components/ui/GlowButton";
@@ -47,9 +54,18 @@ export default function ServicePageTemplate({
   const featuresRef = useRef(null);
   const benefitsRef = useRef(null);
   const useCasesRef = useRef(null);
-  const featuresInView = useInView(featuresRef, { once: true, margin: "-100px" });
-  const benefitsInView = useInView(benefitsRef, { once: true, margin: "-100px" });
-  const useCasesInView = useInView(useCasesRef, { once: true, margin: "-100px" });
+  const featuresInView = useInView(featuresRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const benefitsInView = useInView(benefitsRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const useCasesInView = useInView(useCasesRef, {
+    once: true,
+    margin: "-100px",
+  });
 
   const colors = colorStyles[accentColor];
   const featureColors = ["green", "cyan", "green"];
@@ -79,7 +95,9 @@ export default function ServicePageTemplate({
                 <span className={`${colors.text} ${colors.glow}`}>{title}</span>
               </h1>
 
-              <p className="text-lg text-muted leading-relaxed mb-10">{description}</p>
+              <p className="text-lg text-muted leading-relaxed mb-10">
+                {description}
+              </p>
 
               <GlowButton href="/contact" color={accentColor} size="lg">
                 Start Your Project
@@ -112,7 +130,10 @@ export default function ServicePageTemplate({
 
       {/* Features Section */}
       {features && features.length > 0 && (
-        <section ref={featuresRef} className="py-24 bg-surface border-y-2 border-border">
+        <section
+          ref={featuresRef}
+          className="py-24 bg-surface border-y-2 border-border"
+        >
           <div className="container mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -128,7 +149,8 @@ export default function ServicePageTemplate({
                 Key Features
               </h2>
               <p className="text-muted text-lg max-w-2xl mx-auto">
-                Comprehensive solutions tailored to drive your digital transformation
+                Comprehensive solutions tailored to drive your digital
+                transformation
               </p>
             </motion.div>
 
@@ -150,10 +172,14 @@ export default function ServicePageTemplate({
                       transition-all duration-300 group
                     `}
                   >
-                    <div className={`w-12 h-12 mb-6 border-2 ${fStyles.border} flex items-center justify-center`}>
+                    <div
+                      className={`w-12 h-12 mb-6 border-2 ${fStyles.border} flex items-center justify-center`}
+                    >
                       <Zap className={`w-6 h-6 ${fStyles.text}`} />
                     </div>
-                    <h3 className={`text-xl font-bold text-foreground mb-3 ${fStyles.groupHoverText} transition-colors`}>
+                    <h3
+                      className={`text-xl font-bold text-foreground mb-3 ${fStyles.groupHoverText} transition-colors`}
+                    >
                       {typeof feature === "string" ? feature : feature.title}
                     </h3>
                     {typeof feature !== "string" && feature.description && (
@@ -171,9 +197,18 @@ export default function ServicePageTemplate({
 
       {/* Benefits Section */}
       {benefits && benefits.length > 0 && (
-        <section ref={benefitsRef} className="py-24 bg-background relative overflow-hidden">
+        <section
+          ref={benefitsRef}
+          className="py-24 bg-background relative overflow-hidden"
+        >
           <div className="absolute inset-0 grid-background opacity-30" />
-          <FluidShape color={accentColor} size={400} className="top-[-200px] right-[-200px]" blur={100} opacity={0.15} />
+          <FluidShape
+            color={accentColor}
+            size={400}
+            className="top-[-200px] right-[-200px]"
+            blur={100}
+            opacity={0.15}
+          />
 
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             <motion.div
@@ -205,7 +240,9 @@ export default function ServicePageTemplate({
                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-neon-green transition-colors">
                       {benefit.title}
                     </h3>
-                    <p className="text-muted leading-relaxed">{benefit.description}</p>
+                    <p className="text-muted leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -216,7 +253,10 @@ export default function ServicePageTemplate({
 
       {/* Use Cases Section */}
       {useCases && useCases.length > 0 && (
-        <section ref={useCasesRef} className="py-24 bg-surface border-y-2 border-border">
+        <section
+          ref={useCasesRef}
+          className="py-24 bg-surface border-y-2 border-border"
+        >
           <div className="container mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -254,7 +294,9 @@ export default function ServicePageTemplate({
                     <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-neon-cyan transition-colors">
                       {useCase.title}
                     </h3>
-                    <p className="text-muted leading-relaxed mb-6">{useCase.description}</p>
+                    <p className="text-muted leading-relaxed mb-6">
+                      {useCase.description}
+                    </p>
                     <div className="flex items-center gap-2 text-sm font-mono text-muted group-hover:text-neon-cyan transition-colors">
                       <span>Access log</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -298,7 +340,9 @@ export default function ServicePageTemplate({
                   )}
                   {image.caption && (
                     <div className="absolute bottom-0 left-0 right-0 bg-background/90 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-foreground font-mono text-sm">{image.caption}</p>
+                      <p className="text-foreground font-mono text-sm">
+                        {image.caption}
+                      </p>
                     </div>
                   )}
                 </motion.div>

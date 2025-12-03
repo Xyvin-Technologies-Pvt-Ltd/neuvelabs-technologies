@@ -81,9 +81,13 @@ export default function GlowButton({
 
   const content = (
     <>
-      {icon && iconPosition === "left" && <span className="w-5 h-5">{icon}</span>}
+      {icon && iconPosition === "left" && (
+        <span className="w-5 h-5">{icon}</span>
+      )}
       <span>{children}</span>
-      {icon && iconPosition === "right" && <span className="w-5 h-5">{icon}</span>}
+      {icon && iconPosition === "right" && (
+        <span className="w-5 h-5">{icon}</span>
+      )}
     </>
   );
 

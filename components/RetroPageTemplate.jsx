@@ -4,13 +4,22 @@ import { useRef, forwardRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Terminal, Zap, CheckCircle2, ExternalLink } from "lucide-react";
+import {
+  ArrowRight,
+  Terminal,
+  Zap,
+  CheckCircle2,
+  ExternalLink,
+} from "lucide-react";
 import FluidShape from "@/components/ui/FluidShape";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import GlowButton from "@/components/ui/GlowButton";
 
 // Retro Section Wrapper with forwardRef
-export const RetroSection = forwardRef(function RetroSection({ children, className = "", variant = "default" }, forwardedRef) {
+export const RetroSection = forwardRef(function RetroSection(
+  { children, className = "", variant = "default" },
+  forwardedRef
+) {
   const internalRef = useRef(null);
   // Use the forwarded ref if provided, otherwise use internal ref
   const ref = forwardedRef || internalRef;
@@ -151,7 +160,9 @@ export function RetroFeatureGrid({ title, subtitle, badge, features }) {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             {title}
           </h2>
-          {subtitle && <p className="text-muted text-lg max-w-2xl mx-auto">{subtitle}</p>}
+          {subtitle && (
+            <p className="text-muted text-lg max-w-2xl mx-auto">{subtitle}</p>
+          )}
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -166,15 +177,25 @@ export function RetroFeatureGrid({ title, subtitle, badge, features }) {
                 className={`
                   group p-8 rounded bg-card border transition-all duration-300
                   border-border hover:border-neon-${color}
-                  hover:shadow-[0_0_20px_rgba(${color === 'green' ? '0,255,136' : color === 'cyan' ? '0,212,255' : '255,0,255'},0.2)]
+                  hover:shadow-[0_0_20px_rgba(${
+                    color === "green"
+                      ? "0,255,136"
+                      : color === "cyan"
+                      ? "0,212,255"
+                      : "255,0,255"
+                  },0.2)]
                 `}
               >
-                <div className={`
+                <div
+                  className={`
                   w-12 h-12 rounded bg-background border border-border
                   flex items-center justify-center mb-6
                   group-hover:border-neon-${color} transition-colors
-                `}>
-                  <Zap className={`w-6 h-6 text-muted group-hover:text-neon-${color} transition-colors`} />
+                `}
+                >
+                  <Zap
+                    className={`w-6 h-6 text-muted group-hover:text-neon-${color} transition-colors`}
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {typeof feature === "string" ? feature : feature.title}
@@ -319,10 +340,18 @@ export function RetroStats({ stats }) {
             className={`
               p-6 rounded bg-surface border border-border text-center
               hover:border-neon-${color} transition-all duration-300
-              hover:shadow-[0_0_15px_rgba(${color === 'green' ? '0,255,136' : color === 'cyan' ? '0,212,255' : '255,0,255'},0.2)]
+              hover:shadow-[0_0_15px_rgba(${
+                color === "green"
+                  ? "0,255,136"
+                  : color === "cyan"
+                  ? "0,212,255"
+                  : "255,0,255"
+              },0.2)]
             `}
           >
-            <div className={`text-4xl font-bold font-mono text-neon-${color} mb-2`}>
+            <div
+              className={`text-4xl font-bold font-mono text-neon-${color} mb-2`}
+            >
               {stat.value}
             </div>
             <div className="text-xs font-mono uppercase tracking-wider text-muted">
@@ -346,7 +375,7 @@ export function RetroCTA({ title, description, buttonText, buttonHref }) {
         blur={80}
         opacity={0.15}
       />
-      
+
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
@@ -409,10 +438,7 @@ export default function RetroPageTemplate({
       )}
 
       {benefits && benefits.length > 0 && (
-        <RetroBenefits
-          title="Why Choose Neuve Labs?"
-          benefits={benefits}
-        />
+        <RetroBenefits title="Why Choose Neuve Labs?" benefits={benefits} />
       )}
 
       {useCases && useCases.length > 0 && (
@@ -432,4 +458,3 @@ export default function RetroPageTemplate({
     </>
   );
 }
-
