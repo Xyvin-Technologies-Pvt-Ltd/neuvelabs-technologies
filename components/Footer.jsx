@@ -152,15 +152,15 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-sm text-muted group">
                 <Mail size={16} className="text-neon-cyan" />
                 <a
-                  href="mailto:info@neuvelabs.tech"
+                  href="mailto:info@neuvelabs.com"
                   className="hover:text-foreground transition-colors font-mono"
                 >
-                  info@neuvelabs.tech
+                  info@neuvelabs.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted">
                 <MapPin size={16} className="text-neon-cyan" />
-                <span>Dubai, United Arab Emirates</span>
+                <span>RAK Free Zone, United Arab Emirates</span>
               </div>
             </div>
           </div>

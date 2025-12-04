@@ -84,22 +84,22 @@ export default function ContactPageClient() {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@neuvelabs.tech",
+      value: "info@neuvelabs.com",
       description: "Response within 24 hours",
       colorKey: "green",
     },
     {
       icon: Phone,
       title: "Call Us",
-      value: "+971 50 123 4567",
+      value: "+971 56 784 5810",
       description: "Mon-Fri 9am to 6pm GST",
       colorKey: "cyan",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      value: "Dubai Silicon Oasis",
-      description: "Dubai, UAE",
+      value: "RAK Free Zone",
+      description: "RAK Free Zone, UAE",
       colorKey: "cyan",
     },
   ];
@@ -326,10 +326,10 @@ export default function ContactPageClient() {
               <p className="text-sm text-muted font-mono">
                 Or reach us directly at{" "}
                 <a
-                  href="mailto:contact@neuvelabs.tech"
+                  href="mailto:info@neuvelabs.com"
                   className="text-neon-green hover:text-glow-green transition-all font-bold"
                 >
-                  contact@neuvelabs.tech
+                  info@neuvelabs.com
                 </a>
               </p>
             </motion.div>

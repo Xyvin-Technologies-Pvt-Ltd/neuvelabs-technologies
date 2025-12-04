@@ -213,10 +213,10 @@ export default function ChapterContact() {
             <p className="text-sm text-muted font-mono">
               Or reach us directly at{" "}
               <a
-                href="mailto:contact@neuvelabs.tech"
+                href="mailto:info@neuvelabs.com"
                 className="text-neon-green hover:text-glow-green transition-all"
               >
-                contact@neuvelabs.tech
+                info@neuvelabs.com
               </a>
             </p>
           </motion.div>
