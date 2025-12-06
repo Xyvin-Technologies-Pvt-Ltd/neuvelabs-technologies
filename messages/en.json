@@ -60,7 +60,7 @@
     }
   },
   "footer": {
-    "tagline": "Engineering the future, one transmission at a time.",
+    "tagline": "Engineering the future. ",
     "copyright": "All rights reserved.",
     "links": {
       "privacy": "Privacy Protocol",
@@ -118,6 +118,127 @@
     "switch": "Switch language",
     "en": "English",
     "ar": "العربية"
+  },
+  "about": {
+    "hero": {
+      "badge": "System Profile",
+      "title": "We Are",
+      "titleHighlight": "Neuve Labs",
+      "subtitle": "Established in 2025 in UAE, Neuve Labs brings proven IT consulting expertise and innovative solutions to the Middle East market. We are a collective of passionate innovators, engineers, and strategists dedicated to driving digital transformation.",
+      "ctaPrimary": "Start a Project",
+      "ctaSecondary": "View Our Work"
+    },
+    "stats": {
+      "yearsOfExcellence": "Years of Excellence",
+      "projectsDelivered": "Projects Delivered",
+      "globalReach": "Countries Served",
+      "technologyPartnerships": "Tech Partnerships"
+    },
+    "story": {
+      "badge": "Our Story",
+      "title": "Building the Future,",
+      "titleHighlight": "Where Innovation Meets Impact",
+      "paragraph1": "Neuve Labs was established in 2025 in  UAE, as a new IT consulting company focused on serving the UAE market. While we are a new entity, our team brings extensive experience from delivering 500+ successful projects across multiple countries.",
+      "paragraph2": "We leverage deep IT consulting expertise and proven methodologies to bring cutting-edge solutions to businesses in the UAE and beyond. Our track record includes serving clients across UAE, Oman, Singapore, India, Netherlands, Belgium, and strategic partnerships with US-based IT companies.",
+      "paragraph3": "We believe that technology should be an enabler, not a barrier. That's why we focus on creating intuitive, scalable, and robust solutions that solve real-world problems. From startups to enterprises, we partner with organizations to unlock their full potential through AI engineering, cloud solutions, product development, cybersecurity, and process automation."
+    },
+    "capabilities": {
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Advanced AI/ML solutions that transform business operations and decision-making"
+      },
+      "cloud": {
+        "title": "Cloud Engineering",
+        "description": "Scalable cloud infrastructure and migration services for modern enterprises"
+      },
+      "enterprise": {
+        "title": "Enterprise Solutions",
+        "description": "Full-stack product engineering and enterprise-grade applications"
+      },
+      "partnerships": {
+        "title": "Global Partnerships",
+        "description": "Strategic collaborations with US-based IT companies and international networks"
+      }
+    },
+    "values": {
+      "badge": "Core Protocols",
+      "title": "Driven by Purpose, Guided by Values",
+      "subtitle": "Our core values define who we are and how we work. They are the compass that guides our decisions and actions.",
+      "innovation": {
+        "title": "Innovation First",
+        "description": "We constantly push boundaries to deliver cutting-edge solutions that define the future."
+      },
+      "clientSuccess": {
+        "title": "Client Success",
+        "description": "Your growth is our priority. We build to empower and accelerate your business."
+      },
+      "peopleCentric": {
+        "title": "People Centric",
+        "description": "We believe in the power of human potential, creativity, and collaboration."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Trust and transparency are the foundations of all our partnerships."
+      }
+    },
+    "global": {
+      "badge": "Global Network",
+      "title": "Serving Clients Across",
+      "titleHighlight": "6+ Countries",
+      "description": "From our headquarters in  UAE, we serve clients across 3 continents. Our global reach spans UAE, Oman, Singapore, India, Netherlands, Belgium, and strategic partnerships with US-based technology companies.",
+      "locations": {
+        "rak": "RAK, UAE",
+        "kochi": "Kochi, India",
+        "oman": "Oman",
+        "singapore": "Singapore"
+      }
+    },
+    "cta": {
+      "title": "Ready to join the future?",
+      "description": "Let's discuss how we can help transform your business with cutting-edge technology solutions.",
+      "buttonText": "Start a Conversation"
+    }
+  },
+  "caseStudies": {
+    "category": "Case Study",
+    "backToInsights": "Back to Insights",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "results": "Results & Impact",
+    "techStack": "Technology Stack",
+    "builtWith": "Built With Modern Technologies",
+    "readyToTransform": "Ready to Transform Your Business?",
+    "letsDiscuss": "Let's discuss how we can help you achieve similar results.",
+    "startProject": "Start Your Project",
+    "industrialAi": {
+      "title": "Industrial AI Document Intelligence: Transforming Technical Knowledge Search",
+      "description": "How we built an AI-powered RAG system that reduced document search time by 90% for a telecommunications team managing thousands of technical specifications.",
+      "industry": "Telecommunications & Construction"
+    },
+    "hyperlocalBusiness": {
+      "title": "Hyperlocal Business Network: Connecting Rural Communities Digitally",
+      "description": "A comprehensive platform connecting local businesses, service providers, and customers at the grassroots level, transforming rural commerce through digital innovation.",
+      "industry": "Rural Digital Services"
+    },
+    "educationalCounseling": {
+      "title": "Educational Counseling System: Streamlining Student Support Operations",
+      "description": "A comprehensive counseling management platform that streamlined operations for an international school system, managing 1000+ student cases with precision and efficiency.",
+      "industry": "International Education"
+    },
+    "multiTierLoyalty": {
+      "title": "Multi-Tier Loyalty Platform: Scaling Enterprise Rewards",
+      "description": "An enterprise-grade loyalty system handling 35,000 daily transactions for 5,000 concurrent users, featuring multi-tier gamification and intelligent point management.",
+      "industry": "Retail & Service Industry"
+    },
+    "digitalBusinessIdentity": {
+      "title": "Digital Business Identity Suite: Zero-Paper Corporate Networking",
+      "description": "A modern digital business card platform with QR codes and real-time analytics, eliminating paper waste while providing actionable engagement insights.",
+      "industry": "Corporate Services"
+    },
+    "familyConnection": {
+      "title": "Family Connection Platform: Multi-Generational Digital Ecosystem",
+      "description": "A comprehensive family management platform combining genealogy tracking, financial management, and community engagement features for extended family networks.",
+      "industry": "Social & Community"
+    }
   }
 }
-

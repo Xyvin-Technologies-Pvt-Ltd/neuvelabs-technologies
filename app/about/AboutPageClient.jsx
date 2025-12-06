@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   Users,
   Target,
@@ -22,67 +23,62 @@ import {
 import GlowButton from "@/components/ui/GlowButton";
 
 export default function AboutPageClient() {
+  const t = useTranslations("about");
   const storyRef = useRef(null);
   const valuesRef = useRef(null);
   const storyInView = useInView(storyRef, { once: true, margin: "-100px" });
   const valuesInView = useInView(valuesRef, { once: true, margin: "-100px" });
 
   const stats = [
-    { label: "Years of Excellence", value: "10+" },
-    { label: "Projects Delivered", value: "500+" },
-    { label: "Team Members", value: "150+" },
-    { label: "Countries Served", value: "37" },
+    { label: t("stats.yearsOfExcellence"), value: "10+" },
+    { label: t("stats.projectsDelivered"), value: "500+" },
+    { label: t("stats.globalReach"), value: "6+" },
+    { label: t("stats.technologyPartnerships"), value: "US+" },
   ];
 
   const values = [
     {
-      title: "Innovation First",
-      description:
-        "We constantly push boundaries to deliver cutting-edge solutions that define the future.",
+      title: t("values.innovation.title"),
+      description: t("values.innovation.description"),
       icon: Lightbulb,
       colorClass: "green",
     },
     {
-      title: "Client Success",
-      description:
-        "Your growth is our priority. We build to empower and accelerate your business.",
+      title: t("values.clientSuccess.title"),
+      description: t("values.clientSuccess.description"),
       icon: Trophy,
       colorClass: "cyan",
     },
     {
-      title: "People Centric",
-      description:
-        "We believe in the power of human potential, creativity, and collaboration.",
+      title: t("values.peopleCentric.title"),
+      description: t("values.peopleCentric.description"),
       icon: Users,
       colorClass: "cyan",
     },
     {
-      title: "Integrity",
-      description:
-        "Trust and transparency are the foundations of all our partnerships.",
+      title: t("values.integrity.title"),
+      description: t("values.integrity.description"),
       icon: Target,
       colorClass: "green",
     },
   ];
 
-  const timeline = [
+  const capabilities = [
     {
-      year: "2014",
-      event: "Founded in Dubai with a vision to transform enterprises",
+      title: t("capabilities.ai.title"),
+      description: t("capabilities.ai.description"),
     },
     {
-      year: "2016",
-      event: "Expanded to 5 countries across Middle East and Asia",
+      title: t("capabilities.cloud.title"),
+      description: t("capabilities.cloud.description"),
     },
     {
-      year: "2018",
-      event: "Launched AI & ML practice, pioneering regional adoption",
+      title: t("capabilities.enterprise.title"),
+      description: t("capabilities.enterprise.description"),
     },
-    { year: "2020", event: "100+ enterprise clients, 200+ projects delivered" },
-    { year: "2022", event: "Opened innovation labs in Abu Dhabi and Riyadh" },
     {
-      year: "2024",
-      event: "Leading digital transformation across 37 countries",
+      title: t("capabilities.partnerships.title"),
+      description: t("capabilities.partnerships.description"),
     },
   ];
 
@@ -133,29 +129,27 @@ export default function AboutPageClient() {
             >
               <RetroBadge color="green" className="mb-8">
                 <Terminal className="w-3 h-3" />
-                System Profile
+                {t("hero.badge")}
               </RetroBadge>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                <span className="text-foreground">We Are</span>
+                <span className="text-foreground">{t("hero.title")}</span>
                 <br />
                 <span className="text-neon-green text-glow-green">
-                  Neuve Labs
+                  {t("hero.titleHighlight")}
                 </span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto mb-10">
-                A collective of passionate innovators, engineers, and
-                strategists dedicated to driving digital transformation and
-                shaping the future of technology.
+                {t("hero.subtitle")}
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
                 <GlowButton href="/contact" color="green">
-                  Start a Project
+                  {t("hero.ctaPrimary")}
                 </GlowButton>
                 <GlowButton href="/insights" variant="secondary">
-                  View Our Work
+                  {t("hero.ctaSecondary")}
                 </GlowButton>
               </div>
             </motion.div>
@@ -181,45 +175,35 @@ export default function AboutPageClient() {
             >
               <RetroBadge color="cyan" className="mb-8">
                 <Cpu className="w-3 h-3" />
-                Origin Story
+                {t("story.badge")}
               </RetroBadge>
 
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Building the Future,
+                {t("story.title")}
                 <br />
                 <span className="text-neon-cyan">
-                  One Line of Code at a Time.
+                  {t("story.titleHighlight")}
                 </span>
               </h2>
 
               <div className="space-y-6 text-muted text-lg leading-relaxed">
-                <p>
-                  Founded with a vision to bridge the gap between complex
-                  technology and business value, Neuve Labs has grown into a
-                  leading IT consulting firm in the UAE.
-                </p>
-                <p>
-                  We believe that technology should be an enabler, not a
-                  barrier. That's why we focus on creating intuitive, scalable,
-                  and robust solutions that solve real-world problems. From
-                  startups to enterprises, we partner with organizations to
-                  unlock their full potential.
-                </p>
+                <p>{t("story.paragraph1")}</p>
+                <p>{t("story.paragraph2")}</p>
+                <p>{t("story.paragraph3")}</p>
               </div>
             </motion.div>
 
-            {/* Timeline */}
+            {/* Capabilities */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={storyInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-border" />
               <div className="space-y-6">
-                {timeline.map((item, index) => (
+                {capabilities.map((capability, index) => (
                   <motion.div
-                    key={item.year}
+                    key={capability.title}
                     initial={{ opacity: 0, x: 20 }}
                     animate={storyInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
@@ -228,10 +212,10 @@ export default function AboutPageClient() {
                     <div className="absolute left-0 w-8 h-8 bg-surface border-2 border-border flex items-center justify-center group-hover:border-neon-green group-hover:shadow-[0_0_10px_rgba(0,255,136,0.3)] transition-all">
                       <div className="w-2 h-2 rounded-full bg-neon-green" />
                     </div>
-                    <div className="font-mono text-sm text-neon-green mb-1">
-                      {item.year}
+                    <div className="font-bold text-lg text-foreground mb-1 group-hover:text-neon-green transition-colors">
+                      {capability.title}
                     </div>
-                    <div className="text-foreground">{item.event}</div>
+                    <div className="text-muted text-sm">{capability.description}</div>
                   </motion.div>
                 ))}
               </div>
@@ -251,15 +235,14 @@ export default function AboutPageClient() {
           >
             <RetroBadge color="cyan" className="mb-6">
               <Zap className="w-3 h-3" />
-              Core Protocols
+              {t("values.badge")}
             </RetroBadge>
 
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-              Driven by Purpose, Guided by Values
+              {t("values.title")}
             </h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">
-              Our core values define who we are and how we work. They are the
-              compass that guides our decisions and actions.
+              {t("values.subtitle")}
             </p>
           </motion.div>
 
@@ -324,39 +307,39 @@ export default function AboutPageClient() {
             >
               <RetroBadge color="cyan" className="mb-6">
                 <Globe className="w-3 h-3" />
-                Global Network
+                {t("global.badge")}
               </RetroBadge>
 
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Transforming Businesses Across{" "}
-                <span className="text-neon-cyan">37 Countries</span>
+                {t("global.title")}{" "}
+                <span className="text-neon-cyan">{t("global.titleHighlight")}</span>
               </h2>
 
               <p className="text-lg text-muted mb-10 max-w-2xl mx-auto">
-                From our headquarters in Dubai, we've expanded our reach to
-                serve clients across the Middle East, Asia, Europe, and North
-                America. Our global presence enables us to deliver local
-                expertise with international standards.
+                {t("global.description")}
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Dubai, UAE", "Riyadh, KSA", "Singapore", "London, UK"].map(
-                  (location, index) => (
-                    <motion.div
-                      key={location}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="p-4 bg-surface/50 border-2 border-border text-center hover:border-neon-green transition-colors"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-neon-green mx-auto mb-2 animate-pulse" />
-                      <div className="text-sm font-mono text-muted">
-                        {location}
-                      </div>
-                    </motion.div>
-                  )
-                )}
+                {[
+                  t("global.locations.rak"),
+                  t("global.locations.kochi"),
+                  t("global.locations.oman"),
+                  t("global.locations.singapore"),
+                ].map((location, index) => (
+                  <motion.div
+                    key={location}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="p-4 bg-surface/50 border-2 border-border text-center hover:border-neon-green transition-colors"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-neon-green mx-auto mb-2 animate-pulse" />
+                    <div className="text-sm font-mono text-muted">
+                      {location}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -365,9 +348,9 @@ export default function AboutPageClient() {
 
       {/* CTA */}
       <RetroCTA
-        title="Ready to join the future?"
-        description="Let's discuss how we can help transform your business with cutting-edge technology solutions."
-        buttonText="Start a Conversation"
+        title={t("cta.title")}
+        description={t("cta.description")}
+        buttonText={t("cta.buttonText")}
         buttonHref="/contact"
       />
     </>

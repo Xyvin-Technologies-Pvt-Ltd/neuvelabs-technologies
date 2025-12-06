@@ -4,7 +4,7 @@ import AboutPageClient from "./AboutPageClient";
 export const metadata = generateMetadata({
   title: "About Us",
   description:
-    "Learn about Neuve Labs, our mission, vision, and the team driving digital transformation in the UAE and beyond.",
+    "Neuve Labs - Established in 2025 in  UAE. Bringing proven IT consulting expertise and innovative solutions to the Middle East market. Serving clients across UAE, Oman, Singapore, India, Netherlands, Belgium, and US partnerships.",
 });
 
 export default function About() {

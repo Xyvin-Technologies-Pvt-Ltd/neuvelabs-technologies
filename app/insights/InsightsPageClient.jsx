@@ -1,12 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowRight, Calendar, FileText, Bookmark, Send } from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
-import GlowButton from "@/components/ui/GlowButton";
 
 const insights = [
   {
@@ -17,7 +17,7 @@ const insights = [
     category: "AI & Machine Learning",
     slug: "future-of-ai-enterprise",
     colorKey: "green",
-    featured: true,
+    isCaseStudy: false,
   },
   {
     title: "Cloud Migration Best Practices: A Comprehensive Guide",
@@ -27,7 +27,29 @@ const insights = [
     category: "Cloud & DevOps",
     slug: "cloud-migration-best-practices",
     colorKey: "cyan",
-    featured: true,
+    isCaseStudy: false,
+  },
+  {
+    title: "Industrial AI Document Intelligence: Transforming Technical Knowledge Search",
+    description:
+      "How we built an AI-powered RAG system that reduced document search time by 90% for a telecommunications team managing thousands of technical specifications.",
+    date: "2024-02-20",
+    category: "Case Study",
+    slug: "industrial-ai-document-intelligence",
+    colorKey: "green",
+    isCaseStudy: true,
+    industry: "Telecommunications & Construction",
+  },
+  {
+    title: "Hyperlocal Business Network: Connecting Rural Communities Digitally",
+    description:
+      "A comprehensive platform connecting local businesses, service providers, and customers at the grassroots level, transforming rural commerce through digital innovation.",
+    date: "2024-02-15",
+    category: "Case Study",
+    slug: "hyperlocal-business-network",
+    colorKey: "cyan",
+    isCaseStudy: true,
+    industry: "Rural Digital Services",
   },
   {
     title: "Data-Driven Decision Making: Building an Analytics Culture",
@@ -37,7 +59,51 @@ const insights = [
     category: "Data Analytics",
     slug: "data-driven-decision-making",
     colorKey: "cyan",
-    featured: false,
+    isCaseStudy: false,
+  },
+  {
+    title: "Educational Counseling System: Streamlining Student Support Operations",
+    description:
+      "A comprehensive counseling management platform that streamlined operations for an international school system, managing 1000+ student cases with precision and efficiency.",
+    date: "2024-02-10",
+    category: "Case Study",
+    slug: "educational-counseling-system",
+    colorKey: "green",
+    isCaseStudy: true,
+    industry: "International Education",
+  },
+  {
+    title: "Multi-Tier Loyalty Platform: Scaling Enterprise Rewards",
+    description:
+      "An enterprise-grade loyalty system handling 35,000 daily transactions for 5,000 concurrent users, featuring multi-tier gamification and intelligent point management.",
+    date: "2024-02-05",
+    category: "Case Study",
+    slug: "multi-tier-loyalty-platform",
+    colorKey: "cyan",
+    isCaseStudy: true,
+    industry: "Retail & Service Industry",
+  },
+  {
+    title: "Digital Business Identity Suite: Zero-Paper Corporate Networking",
+    description:
+      "A modern digital business card platform with QR codes and real-time analytics, eliminating paper waste while providing actionable engagement insights.",
+    date: "2024-01-28",
+    category: "Case Study",
+    slug: "digital-business-identity-suite",
+    colorKey: "green",
+    isCaseStudy: true,
+    industry: "Corporate Services",
+  },
+  {
+    title: "Family Connection Platform: Multi-Generational Digital Ecosystem",
+    description:
+      "A comprehensive family management platform combining genealogy tracking, financial management, and community engagement features for extended family networks.",
+    date: "2024-01-25",
+    category: "Case Study",
+    slug: "family-connection-platform",
+    colorKey: "cyan",
+    isCaseStudy: true,
+    industry: "Social & Community",
   },
   {
     title:
@@ -48,19 +114,15 @@ const insights = [
     category: "Digital Transformation",
     slug: "digital-transformation-middle-east",
     colorKey: "green",
-    featured: false,
+    isCaseStudy: false,
   },
 ];
-
-const featuredInsights = insights.filter((i) => i.featured);
-const remainingInsights = insights.filter((i) => !i.featured);
 
 // Pre-defined complete class names for Tailwind JIT
 const colorStyles = {
   green: {
     text: "text-neon-green",
     border: "border-neon-green",
-    borderLeft: "border-l-neon-green",
     hoverBorder: "hover:border-neon-green",
     hoverGlow: "hover:shadow-[0_0_30px_rgba(0,255,136,0.4)]",
     groupHoverText: "group-hover:text-neon-green",
@@ -68,16 +130,53 @@ const colorStyles = {
   cyan: {
     text: "text-neon-cyan",
     border: "border-neon-cyan",
-    borderLeft: "border-l-neon-cyan",
     hoverBorder: "hover:border-neon-cyan",
     hoverGlow: "hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]",
     groupHoverText: "group-hover:text-neon-cyan",
   },
 };
 
+const filterTabs = [
+  { id: "all", label: "All" },
+  { id: "case-studies", label: "Case Studies" },
+  { id: "articles", label: "Articles" },
+];
+
 export default function InsightsPageClient() {
   const gridRef = useRef(null);
   const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  useEffect(() => {
+    const filter = searchParams.get("filter");
+    if (filter === "case-studies" || filter === "articles") {
+      setActiveFilter(filter);
+    } else {
+      setActiveFilter("all");
+    }
+  }, [searchParams]);
+
+  const handleFilterChange = (filterId) => {
+    setActiveFilter(filterId);
+    if (filterId === "all") {
+      router.push("/insights", { scroll: false });
+    } else {
+      router.push(`/insights?filter=${filterId}`, { scroll: false });
+    }
+  };
+
+  const filteredInsights = insights.filter((insight) => {
+    if (activeFilter === "case-studies") {
+      return insight.isCaseStudy;
+    }
+    if (activeFilter === "articles") {
+      return !insight.isCaseStudy;
+    }
+    return true;
+  });
 
   return (
     <>
@@ -115,15 +214,42 @@ export default function InsightsPageClient() {
         </div>
       </section>
 
-      {/* Featured Insights */}
+      {/* Filter Tabs */}
+      <section className="py-8 bg-surface border-y-2 border-border">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-8">
+            {filterTabs.map((tab) => {
+              const isActive = activeFilter === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => handleFilterChange(tab.id)}
+                  className={`
+                    relative px-4 py-2 font-mono text-sm uppercase tracking-wider
+                    transition-all duration-300
+                    ${
+                      isActive
+                        ? "text-neon-cyan border-b-2 border-neon-cyan"
+                        : "text-muted hover:text-foreground"
+                    }
+                  `}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Insights Grid */}
       <section
         ref={gridRef}
-        className="py-24 bg-surface border-y-2 border-border"
+        className="py-24 bg-surface border-b-2 border-border"
       >
         <div className="container mx-auto px-6 lg:px-8">
-          {/* Featured Grid */}
-          <div className="grid lg:grid-cols-2 gap-6 mb-12">
-            {featuredInsights.map((insight, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredInsights.map((insight, index) => {
               const styles = colorStyles[insight.colorKey];
 
               return (
@@ -132,69 +258,6 @@ export default function InsightsPageClient() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={gridInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Link
-                    href={`/insights/${insight.slug}`}
-                    className={`
-                      block h-full p-10 bg-card border-2 border-border
-                      border-l-4 ${styles.borderLeft}
-                      ${styles.hoverBorder} ${styles.hoverGlow}
-                      transition-all duration-300 group
-                    `}
-                  >
-                    {/* Meta */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm mb-6">
-                      <span
-                        className={`px-3 py-1 border-2 ${styles.border} ${styles.text} font-mono text-xs uppercase`}
-                      >
-                        {insight.category}
-                      </span>
-                      <span className="flex items-center gap-2 text-muted font-mono text-xs">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(insight.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h2
-                      className={`text-2xl md:text-3xl font-bold text-foreground mb-4 ${styles.groupHoverText} transition-colors`}
-                    >
-                      {insight.title}
-                    </h2>
-
-                    {/* Description */}
-                    <p className="text-muted text-lg leading-relaxed mb-8">
-                      {insight.description}
-                    </p>
-
-                    {/* CTA */}
-                    <div
-                      className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
-                    >
-                      Access Full Log
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Remaining Insights */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {remainingInsights.map((insight, index) => {
-              const styles = colorStyles[insight.colorKey];
-
-              return (
-                <motion.div
-                  key={insight.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={gridInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 >
                   <Link
                     href={`/insights/${insight.slug}`}
@@ -211,6 +274,11 @@ export default function InsightsPageClient() {
                       >
                         {insight.category}
                       </span>
+                      {insight.isCaseStudy && insight.industry && (
+                        <span className="px-2 py-1 border-2 border-border text-muted font-mono uppercase">
+                          {insight.industry}
+                        </span>
+                      )}
                       <span className="text-muted font-mono">
                         {new Date(insight.date).toLocaleDateString("en-US", {
                           year: "numeric",
@@ -236,7 +304,7 @@ export default function InsightsPageClient() {
                     <div
                       className={`flex items-center gap-2 font-mono text-xs ${styles.text} group-hover:translate-x-2 transition-transform`}
                     >
-                      Read Article
+                      {insight.isCaseStudy ? "View Case Study" : "Read Article"}
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </Link>

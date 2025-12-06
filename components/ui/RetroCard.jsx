@@ -80,6 +80,7 @@ export function MetricCard({
   label,
   color = "green",
   icon,
+  description,
   className = "",
 }) {
   const colorClasses = {
@@ -93,20 +94,25 @@ export function MetricCard({
   };
 
   return (
-    <RetroCard color={color} variant="accent" className={`p-6 ${className}`}>
-      <div className="flex items-start gap-4 relative z-10">
+    <RetroCard color={color} variant="accent" className={`p-6 overflow-hidden ${className}`}>
+      <div className="flex items-start gap-4 relative z-10 min-w-0">
         {icon && (
-          <div className={`${colorClasses[color]} opacity-60`}>{icon}</div>
+          <div className={`${colorClasses[color]} opacity-60 flex-shrink-0`}>{icon}</div>
         )}
-        <div>
+        <div className="flex-1 min-w-0">
           <div
-            className={`text-5xl font-bold font-mono ${colorClasses[color]} ${glowClasses[color]}`}
+            className={`text-3xl md:text-4xl lg:text-5xl font-bold font-mono ${colorClasses[color]} ${glowClasses[color]} break-words`}
           >
             {value}
           </div>
-          <div className="text-sm text-muted mt-2 uppercase tracking-wider font-mono">
+          <div className="text-xs md:text-sm text-muted mt-2 uppercase tracking-wider font-mono break-words">
             {label}
           </div>
+          {description && (
+            <div className="text-xs text-muted/70 mt-1 font-mono lowercase break-words">
+              {description}
+            </div>
+          )}
         </div>
       </div>
     </RetroCard>

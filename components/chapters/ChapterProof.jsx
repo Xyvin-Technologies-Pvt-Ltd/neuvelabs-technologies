@@ -48,7 +48,7 @@ export default function ChapterProof() {
             </div>
 
             <GlowButton
-              href="/insights"
+              href="/insights?filter=case-studies"
               variant="secondary"
               size="md"
               icon={<ArrowRight className="w-4 h-4" />}

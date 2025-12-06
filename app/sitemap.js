@@ -21,6 +21,13 @@ export default function sitemap() {
     "/industries/manufacturing",
     "/industries/real-estate",
     "/industries/education",
+    // Case Studies
+    "/insights/industrial-ai-document-intelligence",
+    "/insights/hyperlocal-business-network",
+    "/insights/educational-counseling-system",
+    "/insights/multi-tier-loyalty-platform",
+    "/insights/digital-business-identity-suite",
+    "/insights/family-connection-platform",
   ];
 
   return routes.map((route) => ({

@@ -712,6 +712,132 @@ body {
 }
 
 /* ============================================
+   ARTICLE CONTENT STYLES
+   ============================================ */
+.article-content h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.article-content p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--foreground-muted);
+  margin-bottom: 1.5rem;
+}
+
+.article-content .lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--foreground-muted);
+  margin: 0.75rem 0;
+}
+
+.article-content ul li {
+  list-style-type: disc;
+}
+
+.article-content ol li {
+  list-style-type: decimal;
+}
+
+.article-content strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.article-content a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.article-content blockquote {
+  border-left: 4px solid var(--neon-cyan);
+  background: var(--surface);
+  padding: 1.5rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.article-content code {
+  color: var(--neon-green);
+  background: var(--surface);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.article-content pre {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.article-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* Nested lists */
+.article-content ul ul,
+.article-content ol ul,
+.article-content ul ol,
+.article-content ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* First paragraph after heading */
+.article-content h2 + p,
+.article-content h3 + p {
+  margin-top: 0;
+}
+
+/* ============================================
    PRINT STYLES
    ============================================ */
 @media print {

@@ -26,6 +26,16 @@ const industryIcons = {
   Healthcare: HeartPulse,
 };
 
+// Map industries to their corresponding case study slugs
+const industryCaseStudyMap = {
+  Telecommunications: "telecom-catalogue-automation",
+  Transport: "ev-fleet-management",
+  "Financial Services": "loyalty-payment-platform",
+  Community: "family-community-platform",
+  Education: "custom-lms-platform",
+  Healthcare: "counselling-management-system",
+};
+
 const cardColors = ["green", "cyan", "green", "cyan", "green", "cyan"];
 
 export default function ChapterChallenge() {
@@ -70,6 +80,7 @@ export default function ChapterChallenge() {
             {industryStories.map((story, index) => {
               const Icon = industryIcons[story.industry] || AlertTriangle;
               const color = cardColors[index % cardColors.length];
+              const caseStudySlug = industryCaseStudyMap[story.industry];
 
               return (
                 <motion.div
@@ -82,9 +93,7 @@ export default function ChapterChallenge() {
                     color={color}
                     variant="scanlines"
                     className="p-6 h-full"
-                    href={`/industries/${story.industry
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                    href={`/insights/${caseStudySlug}`}
                   >
                     <div className="flex items-start gap-4">
                       <div
@@ -126,6 +135,7 @@ export default function ChapterChallenge() {
               {industryStories.map((story, index) => {
                 const Icon = industryIcons[story.industry] || AlertTriangle;
                 const color = cardColors[index % cardColors.length];
+                const caseStudySlug = industryCaseStudyMap[story.industry];
 
                 return (
                   <motion.div
@@ -139,6 +149,7 @@ export default function ChapterChallenge() {
                       color={color}
                       variant="scanlines"
                       className="p-6 h-full"
+                      href={`/insights/${caseStudySlug}`}
                     >
                       <div className="flex flex-col gap-4">
                         <div
@@ -184,7 +195,7 @@ export default function ChapterChallenge() {
           className="mt-12 text-center"
         >
           <Link
-            href="/insights"
+            href="/insights?filter=case-studies"
             className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-wider text-muted hover:text-neon-green transition-colors"
           >
             {t("viewAll")}
