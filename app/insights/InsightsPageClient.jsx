@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { ArrowRight, Calendar, FileText, Bookmark, Send } from "lucide-react";
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
@@ -136,19 +137,20 @@ const colorStyles = {
   },
 };
 
-const filterTabs = [
-  { id: "all", label: "All" },
-  { id: "case-studies", label: "Case Studies" },
-  { id: "articles", label: "Articles" },
-];
-
 export default function InsightsPageClient() {
+  const t = useTranslations("insights");
   const gridRef = useRef(null);
   const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
   const searchParams = useSearchParams();
   const router = useRouter();
   
   const [activeFilter, setActiveFilter] = useState("all");
+
+  const filterTabs = [
+    { id: "all", label: t("filters.all") },
+    { id: "case-studies", label: t("filters.caseStudies") },
+    { id: "articles", label: t("filters.articles") },
+  ];
 
   useEffect(() => {
     const filter = searchParams.get("filter");
@@ -195,19 +197,17 @@ export default function InsightsPageClient() {
             >
               <RetroBadge color="cyan" className="mb-8">
                 <FileText className="w-3 h-3" />
-                Mission Logs
+                {t("hero.badge")}
               </RetroBadge>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                <span className="text-foreground">Latest</span>
+                <span className="text-foreground">{t("hero.title")}</span>
                 <br />
-                <span className="text-neon-cyan text-glow-cyan">Insights</span>
+                <span className="text-neon-cyan text-glow-cyan">{t("hero.titleHighlight")}</span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                Data-rich analysis, playbooks, and perspectives from our
-                consultants working with government entities, banking leaders,
-                and innovators.
+                {t("hero.description")}
               </p>
             </motion.div>
           </div>
@@ -304,7 +304,7 @@ export default function InsightsPageClient() {
                     <div
                       className={`flex items-center gap-2 font-mono text-xs ${styles.text} group-hover:translate-x-2 transition-transform`}
                     >
-                      {insight.isCaseStudy ? "View Case Study" : "Read Article"}
+                      {insight.isCaseStudy ? t("cta.viewCaseStudy") : t("cta.readArticle")}
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </Link>
@@ -344,21 +344,20 @@ export default function InsightsPageClient() {
               <div className="text-center">
                 <RetroBadge color="cyan" className="mb-6">
                   <Bookmark className="w-3 h-3" />
-                  Stay Updated
+                  {t("newsletter.badge")}
                 </RetroBadge>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  Insights Delivered to Your Inbox
+                  {t("newsletter.title")}
                 </h2>
                 <p className="text-muted mb-8">
-                  Subscribe for strategic updates on AI, cyber security, and
-                  automation shaping the UAE & GCC technology landscape.
+                  {t("newsletter.description")}
                 </p>
 
                 <form className="flex flex-col sm:flex-row gap-4">
                   <input
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder={t("newsletter.placeholder")}
                     className="flex-1 bg-background border-2 border-border px-6 py-3 font-mono text-foreground placeholder:text-muted/50 focus:outline-none focus:border-neon-cyan transition-colors"
                   />
                   <button
@@ -366,12 +365,12 @@ export default function InsightsPageClient() {
                     className="px-8 py-3 bg-neon-cyan text-background font-mono font-bold uppercase tracking-wider hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4" />
-                    Subscribe
+                    {t("newsletter.button")}
                   </button>
                 </form>
 
                 <p className="mt-6 text-xs text-muted font-mono">
-                  We respect your privacy. Unsubscribe at any time.
+                  {t("newsletter.privacy")}
                 </p>
               </div>
             </motion.div>

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   Brain,
   Cloud,
@@ -19,57 +20,6 @@ import {
 import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
 import { RetroCTA } from "@/components/RetroPageTemplate";
-
-const services = [
-  {
-    title: "AI & Machine Learning",
-    description:
-      "Transform your business with cutting-edge artificial intelligence and machine learning solutions. From predictive analytics to natural language processing.",
-    href: "/digital-engineering/ai-ml",
-    icon: Brain,
-    colorKey: "green",
-  },
-  {
-    title: "Cloud Engineering",
-    description:
-      "Modernize your infrastructure with cloud-native solutions. Accelerate deployments, improve reliability, and scale effortlessly.",
-    href: "/digital-engineering/cloud-engineering",
-    icon: Cloud,
-    colorKey: "cyan",
-  },
-  {
-    title: "Data Engineering",
-    description:
-      "Build robust data pipelines and infrastructure. Transform raw data into actionable insights with modern data architecture.",
-    href: "/digital-engineering/data-engineering",
-    icon: Database,
-    colorKey: "cyan",
-  },
-  {
-    title: "Product Engineering",
-    description:
-      "End-to-end product development from concept to deployment. Build experiences that define the next generation.",
-    href: "/digital-engineering/product-engineering",
-    icon: Cpu,
-    colorKey: "green",
-  },
-  {
-    title: "Data Analytics",
-    description:
-      "Unlock the power of your data with advanced analytics, business intelligence, and data visualization solutions.",
-    href: "/digital-engineering/data-analytics",
-    icon: BarChart3,
-    colorKey: "cyan",
-  },
-  {
-    title: "Enterprise Software",
-    description:
-      "Build robust, scalable enterprise applications tailored to your business needs. Custom software and legacy modernization.",
-    href: "/digital-engineering/enterprise-software",
-    icon: Code2,
-    colorKey: "cyan",
-  },
-];
 
 // Pre-defined complete class names for Tailwind JIT
 const colorStyles = {
@@ -92,8 +42,60 @@ const colorStyles = {
 };
 
 export default function DigitalEngineeringClient() {
+  const t = useTranslations("digitalEngineering");
   const gridRef = useRef(null);
   const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
+
+  const services = [
+    {
+      title: t("services.aiMl.title"),
+      description: t("services.aiMl.description"),
+      href: "/digital-engineering/ai-ml",
+      icon: Brain,
+      colorKey: "green",
+      cta: t("services.aiMl.cta"),
+    },
+    {
+      title: t("services.cloudEngineering.title"),
+      description: t("services.cloudEngineering.description"),
+      href: "/digital-engineering/cloud-engineering",
+      icon: Cloud,
+      colorKey: "cyan",
+      cta: t("services.cloudEngineering.cta"),
+    },
+    {
+      title: t("services.dataEngineering.title"),
+      description: t("services.dataEngineering.description"),
+      href: "/digital-engineering/data-engineering",
+      icon: Database,
+      colorKey: "cyan",
+      cta: t("services.dataEngineering.cta"),
+    },
+    {
+      title: t("services.productEngineering.title"),
+      description: t("services.productEngineering.description"),
+      href: "/digital-engineering/product-engineering",
+      icon: Cpu,
+      colorKey: "green",
+      cta: t("services.productEngineering.cta"),
+    },
+    {
+      title: t("services.dataAnalytics.title"),
+      description: t("services.dataAnalytics.description"),
+      href: "/digital-engineering/data-analytics",
+      icon: BarChart3,
+      colorKey: "cyan",
+      cta: t("services.dataAnalytics.cta"),
+    },
+    {
+      title: t("services.enterpriseSoftware.title"),
+      description: t("services.enterpriseSoftware.description"),
+      href: "/digital-engineering/enterprise-software",
+      icon: Code2,
+      colorKey: "cyan",
+      cta: t("services.enterpriseSoftware.cta"),
+    },
+  ];
 
   return (
     <>
@@ -112,20 +114,19 @@ export default function DigitalEngineeringClient() {
             >
               <RetroBadge color="green" className="mb-8">
                 <Zap className="w-3 h-3" />
-                Core Expertise
+                {t("hero.badge")}
               </RetroBadge>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                <span className="text-foreground">Digital</span>
+                <span className="text-foreground">{t("hero.title")}</span>
                 <br />
                 <span className="text-neon-green text-glow-green">
-                  Engineering
+                  {t("hero.titleHighlight")}
                 </span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                We design, build, and deploy cutting-edge digital solutions that
-                transform businesses and drive innovation.
+                {t("hero.description")}
               </p>
             </motion.div>
           </div>
@@ -184,7 +185,7 @@ export default function DigitalEngineeringClient() {
                     <div
                       className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
                     >
-                      Explore Solutions
+                      {service.cta}
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </Link>
@@ -197,9 +198,9 @@ export default function DigitalEngineeringClient() {
 
       {/* CTA */}
       <RetroCTA
-        title="Ready to Engineer the Future?"
-        description="Let's discuss how our digital engineering expertise can transform your business."
-        buttonText="Start Your Project"
+        title={t("cta.title")}
+        description={t("cta.description")}
+        buttonText={t("cta.buttonText")}
         buttonHref="/contact"
       />
     </>

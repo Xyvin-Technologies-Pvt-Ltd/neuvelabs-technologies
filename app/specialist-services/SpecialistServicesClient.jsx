@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   Shield,
   Cpu,
@@ -19,41 +20,6 @@ import { RetroBadge } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
 import FluidShape from "@/components/ui/FluidShape";
 import { RetroCTA } from "@/components/RetroPageTemplate";
-
-const services = [
-  {
-    title: "AI Engineering",
-    description:
-      "Build production-ready AI systems. From model development to deployment and MLOps infrastructure.",
-    href: "/specialist-services/ai-engineering",
-    icon: Brain,
-    colorKey: "green",
-  },
-  {
-    title: "Cyber Security",
-    description:
-      "Protect your digital assets with robust security strategies, threat monitoring, and compliance frameworks.",
-    href: "/specialist-services/cyber-security",
-    icon: Shield,
-    colorKey: "cyan",
-  },
-  {
-    title: "Process Automation",
-    description:
-      "Automate complex business processes with intelligent AI-powered solutions that reduce manual work.",
-    href: "/specialist-services/process-automation",
-    icon: Workflow,
-    colorKey: "cyan",
-  },
-];
-
-const focusAreas = [
-  "AI-driven process automation & predictive analytics",
-  "Cyber resilience programs & SOC monitoring",
-  "Applied AI platforms & GenAI copilots",
-  "Enterprise architecture & legacy modernization",
-  "Cloud migration & DevOps transformation",
-];
 
 // Pre-defined complete class names for Tailwind JIT
 const colorStyles = {
@@ -76,10 +42,40 @@ const colorStyles = {
 };
 
 export default function SpecialistServicesClient() {
+  const t = useTranslations("specialistServices");
   const gridRef = useRef(null);
   const whyRef = useRef(null);
   const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
   const whyInView = useInView(whyRef, { once: true, margin: "-100px" });
+
+  const services = [
+    {
+      title: t("services.aiEngineering.title"),
+      description: t("services.aiEngineering.description"),
+      href: "/specialist-services/ai-engineering",
+      icon: Brain,
+      colorKey: "green",
+      cta: t("services.aiEngineering.cta"),
+    },
+    {
+      title: t("services.cyberSecurity.title"),
+      description: t("services.cyberSecurity.description"),
+      href: "/specialist-services/cyber-security",
+      icon: Shield,
+      colorKey: "cyan",
+      cta: t("services.cyberSecurity.cta"),
+    },
+    {
+      title: t("services.processAutomation.title"),
+      description: t("services.processAutomation.description"),
+      href: "/specialist-services/process-automation",
+      icon: Workflow,
+      colorKey: "cyan",
+      cta: t("services.processAutomation.cta"),
+    },
+  ];
+
+  const focusAreas = t.raw("whyUs.focusAreas.items") || [];
 
   return (
     <>
@@ -98,18 +94,17 @@ export default function SpecialistServicesClient() {
             >
               <RetroBadge color="cyan" className="mb-8">
                 <Terminal className="w-3 h-3" />
-                Specialized Expertise
+                {t("hero.badge")}
               </RetroBadge>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                <span className="text-foreground">Specialist</span>
+                <span className="text-foreground">{t("hero.title")}</span>
                 <br />
-                <span className="text-neon-cyan text-glow-cyan">Services</span>
+                <span className="text-neon-cyan text-glow-cyan">{t("hero.titleHighlight")}</span>
               </h1>
 
               <p className="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
-                Expert consulting engineered for innovation and measurable
-                impact. We combine deep industry insight with engineering rigor.
+                {t("hero.description")}
               </p>
             </motion.div>
           </div>
@@ -168,7 +163,7 @@ export default function SpecialistServicesClient() {
                     <div
                       className={`flex items-center gap-2 font-mono text-sm ${styles.text} group-hover:translate-x-2 transition-transform`}
                     >
-                      Learn More
+                      {service.cta}
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </Link>
@@ -202,31 +197,29 @@ export default function SpecialistServicesClient() {
             >
               <RetroBadge color="cyan" className="mb-6">
                 <Zap className="w-3 h-3" />
-                Why Us
+                {t("whyUs.badge")}
               </RetroBadge>
 
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Strategic specialists with{" "}
+                {t("whyUs.title")}{" "}
                 <span className="text-neon-cyan">
-                  local market intelligence
+                  {t("whyUs.titleHighlight")}
                 </span>
               </h2>
 
               <p className="text-muted text-lg leading-relaxed mb-8">
-                From enterprise-grade automation to security strategy and AI
-                delivery, our teams translate boardroom priorities into
-                engineered solutions aligned with UAE Vision 2031.
+                {t("whyUs.description")}
               </p>
 
               <div className="space-y-6">
                 {[
                   {
-                    title: "Regulatory Alignment",
-                    desc: "Built-in compliance with UAE Central Bank, NESA, and ADGM frameworks.",
+                    title: t("whyUs.regulatoryAlignment.title"),
+                    desc: t("whyUs.regulatoryAlignment.description"),
                   },
                   {
-                    title: "Co-creation Approach",
-                    desc: "Embedded design studios and agile pods elevate your internal capabilities.",
+                    title: t("whyUs.coCreation.title"),
+                    desc: t("whyUs.coCreation.description"),
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -269,7 +262,7 @@ export default function SpecialistServicesClient() {
               </div>
 
               <h3 className="text-xl font-bold text-foreground mb-6">
-                Focus Areas
+                {t("whyUs.focusAreas.title")}
               </h3>
               <ul className="space-y-4">
                 {focusAreas.map((item, i) => (
@@ -291,9 +284,9 @@ export default function SpecialistServicesClient() {
 
       {/* CTA */}
       <RetroCTA
-        title="Ready to Specialize?"
-        description="Let's discuss how our specialist services can help you achieve measurable impact."
-        buttonText="Start a Conversation"
+        title={t("cta.title")}
+        description={t("cta.description")}
+        buttonText={t("cta.buttonText")}
         buttonHref="/contact"
       />
     </>

@@ -62,8 +62,33 @@
   "footer": {
     "tagline": "Engineering the future. ",
     "copyright": "All rights reserved.",
+    "description": "Next-generation AI and IT consulting company helping enterprises accelerate digital transformation through cutting-edge technology solutions.",
+    "services": {
+      "title": "Services",
+      "aiMl": "AI & Machine Learning",
+      "cloudDevops": "Cloud & DevOps",
+      "dataAnalytics": "Data Analytics",
+      "enterpriseSoftware": "Enterprise Software"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "industries": "Industries",
+      "insights": "Insights",
+      "contact": "Contact Us"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest insights and tech trends.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "contact": {
+      "email": "info@neuvelabs.com",
+      "location": "Dubai, United Arab Emirates"
+    },
     "links": {
-      "privacy": "Privacy Protocol",
+      "privacy": "Privacy Policy",
       "terms": "Terms of Service",
       "careers": "Join the Crew"
     }
@@ -199,6 +224,31 @@
       "buttonText": "Start a Conversation"
     }
   },
+  "insights": {
+    "hero": {
+      "badge": "Mission Logs",
+      "title": "Latest",
+      "titleHighlight": "Insights",
+      "description": "Data-rich analysis, playbooks, and perspectives from our consultants working with government entities, banking leaders, and innovators."
+    },
+    "filters": {
+      "all": "All",
+      "caseStudies": "Case Studies",
+      "articles": "Articles"
+    },
+    "newsletter": {
+      "badge": "Stay Updated",
+      "title": "Insights Delivered to Your Inbox",
+      "description": "Subscribe for strategic updates on AI, cyber security, and automation shaping the UAE & GCC technology landscape.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe",
+      "privacy": "We respect your privacy. Unsubscribe at any time."
+    },
+    "cta": {
+      "viewCaseStudy": "View Case Study",
+      "readArticle": "Read Article"
+    }
+  },
   "caseStudies": {
     "category": "Case Study",
     "backToInsights": "Back to Insights",
@@ -239,6 +289,105 @@
       "title": "Family Connection Platform: Multi-Generational Digital Ecosystem",
       "description": "A comprehensive family management platform combining genealogy tracking, financial management, and community engagement features for extended family networks.",
       "industry": "Social & Community"
+    }
+  },
+  "digitalEngineering": {
+    "hero": {
+      "badge": "Core Expertise",
+      "title": "Digital",
+      "titleHighlight": "Engineering",
+      "description": "We design, build, and deploy cutting-edge digital solutions that transform businesses and drive innovation."
+    },
+    "services": {
+      "aiMl": {
+        "title": "AI & Machine Learning",
+        "description": "Transform your business with cutting-edge artificial intelligence and machine learning solutions. From predictive analytics to natural language processing.",
+        "cta": "Explore Solutions"
+      },
+      "cloudEngineering": {
+        "title": "Cloud Engineering",
+        "description": "Modernize your infrastructure with cloud-native solutions. Accelerate deployments, improve reliability, and scale effortlessly.",
+        "cta": "Explore Solutions"
+      },
+      "dataEngineering": {
+        "title": "Data Engineering",
+        "description": "Build robust data pipelines and infrastructure. Transform raw data into actionable insights with modern data architecture.",
+        "cta": "Explore Solutions"
+      },
+      "productEngineering": {
+        "title": "Product Engineering",
+        "description": "End-to-end product development from concept to deployment. Build experiences that define the next generation.",
+        "cta": "Explore Solutions"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "description": "Unlock the power of your data with advanced analytics, business intelligence, and data visualization solutions.",
+        "cta": "Explore Solutions"
+      },
+      "enterpriseSoftware": {
+        "title": "Enterprise Software",
+        "description": "Build robust, scalable enterprise applications tailored to your business needs. Custom software and legacy modernization.",
+        "cta": "Explore Solutions"
+      }
+    },
+    "cta": {
+      "title": "Ready to Engineer the Future?",
+      "description": "Let's discuss how our digital engineering expertise can transform your business.",
+      "buttonText": "Start Your Project"
+    }
+  },
+  "specialistServices": {
+    "hero": {
+      "badge": "Specialized Expertise",
+      "title": "Specialist",
+      "titleHighlight": "Services",
+      "description": "Expert consulting engineered for innovation and measurable impact. We combine deep industry insight with engineering rigor."
+    },
+    "services": {
+      "aiEngineering": {
+        "title": "AI Engineering",
+        "description": "Build production-ready AI systems. From model development to deployment and MLOps infrastructure.",
+        "cta": "Learn More"
+      },
+      "cyberSecurity": {
+        "title": "Cyber Security",
+        "description": "Protect your digital assets with robust security strategies, threat monitoring, and compliance frameworks.",
+        "cta": "Learn More"
+      },
+      "processAutomation": {
+        "title": "Process Automation",
+        "description": "Automate complex business processes with intelligent AI-powered solutions that reduce manual work.",
+        "cta": "Learn More"
+      }
+    },
+    "whyUs": {
+      "badge": "Why Us",
+      "title": "Strategic specialists with",
+      "titleHighlight": "local market intelligence",
+      "description": "From enterprise-grade automation to security strategy and AI delivery, our teams translate boardroom priorities into engineered solutions aligned with UAE Vision 2031.",
+      "regulatoryAlignment": {
+        "title": "Regulatory Alignment",
+        "description": "Built-in compliance with UAE Central Bank, NESA, and ADGM frameworks."
+      },
+      "coCreation": {
+        "title": "Co-creation Approach",
+        "description": "Embedded design studios and agile pods elevate your internal capabilities."
+      },
+      "focusAreas": {
+        "title": "Focus Areas",
+        "items": [
+          "AI-driven process automation & predictive analytics",
+          "Cyber resilience programs & SOC monitoring",
+          "Applied AI platforms & GenAI copilots",
+          "Enterprise architecture & legacy modernization",
+          "Cloud migration & DevOps transformation"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Specialize?",
+      "description": "Let's discuss how our specialist services can help you achieve measurable impact.",
+      "buttonText": "Start a Conversation"
     }
   }
 }

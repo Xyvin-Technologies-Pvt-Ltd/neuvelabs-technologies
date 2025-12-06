@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ArrowLeft, CheckCircle2, Code, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { RetroBadge, MetricCard } from "@/components/ui/RetroCard";
 import { CornerGlow } from "@/components/ui/FluidShape";
 
@@ -22,6 +23,7 @@ const colorStyles = {
 };
 
 export default function CaseStudyPageClient({ caseStudy }) {
+  const t = useTranslations("caseStudies");
   const styles = colorStyles[caseStudy.colorKey] || colorStyles.green;
 
   return (
@@ -45,7 +47,7 @@ export default function CaseStudyPageClient({ caseStudy }) {
               className="inline-flex items-center gap-2 text-muted hover:text-foreground transition-colors font-mono text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Insights
+              {t("backToInsights")}
             </Link>
           </motion.div>
 
@@ -58,7 +60,7 @@ export default function CaseStudyPageClient({ caseStudy }) {
           >
             <RetroBadge color={caseStudy.colorKey} className="mb-6">
               <CheckCircle2 className="w-3 h-3" />
-              {caseStudy.category}
+              {t("category")}
             </RetroBadge>
 
             <div className="flex flex-wrap items-center gap-4 text-sm mb-6">
@@ -97,7 +99,7 @@ export default function CaseStudyPageClient({ caseStudy }) {
               transition={{ duration: 0.6 }}
             >
               <RetroBadge color={caseStudy.colorKey} className="mb-6">
-                Challenge
+                {t("challenge")}
               </RetroBadge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {caseStudy.challenge.title}
@@ -123,7 +125,7 @@ export default function CaseStudyPageClient({ caseStudy }) {
               transition={{ duration: 0.6 }}
             >
               <RetroBadge color={caseStudy.colorKey} className="mb-6">
-                Solution
+                {t("solution")}
               </RetroBadge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {caseStudy.solution.title}
@@ -169,7 +171,7 @@ export default function CaseStudyPageClient({ caseStudy }) {
             >
               <RetroBadge color={caseStudy.colorKey} className="mb-6">
                 <TrendingUp className="w-3 h-3" />
-                Results & Impact
+                {t("results")}
               </RetroBadge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
                 {caseStudy.results.title}
@@ -219,10 +221,10 @@ export default function CaseStudyPageClient({ caseStudy }) {
             >
               <RetroBadge color={caseStudy.colorKey} className="mb-6">
                 <Code className="w-3 h-3" />
-                Technology Stack
+                {t("techStack")}
               </RetroBadge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Built With Modern Technologies
+                {t("builtWith")}
               </h2>
               <div className="flex flex-wrap gap-3">
                 {caseStudy.techStack.map((tech, index) => (
@@ -254,16 +256,16 @@ export default function CaseStudyPageClient({ caseStudy }) {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Ready to Transform Your Business?
+                {t("readyToTransform")}
               </h2>
               <p className="text-muted text-lg mb-8">
-                Let's discuss how we can help you achieve similar results.
+                {t("letsDiscuss")}
               </p>
               <Link
                 href="/contact"
                 className={`inline-flex items-center gap-2 px-8 py-4 border-2 ${styles.border} ${styles.text} font-mono font-bold uppercase tracking-wider hover:shadow-[0_0_30px_rgba(0,255,136,0.4)] transition-all bg-card`}
               >
-                Start Your Project
+                {t("startProject")}
                 <ArrowLeft className="w-4 h-4 rotate-180" />
               </Link>
             </motion.div>
