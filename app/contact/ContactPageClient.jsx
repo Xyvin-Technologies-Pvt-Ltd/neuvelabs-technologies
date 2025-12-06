@@ -17,7 +17,7 @@ import { RetroBadge } from "@/components/ui/RetroCard";
 import RetroInput, { RetroTextarea } from "@/components/ui/RetroInput";
 import GlowButton from "@/components/ui/GlowButton";
 
-// Pre-defined complete class names for Tailwind JIT
+// Pre-defined complete class names for Tailwind JITs
 const colorStyles = {
   green: {
     text: "text-neon-green",
