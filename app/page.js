@@ -18,7 +18,7 @@ export default function Home() {
       <ChapterSignal />
 
       {/* Chapter 2: The Challenge - Industry Problems */}
-      <ChapterChallenge />
+      {/* <ChapterChallenge /> */}
 
       {/* Chapter 3: The Vision - Services/Solutions */}
       <ChapterVision />
