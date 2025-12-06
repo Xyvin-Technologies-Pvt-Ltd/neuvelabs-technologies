@@ -48,7 +48,11 @@ export default function TypewriterText({
         <motion.span
           className="terminal-cursor"
           animate={{ opacity: isComplete ? [1, 0] : 1 }}
-          transition={isComplete ? { duration: 0.5, repeat: Infinity, repeatType: "reverse" } : {}}
+          transition={
+            isComplete
+              ? { duration: 0.5, repeat: Infinity, repeatType: "reverse" }
+              : {}
+          }
         />
       )}
     </Tag>
@@ -96,6 +100,3 @@ export function TypewriterLines({
     </div>
   );
 }
-
-
-

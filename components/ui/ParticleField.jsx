@@ -22,7 +22,9 @@ export default function ParticleField({
   }, [particleCount, maxSize, speed]);
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+    >
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -52,10 +54,7 @@ export default function ParticleField({
 }
 
 // Canvas-based particle field for better performance with many particles
-export function ParticleFieldCanvas({
-  particleCount = 200,
-  className = "",
-}) {
+export function ParticleFieldCanvas({ particleCount = 200, className = "" }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -139,6 +138,3 @@ export function ParticleFieldCanvas({
     />
   );
 }
-
-
-

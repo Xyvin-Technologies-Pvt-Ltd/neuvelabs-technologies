@@ -6,27 +6,27 @@ export const useLanguageStore = create(
     (set, get) => ({
       locale: 'en', // 'en' | 'ar'
       isRTL: false,
-      
+
       setLocale: (locale) => {
         const isRTL = locale === 'ar';
         set({ locale, isRTL });
-        
+
         // Apply RTL to document
         if (typeof document !== 'undefined') {
           document.documentElement.setAttribute('lang', locale);
           document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
         }
       },
-      
+
       toggleLocale: () => {
         const newLocale = get().locale === 'en' ? 'ar' : 'en';
         get().setLocale(newLocale);
       },
-      
+
       // Initialize from browser or stored preference
       initializeLocale: () => {
         if (typeof window === 'undefined') return;
-        
+
         const stored = localStorage.getItem('language-storage');
         if (stored) {
           const parsed = JSON.parse(stored);
@@ -35,7 +35,7 @@ export const useLanguageStore = create(
             return;
           }
         }
-        
+
         // Check browser language
         const browserLang = navigator.language.split('-')[0];
         if (browserLang === 'ar') {
@@ -51,6 +51,8 @@ export const useLanguageStore = create(
     }
   )
 );
+
+
 
 
 

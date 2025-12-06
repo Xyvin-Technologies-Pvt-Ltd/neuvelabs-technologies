@@ -16,9 +16,7 @@ export default function ThemeToggle({ className = "" }) {
 
   // Prevent hydration mismatch
   if (!mounted) {
-    return (
-      <div className={`w-10 h-10 rounded-full bg-surface ${className}`} />
-    );
+    return <div className={`w-10 h-10 rounded-full bg-surface ${className}`} />;
   }
 
   return (
@@ -34,7 +32,7 @@ export default function ThemeToggle({ className = "" }) {
         transition-all duration-300
         ${className}
       `}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       <motion.div
         initial={false}
@@ -50,16 +48,17 @@ export default function ThemeToggle({ className = "" }) {
           <Sun className="w-5 h-5 text-neon-orange" />
         )}
       </motion.div>
-      
+
       {/* Glow ring on hover */}
       <motion.div
         className="absolute inset-0 rounded-full"
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1 }}
         style={{
-          background: theme === "dark" 
-            ? "radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%)"
-            : "radial-gradient(circle, rgba(255,102,0,0.1) 0%, transparent 70%)",
+          background:
+            theme === "dark"
+              ? "radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%)"
+              : "radial-gradient(circle, rgba(255,102,0,0.1) 0%, transparent 70%)",
         }}
       />
     </motion.button>
@@ -103,6 +102,3 @@ export function ThemeToggleInline({ className = "" }) {
     </button>
   );
 }
-
-
-

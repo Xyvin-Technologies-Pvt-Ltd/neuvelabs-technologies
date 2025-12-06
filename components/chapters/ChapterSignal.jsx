@@ -16,16 +16,16 @@ export default function ChapterSignal() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background layers */}
       <div className="absolute inset-0 bg-background" />
-      
+
       {/* Grid background */}
       <div className="absolute inset-0 grid-background-radial opacity-50" />
-      
+
       {/* Particle field */}
       <ParticleFieldCanvas particleCount={150} />
-      
+
       {/* Fluid shapes */}
       <FluidShapeGroup />
-      
+
       {/* Main content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
@@ -99,6 +99,3 @@ export default function ChapterSignal() {
     </section>
   );
 }
-
-
-
