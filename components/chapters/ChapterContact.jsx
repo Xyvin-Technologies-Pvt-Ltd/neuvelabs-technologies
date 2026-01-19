@@ -108,7 +108,7 @@ export default function ChapterContact() {
                   <div className="w-3 h-3 rounded-full bg-neon-green/60" />
                 </div>
                 <span className="text-xs font-mono text-muted ml-4">
-                  transmission_form.exe
+                  contact_form
                 </span>
               </div>
 
@@ -123,7 +123,7 @@ export default function ChapterContact() {
                     {t("form.success")}
                   </h3>
                   <p className="text-muted">
-                    Our team will respond to your transmission shortly.
+                    Our team will get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (

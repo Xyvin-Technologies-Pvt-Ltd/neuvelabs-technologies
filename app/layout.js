@@ -47,6 +47,8 @@ export default async function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
+        <link rel="icon" href="/logo-title.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo-title.svg" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -79,7 +81,7 @@ export default async function RootLayout({ children }) {
               "@type": "Organization",
               name: "Neuve Labs Technology",
               url: siteConfig.url,
-              logo: `${siteConfig.url}/images/logo.png`,
+              logo: `${siteConfig.url}/logo1.svg`,
               description: siteConfig.description,
               address: {
                 "@type": "PostalAddress",

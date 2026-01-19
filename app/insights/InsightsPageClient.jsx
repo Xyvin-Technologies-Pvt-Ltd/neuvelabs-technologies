@@ -337,7 +337,7 @@ export default function InsightsPageClient() {
                   <div className="w-3 h-3 rounded-full bg-neon-green" />
                 </div>
                 <span className="text-xs font-mono text-muted ml-4">
-                  newsletter_subscribe.exe
+                  newsletter
                 </span>
               </div>
 

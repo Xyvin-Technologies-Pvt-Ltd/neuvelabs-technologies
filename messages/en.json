@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Neuve Labs Technology",
-    "description": "Where extraordinary minds shape the future of technology"
+    "description": "AI and IT consulting company delivering digital transformation solutions in UAE"
   },
   "nav": {
     "home": "Home",
@@ -14,30 +14,30 @@
     "industries": "Industries"
   },
   "hero": {
-    "preTitle": "Initializing transmission...",
-    "title": "The future isn't coming.",
-    "titleHighlight": "It's already here.",
-    "subtitle": "We don't just build technology. We engineer tomorrow's possibilities today.",
-    "scrollIndicator": "Enter the future",
-    "cta": "Begin transmission"
+    "preTitle": "Welcome to Neuve Labs",
+    "title": "Technology that",
+    "titleHighlight": "drives results.",
+    "subtitle": "We build intelligent solutions that help businesses automate, scale, and compete in the digital economy.",
+    "scrollIndicator": "Explore our work",
+    "cta": "Get Started"
   },
   "challenge": {
-    "badge": "Transmission Log",
+    "badge": "Industry Challenges",
     "title": "The Challenges",
-    "subtitle": "Industries facing the storm of digital transformation",
-    "viewAll": "View all case files"
+    "subtitle": "Industries navigating digital transformation need proven partners",
+    "viewAll": "View all case studies"
   },
   "vision": {
-    "badge": "Technologies Unlocked",
-    "title": "The Vision",
-    "subtitle": "Our constellation of solutions powering tomorrow's enterprises",
-    "explore": "Explore technology"
+    "badge": "Our Services",
+    "title": "What We Do",
+    "subtitle": "End-to-end technology solutions tailored to your business needs",
+    "explore": "Learn more"
   },
   "proof": {
-    "badge": "Mission Logs",
-    "title": "Proof of Transmission",
-    "subtitle": "Verified transformations across industries",
-    "readMore": "Access full log",
+    "badge": "Case Studies",
+    "title": "Our Work",
+    "subtitle": "Real results from real projects across industries",
+    "readMore": "Read full case study",
     "metrics": {
       "improvement": "improvement",
       "reduction": "reduction",
@@ -45,24 +45,24 @@
     }
   },
   "contact": {
-    "badge": "Open Channel",
-    "title": "Join the Future",
-    "subtitle": "Ready to transform your digital landscape?",
+    "badge": "Get in Touch",
+    "title": "Let's Talk",
+    "subtitle": "Ready to start your next project?",
     "form": {
-      "name": "Your designation",
-      "email": "Communication frequency",
-      "company": "Organization",
-      "message": "Transmission content",
-      "submit": "Transmit message",
-      "sending": "Transmitting...",
-      "success": "Transmission successful",
-      "error": "Transmission failed. Retry?"
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "message": "How can we help?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully",
+      "error": "Something went wrong. Please try again."
     }
   },
   "footer": {
-    "tagline": "Engineering the future. ",
+    "tagline": "Technology that delivers.",
     "copyright": "All rights reserved.",
-    "description": "Next-generation AI and IT consulting company helping enterprises accelerate digital transformation through cutting-edge technology solutions.",
+    "description": "AI and IT consulting company helping enterprises accelerate digital transformation through proven technology solutions.",
     "services": {
       "title": "Services",
       "aiMl": "AI & Machine Learning",
@@ -90,33 +90,33 @@
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "careers": "Join the Crew"
+      "careers": "Careers"
     }
   },
   "services": {
     "aiEngineering": {
       "title": "AI Engineering",
-      "description": "Machine learning systems that think beyond boundaries"
+      "description": "Custom AI and ML solutions from prototype to production deployment"
     },
     "cloudEngineering": {
       "title": "Cloud Engineering",
-      "description": "Infinite scale infrastructure for limitless ambition"
+      "description": "Scalable cloud infrastructure, migration, and optimization services"
     },
     "dataEngineering": {
       "title": "Data Engineering",
-      "description": "Transform raw signals into strategic intelligence"
+      "description": "Build reliable data pipelines and analytics infrastructure"
     },
     "productEngineering": {
       "title": "Product Engineering",
-      "description": "Build experiences that define the next generation"
+      "description": "Full-stack development from concept to market-ready products"
     },
     "cyberSecurity": {
       "title": "Cyber Security",
-      "description": "Fortress-grade protection for your digital assets"
+      "description": "Security assessments, compliance, and threat protection solutions"
     },
     "processAutomation": {
       "title": "Process Automation",
-      "description": "Streamline operations with intelligent workflows"
+      "description": "Streamline operations with intelligent workflow automation"
     }
   },
   "industries": {
@@ -146,71 +146,71 @@
   },
   "about": {
     "hero": {
-      "badge": "System Profile",
+      "badge": "About Us",
       "title": "We Are",
       "titleHighlight": "Neuve Labs",
-      "subtitle": "Established in 2025 in UAE, Neuve Labs brings proven IT consulting expertise and innovative solutions to the Middle East market. We are a collective of passionate innovators, engineers, and strategists dedicated to driving digital transformation.",
+      "subtitle": "Based in UAE since 2025, Neuve Labs combines fresh perspective with proven expertise. Our team has delivered 500+ projects across multiple countries, bringing that experience to help Middle East businesses transform digitally.",
       "ctaPrimary": "Start a Project",
       "ctaSecondary": "View Our Work"
     },
     "stats": {
-      "yearsOfExcellence": "Years of Excellence",
       "projectsDelivered": "Projects Delivered",
       "globalReach": "Countries Served",
-      "technologyPartnerships": "Tech Partnerships"
+      "technologyPartnerships": "Tech Partnerships",
+      "clientSatisfaction": "Client Retention"
     },
     "story": {
       "badge": "Our Story",
       "title": "Building the Future,",
-      "titleHighlight": "Where Innovation Meets Impact",
-      "paragraph1": "Neuve Labs was established in 2025 in  UAE, as a new IT consulting company focused on serving the UAE market. While we are a new entity, our team brings extensive experience from delivering 500+ successful projects across multiple countries.",
-      "paragraph2": "We leverage deep IT consulting expertise and proven methodologies to bring cutting-edge solutions to businesses in the UAE and beyond. Our track record includes serving clients across UAE, Oman, Singapore, India, Netherlands, Belgium, and strategic partnerships with US-based IT companies.",
-      "paragraph3": "We believe that technology should be an enabler, not a barrier. That's why we focus on creating intuitive, scalable, and robust solutions that solve real-world problems. From startups to enterprises, we partner with organizations to unlock their full potential through AI engineering, cloud solutions, product development, cybersecurity, and process automation."
+      "titleHighlight": "One Project at a Time",
+      "paragraph1": "Neuve Labs was established in 2025 in UAE as a dedicated IT consulting company serving the Middle East market. Our founding team brings hands-on experience from delivering 500+ successful projects across telecommunications, finance, healthcare, and enterprise sectors.",
+      "paragraph2": "We've worked with clients across UAE, Oman, Singapore, India, Netherlands, and Belgium, and maintain strategic partnerships with US-based technology companies. This global exposure informs our approach to solving local challenges.",
+      "paragraph3": "We believe technology should solve real problems, not create new ones. That's why we focus on practical, scalable solutions that deliver measurable results. From startups to enterprises, we partner with organizations to implement AI, cloud, product development, and automation solutions that work."
     },
     "capabilities": {
       "ai": {
         "title": "AI & Machine Learning",
-        "description": "Advanced AI/ML solutions that transform business operations and decision-making"
+        "description": "Practical AI solutions that automate processes and improve decision-making"
       },
       "cloud": {
         "title": "Cloud Engineering",
-        "description": "Scalable cloud infrastructure and migration services for modern enterprises"
+        "description": "Cloud infrastructure and migration services for modern businesses"
       },
       "enterprise": {
         "title": "Enterprise Solutions",
-        "description": "Full-stack product engineering and enterprise-grade applications"
+        "description": "Custom software development and enterprise application modernization"
       },
       "partnerships": {
-        "title": "Global Partnerships",
-        "description": "Strategic collaborations with US-based IT companies and international networks"
+        "title": "Global Network",
+        "description": "Partnerships with international technology providers and consultancies"
       }
     },
     "values": {
-      "badge": "Core Protocols",
-      "title": "Driven by Purpose, Guided by Values",
-      "subtitle": "Our core values define who we are and how we work. They are the compass that guides our decisions and actions.",
+      "badge": "Our Values",
+      "title": "How We Work",
+      "subtitle": "The principles that guide every project and partnership we undertake.",
       "innovation": {
-        "title": "Innovation First",
-        "description": "We constantly push boundaries to deliver cutting-edge solutions that define the future."
+        "title": "Practical Innovation",
+        "description": "We apply proven technologies creatively to solve your specific business challenges."
       },
       "clientSuccess": {
         "title": "Client Success",
-        "description": "Your growth is our priority. We build to empower and accelerate your business."
+        "description": "Your business outcomes are our measure of success. We build solutions that deliver ROI."
       },
       "peopleCentric": {
-        "title": "People Centric",
-        "description": "We believe in the power of human potential, creativity, and collaboration."
+        "title": "Collaborative Approach",
+        "description": "We work alongside your team, ensuring knowledge transfer and sustainable solutions."
       },
       "integrity": {
-        "title": "Integrity",
-        "description": "Trust and transparency are the foundations of all our partnerships."
+        "title": "Honest Partnership",
+        "description": "We provide realistic timelines, transparent pricing, and straightforward communication."
       }
     },
     "global": {
-      "badge": "Global Network",
+      "badge": "Our Reach",
       "title": "Serving Clients Across",
-      "titleHighlight": "6+ Countries",
-      "description": "From our headquarters in  UAE, we serve clients across 3 continents. Our global reach spans UAE, Oman, Singapore, India, Netherlands, Belgium, and strategic partnerships with US-based technology companies.",
+      "titleHighlight": "Multiple Regions",
+      "description": "Headquartered in UAE with delivery capabilities across Asia, Middle East, and Europe. Our distributed team model lets us serve clients wherever they operate.",
       "locations": {
         "rak": "RAK, UAE",
         "kochi": "Kochi, India",
@@ -219,17 +219,17 @@
       }
     },
     "cta": {
-      "title": "Ready to join the future?",
-      "description": "Let's discuss how we can help transform your business with cutting-edge technology solutions.",
+      "title": "Ready to start your project?",
+      "description": "Let's discuss how we can help solve your technology challenges.",
       "buttonText": "Start a Conversation"
     }
   },
   "insights": {
     "hero": {
-      "badge": "Mission Logs",
+      "badge": "Insights",
       "title": "Latest",
       "titleHighlight": "Insights",
-      "description": "Data-rich analysis, playbooks, and perspectives from our consultants working with government entities, banking leaders, and innovators."
+      "description": "Case studies, technical guides, and perspectives from our team on AI, cloud, and digital transformation."
     },
     "filters": {
       "all": "All",
@@ -238,8 +238,8 @@
     },
     "newsletter": {
       "badge": "Stay Updated",
-      "title": "Insights Delivered to Your Inbox",
-      "description": "Subscribe for strategic updates on AI, cyber security, and automation shaping the UAE & GCC technology landscape.",
+      "title": "Get Updates Delivered",
+      "description": "Subscribe for practical insights on AI, security, and automation in the UAE & GCC market.",
       "placeholder": "your@email.com",
       "button": "Subscribe",
       "privacy": "We respect your privacy. Unsubscribe at any time."
@@ -256,137 +256,137 @@
     "solution": "Solution",
     "results": "Results & Impact",
     "techStack": "Technology Stack",
-    "builtWith": "Built With Modern Technologies",
-    "readyToTransform": "Ready to Transform Your Business?",
+    "builtWith": "Technologies Used",
+    "readyToTransform": "Facing a Similar Challenge?",
     "letsDiscuss": "Let's discuss how we can help you achieve similar results.",
     "startProject": "Start Your Project",
     "industrialAi": {
-      "title": "Industrial AI Document Intelligence: Transforming Technical Knowledge Search",
-      "description": "How we built an AI-powered RAG system that reduced document search time by 90% for a telecommunications team managing thousands of technical specifications.",
-      "industry": "Telecommunications & Construction"
+      "title": "AI Document Intelligence: Transforming Technical Knowledge Search",
+      "description": "How we built an AI-powered search system that reduced document lookup time by 90% for a telecommunications team managing thousands of technical specifications.",
+      "industry": "Telecommunications"
     },
     "hyperlocalBusiness": {
-      "title": "Hyperlocal Business Network: Connecting Rural Communities Digitally",
-      "description": "A comprehensive platform connecting local businesses, service providers, and customers at the grassroots level, transforming rural commerce through digital innovation.",
-      "industry": "Rural Digital Services"
+      "title": "Hyperlocal Business Platform: Connecting Communities Digitally",
+      "description": "A platform connecting local businesses, service providers, and customers, enabling digital commerce at the grassroots level.",
+      "industry": "Digital Services"
     },
     "educationalCounseling": {
-      "title": "Educational Counseling System: Streamlining Student Support Operations",
-      "description": "A comprehensive counseling management platform that streamlined operations for an international school system, managing 1000+ student cases with precision and efficiency.",
-      "industry": "International Education"
+      "title": "Student Support System: Streamlining Counseling Operations",
+      "description": "A counseling management platform that streamlined operations for an international school system, managing 1000+ student cases efficiently.",
+      "industry": "Education"
     },
     "multiTierLoyalty": {
-      "title": "Multi-Tier Loyalty Platform: Scaling Enterprise Rewards",
-      "description": "An enterprise-grade loyalty system handling 35,000 daily transactions for 5,000 concurrent users, featuring multi-tier gamification and intelligent point management.",
-      "industry": "Retail & Service Industry"
+      "title": "Enterprise Loyalty Platform: Scaling Rewards Programs",
+      "description": "A loyalty system handling 35,000 daily transactions for 5,000 concurrent users with gamification and intelligent point management.",
+      "industry": "Retail"
     },
     "digitalBusinessIdentity": {
-      "title": "Digital Business Identity Suite: Zero-Paper Corporate Networking",
-      "description": "A modern digital business card platform with QR codes and real-time analytics, eliminating paper waste while providing actionable engagement insights.",
+      "title": "Digital Business Cards: Modern Corporate Networking",
+      "description": "A digital business card platform with QR sharing and engagement analytics, replacing paper cards with actionable insights.",
       "industry": "Corporate Services"
     },
     "familyConnection": {
-      "title": "Family Connection Platform: Multi-Generational Digital Ecosystem",
-      "description": "A comprehensive family management platform combining genealogy tracking, financial management, and community engagement features for extended family networks.",
-      "industry": "Social & Community"
+      "title": "Family Platform: Multi-Generational Connection",
+      "description": "A family management platform combining genealogy, financial management, and community features for extended family networks.",
+      "industry": "Community"
     }
   },
   "digitalEngineering": {
     "hero": {
-      "badge": "Core Expertise",
+      "badge": "Digital Engineering",
       "title": "Digital",
       "titleHighlight": "Engineering",
-      "description": "We design, build, and deploy cutting-edge digital solutions that transform businesses and drive innovation."
+      "description": "We design, build, and deploy technology solutions that help businesses operate more efficiently and compete effectively."
     },
     "services": {
       "aiMl": {
         "title": "AI & Machine Learning",
-        "description": "Transform your business with cutting-edge artificial intelligence and machine learning solutions. From predictive analytics to natural language processing.",
+        "description": "From predictive analytics to natural language processing, we build AI solutions that automate decisions and surface insights from your data.",
         "cta": "Explore Solutions"
       },
       "cloudEngineering": {
         "title": "Cloud Engineering",
-        "description": "Modernize your infrastructure with cloud-native solutions. Accelerate deployments, improve reliability, and scale effortlessly.",
+        "description": "Modernize your infrastructure with cloud-native architecture. We handle migrations, optimize costs, and build for reliability at scale.",
         "cta": "Explore Solutions"
       },
       "dataEngineering": {
         "title": "Data Engineering",
-        "description": "Build robust data pipelines and infrastructure. Transform raw data into actionable insights with modern data architecture.",
+        "description": "Build robust data pipelines that turn raw data into business insights. Modern architecture for analytics, reporting, and ML workloads.",
         "cta": "Explore Solutions"
       },
       "productEngineering": {
         "title": "Product Engineering",
-        "description": "End-to-end product development from concept to deployment. Build experiences that define the next generation.",
+        "description": "End-to-end product development from concept to launch. Web, mobile, and enterprise applications built for real users.",
         "cta": "Explore Solutions"
       },
       "dataAnalytics": {
         "title": "Data Analytics",
-        "description": "Unlock the power of your data with advanced analytics, business intelligence, and data visualization solutions.",
+        "description": "Business intelligence dashboards, reporting systems, and analytics platforms that help you make data-driven decisions.",
         "cta": "Explore Solutions"
       },
       "enterpriseSoftware": {
         "title": "Enterprise Software",
-        "description": "Build robust, scalable enterprise applications tailored to your business needs. Custom software and legacy modernization.",
+        "description": "Custom enterprise applications, system integrations, and legacy modernization. Built to fit your processes, not the other way around.",
         "cta": "Explore Solutions"
       }
     },
     "cta": {
-      "title": "Ready to Engineer the Future?",
-      "description": "Let's discuss how our digital engineering expertise can transform your business.",
+      "title": "Ready to Build?",
+      "description": "Let's discuss how our engineering team can help with your next project.",
       "buttonText": "Start Your Project"
     }
   },
   "specialistServices": {
     "hero": {
-      "badge": "Specialized Expertise",
+      "badge": "Specialist Services",
       "title": "Specialist",
       "titleHighlight": "Services",
-      "description": "Expert consulting engineered for innovation and measurable impact. We combine deep industry insight with engineering rigor."
+      "description": "Focused expertise in high-impact areas. We combine deep technical knowledge with practical delivery experience."
     },
     "services": {
       "aiEngineering": {
         "title": "AI Engineering",
-        "description": "Build production-ready AI systems. From model development to deployment and MLOps infrastructure.",
+        "description": "Build production-ready AI systems. From model development to deployment, monitoring, and MLOps infrastructure.",
         "cta": "Learn More"
       },
       "cyberSecurity": {
         "title": "Cyber Security",
-        "description": "Protect your digital assets with robust security strategies, threat monitoring, and compliance frameworks.",
+        "description": "Security assessments, compliance implementation, threat monitoring, and incident response planning.",
         "cta": "Learn More"
       },
       "processAutomation": {
         "title": "Process Automation",
-        "description": "Automate complex business processes with intelligent AI-powered solutions that reduce manual work.",
+        "description": "Identify and automate repetitive processes with RPA and AI-powered solutions that reduce manual work.",
         "cta": "Learn More"
       }
     },
     "whyUs": {
       "badge": "Why Us",
-      "title": "Strategic specialists with",
-      "titleHighlight": "local market intelligence",
-      "description": "From enterprise-grade automation to security strategy and AI delivery, our teams translate boardroom priorities into engineered solutions aligned with UAE Vision 2031.",
+      "title": "Local expertise with",
+      "titleHighlight": "global standards",
+      "description": "We understand the UAE market and regulatory environment while applying international best practices to every engagement.",
       "regulatoryAlignment": {
-        "title": "Regulatory Alignment",
-        "description": "Built-in compliance with UAE Central Bank, NESA, and ADGM frameworks."
+        "title": "Regulatory Compliance",
+        "description": "Experience with UAE Central Bank, NESA, and ADGM requirements built into our delivery approach."
       },
       "coCreation": {
-        "title": "Co-creation Approach",
-        "description": "Embedded design studios and agile pods elevate your internal capabilities."
+        "title": "Knowledge Transfer",
+        "description": "We work alongside your team to build internal capabilities, not just deliverables."
       },
       "focusAreas": {
         "title": "Focus Areas",
         "items": [
-          "AI-driven process automation & predictive analytics",
-          "Cyber resilience programs & SOC monitoring",
-          "Applied AI platforms & GenAI copilots",
-          "Enterprise architecture & legacy modernization",
-          "Cloud migration & DevOps transformation"
+          "AI-powered process automation & analytics",
+          "Security assessments & compliance programs",
+          "GenAI applications & intelligent assistants",
+          "Enterprise architecture & modernization",
+          "Cloud migration & DevOps implementation"
         ]
       }
     },
     "cta": {
-      "title": "Ready to Specialize?",
-      "description": "Let's discuss how our specialist services can help you achieve measurable impact.",
+      "title": "Need Specialized Help?",
+      "description": "Let's discuss how our specialist services can address your specific challenges.",
       "buttonText": "Start a Conversation"
     }
   }

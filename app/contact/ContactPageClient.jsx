@@ -215,7 +215,7 @@ export default function ContactPageClient() {
                     <div className="w-3 h-3 rounded-full bg-neon-green" />
                   </div>
                   <span className="text-xs font-mono text-muted ml-4">
-                    transmission_form.exe — SECURE CHANNEL
+                    contact_form — SECURE
                   </span>
                 </div>
 
@@ -231,18 +231,18 @@ export default function ContactPageClient() {
                         <CheckCircle className="w-10 h-10 text-neon-green" />
                       </div>
                       <h3 className="text-2xl font-bold text-neon-green text-glow-green mb-4">
-                        TRANSMISSION SUCCESSFUL
+                        Message Sent
                       </h3>
                       <p className="text-muted font-mono">
-                        Our team will respond to your transmission shortly.
+                        Our team will get back to you within 24 hours.
                       </p>
                     </motion.div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       {/* Terminal prompt */}
                       <div className="font-mono text-sm text-neon-green mb-8">
-                        <span className="text-muted">&gt;</span> Initialize
-                        contact protocol...
+                        <span className="text-muted">&gt;</span> Ready to help
+                        with your project...
                         <span className="terminal-cursor" />
                       </div>
 
@@ -250,7 +250,7 @@ export default function ContactPageClient() {
                         <RetroInput
                           type="text"
                           name="name"
-                          label="Your Designation"
+                          label="Full Name"
                           placeholder="John Doe"
                           value={formData.name}
                           onChange={handleChange}
@@ -259,7 +259,7 @@ export default function ContactPageClient() {
                         <RetroInput
                           type="email"
                           name="email"
-                          label="Communication Frequency"
+                          label="Email Address"
                           placeholder="john@company.com"
                           value={formData.email}
                           onChange={handleChange}
@@ -270,7 +270,7 @@ export default function ContactPageClient() {
                       <RetroInput
                         type="text"
                         name="company"
-                        label="Organization"
+                        label="Company"
                         placeholder="Acme Corporation"
                         value={formData.company}
                         onChange={handleChange}
@@ -278,7 +278,7 @@ export default function ContactPageClient() {
 
                       <RetroTextarea
                         name="message"
-                        label="Transmission Content"
+                        label="How can we help?"
                         placeholder="Describe your project or challenge..."
                         value={formData.message}
                         onChange={handleChange}
@@ -293,7 +293,7 @@ export default function ContactPageClient() {
                           className="flex items-center gap-2 text-neon-cyan text-sm font-mono p-4 border-2 border-neon-cyan/50 bg-neon-cyan/10"
                         >
                           <AlertCircle className="w-5 h-5" />
-                          TRANSMISSION FAILED. RETRY?
+                          Something went wrong. Please try again.
                         </motion.div>
                       )}
 
@@ -306,8 +306,8 @@ export default function ContactPageClient() {
                           icon={<Send className="w-5 h-5" />}
                         >
                           {status === "loading"
-                            ? "TRANSMITTING..."
-                            : "TRANSMIT MESSAGE"}
+                            ? "Sending..."
+                            : "Send Message"}
                         </GlowButton>
                       </div>
                     </form>

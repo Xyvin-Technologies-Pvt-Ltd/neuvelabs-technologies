@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Twitter, Linkedin, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -38,12 +39,13 @@ export default function Footer() {
           {/* Brand & Description */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-block">
-              <h3
-                className="text-3xl font-bold text-white tracking-tight"
-                style={{ fontFamily: "Goglast, sans-serif" }}
-              >
-                neuvelabs
-              </h3>
+              <Image
+                src="/logo-name.svg"
+                alt="Neuve Labs"
+                width={229}
+                height={27}
+                className="h-8 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="text-gray-400 leading-relaxed max-w-sm">
               {t("description")}

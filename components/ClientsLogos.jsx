@@ -1,86 +1,109 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 export default function ClientsLogos() {
-  // Replace these with actual client logo paths or use placeholder images
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const clients = [
     {
-      name: "Client 1",
-      logo: "/images/clients/client1.png", // Add your client logos to public/images/clients/
-      alt: "Client 1 Logo",
+      name: "A Accounting",
+      logo: "/images/clients/aaccounting.png",
+      alt: "A Accounting Logo",
     },
     {
-      name: "Client 2",
-      logo: "/images/clients/client2.png",
-      alt: "Client 2 Logo",
+      name: "Kangaroo",
+      logo: "/images/clients/kangaroo-logo.png",
+      alt: "Kangaroo Logo",
     },
     {
-      name: "Client 3",
-      logo: "/images/clients/client3.png",
-      alt: "Client 3 Logo",
+      name: "Khedmah",
+      logo: "/images/clients/khedmah.jpg",
+      alt: "Khedmah Logo",
     },
     {
-      name: "Client 4",
-      logo: "/images/clients/client4.png",
-      alt: "Client 4 Logo",
+      name: "CBS",
+      logo: "/images/clients/cbs.png",
+      alt: "CBS Logo",
     },
     {
-      name: "Client 5",
-      logo: "/images/clients/client5.png",
-      alt: "Client 5 Logo",
+      name: "Exctel",
+      logo: "/images/clients/exctel.png",
+      alt: "Exctel Logo",
     },
     {
-      name: "Client 6",
-      logo: "/images/clients/client6.png",
-      alt: "Client 6 Logo",
+      name:"Bristlecone",
+      logo: "/images/clients/Bristlecone.png",
+      alt: "Bristlecone Logo",
     },
+    {
+      name:"ECO",
+      logo: "/images/clients/eco_logo.svg",
+      alt: "Elite Road Supplies Co Logo",
+    },
+    {
+      name:"he International Academy of Osteopathy",
+      logo: "/images/clients/iao.webp",
+      alt: "he International Academy of Osteopathy Logo",
+    },
+ 
   ];
 
+  // Duplicate clients for seamless infinite scroll
+  const duplicatedClients = [...clients, ...clients];
+
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-              <span className="text-xs font-medium text-gray-600 uppercase tracking-wider">
-                Trusted Partners
-              </span>
-            </div>
+    <section
+      ref={ref}
+      className="relative py-16 bg-surface border-y-2 border-border overflow-hidden"
+    >
+      {/* Background grid */}
+      <div className="absolute inset-0 grid-background opacity-20" />
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Leading{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
-                Organizations
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're proud to partner with innovative companies across various industries.
-            </p>
-          </motion.div>
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface/50 border border-border mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse" />
+            <span className="text-xs font-mono text-muted uppercase tracking-wider">
+              Trusted Partners
+            </span>
+          </div>
 
-          {/* Clients Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {clients.map((client, index) => (
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+            Trusted by{" "}
+            <span className="text-neon-cyan">Leading Organizations</span>
+          </h2>
+          <p className="text-sm text-muted max-w-xl mx-auto">
+            We partner with innovative companies across various industries
+          </p>
+        </motion.div>
+
+        {/* Infinite Carousel */}
+        <div className="relative overflow-hidden">
+          {/* Gradient overlays for fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
+
+          {/* Carousel Container */}
+          <div className="flex animate-scroll">
+            {duplicatedClients.map((client, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                key={`${client.name}-${index}`}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center justify-center p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 grayscale hover:grayscale-0"
+                className="flex-shrink-0 mx-6 px-8 py-6 bg-card border-2 border-border hover:border-neon-green transition-all duration-300 group"
               >
-                {/* Option 1: Using Image component (recommended if you have logo images) */}
-                {client.logo ? (
+                <div className="relative w-32 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
                   <Image
                     src={client.logo}
                     alt={client.alt}
@@ -88,12 +111,7 @@ export default function ClientsLogos() {
                     height={60}
                     className="object-contain max-h-12 w-auto"
                   />
-                ) : (
-                  // Option 2: Placeholder text (use until you add logos)
-                  <span className="text-gray-400 font-semibold text-sm">
-                    {client.name}
-                  </span>
-                )}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -102,11 +120,3 @@ export default function ClientsLogos() {
     </section>
   );
 }
-
-
-
-
-
-
-
-

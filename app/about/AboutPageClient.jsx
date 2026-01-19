@@ -30,10 +30,10 @@ export default function AboutPageClient() {
   const valuesInView = useInView(valuesRef, { once: true, margin: "-100px" });
 
   const stats = [
-    { label: t("stats.yearsOfExcellence"), value: "10+" },
     { label: t("stats.projectsDelivered"), value: "500+" },
     { label: t("stats.globalReach"), value: "6+" },
-    { label: t("stats.technologyPartnerships"), value: "US+" },
+    { label: t("stats.technologyPartnerships"), value: "10+" },
+    { label: t("stats.clientSatisfaction"), value: "95%" },
   ];
 
   const values = [

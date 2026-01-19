@@ -257,7 +257,7 @@ export default function SpecialistServicesClient() {
                   <div className="w-3 h-3 rounded-full bg-neon-green" />
                 </div>
                 <span className="text-xs font-mono text-muted ml-4">
-                  focus_areas.txt
+                  focus_areas
                 </span>
               </div>
 

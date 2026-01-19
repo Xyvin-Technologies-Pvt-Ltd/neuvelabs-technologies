@@ -4,6 +4,7 @@ import ChapterChallenge from "@/components/chapters/ChapterChallenge";
 import ChapterVision from "@/components/chapters/ChapterVision";
 import ChapterProof from "@/components/chapters/ChapterProof";
 import ChapterContact from "@/components/chapters/ChapterContact";
+import ClientsLogos from "@/components/ClientsLogos";
 
 export const metadata = generateMetadata({
   title: "Home",
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* Chapter 3: The Vision - Services/Solutions */}
       <ChapterVision />
+
+      {/* Clients Carousel */}
+      <ClientsLogos />
 
       {/* Chapter 4: Proof of Transmission - Case Studies */}
       <ChapterProof />

@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Menu, X, ChevronDown, Terminal } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import ThemeToggle from "./ui/ThemeToggle";
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 
@@ -90,16 +91,15 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative z-50 group">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-neon-green/10 border border-neon-green/30 flex items-center justify-center group-hover:border-neon-green group-hover:shadow-[0_0_15px_rgba(0,255,136,0.3)] transition-all duration-300">
-                <Terminal className="w-4 h-4 text-neon-green" />
-              </div>
-              <span
-                className="text-xl font-bold text-foreground group-hover:text-neon-green transition-colors"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                neuvelabs
-              </span>
+            <div className="flex items-center">
+              <Image
+                src="/logo1.svg"
+                alt="Neuve Labs"
+                width={200}
+                height={71}
+                className="h-8 w-auto transition-opacity duration-300 group-hover:opacity-80"
+                priority
+              />
             </div>
           </Link>
 

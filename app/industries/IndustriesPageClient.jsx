@@ -22,67 +22,67 @@ const industries = [
     title: "Healthcare",
     slug: "healthcare",
     description:
-      "Transform patient care with AI-powered diagnostics, telemedicine platforms, and healthcare data analytics solutions.",
+      "Patient management systems, telemedicine platforms, and healthcare data analytics solutions built for compliance and usability.",
     caseStudy:
-      "Implemented AI-driven patient management system for leading UAE hospital network, reducing wait times by 40%.",
+      "Built secure counselling management systems and patient tracking solutions for healthcare providers.",
     icon: Stethoscope,
     colorKey: "green",
-    stats: { value: "40%", label: "Wait time reduction" },
+    stats: { value: "80%", label: "Admin time saved" },
   },
   {
     title: "Finance & Banking",
     slug: "finance-banking",
     description:
-      "Secure, compliant financial technology solutions including fraud detection, risk analytics, and digital banking platforms.",
+      "Secure fintech solutions including payment integrations, loyalty platforms, and financial data processing systems.",
     caseStudy:
-      "Deployed real-time fraud detection system for major UAE bank, processing 2M+ transactions daily.",
+      "Developed integrated loyalty and payment platforms handling thousands of daily transactions.",
     icon: Building2,
     colorKey: "cyan",
-    stats: { value: "99.9%", label: "Detection accuracy" },
+    stats: { value: "35%", label: "Retention increase" },
   },
   {
     title: "Retail & E-commerce",
     slug: "retail-ecommerce",
     description:
-      "Enhance customer experiences with personalized recommendations, inventory management, and omnichannel solutions.",
+      "E-commerce platforms, inventory management, loyalty programs, and customer engagement solutions.",
     caseStudy:
-      "Built AI-powered recommendation engine for regional e-commerce platform, increasing conversion rates.",
+      "Built enterprise loyalty systems with gamification and multi-tier rewards management.",
     icon: ShoppingBag,
     colorKey: "cyan",
-    stats: { value: "35%", label: "Conversion increase" },
+    stats: { value: "35K",  label: "Daily transactions" },
   },
   {
     title: "Manufacturing",
     slug: "manufacturing",
     description:
-      "Optimize operations with IoT integration, predictive maintenance, and supply chain automation solutions.",
+      "IoT integration, process automation, supply chain solutions, and operational efficiency tools.",
     caseStudy:
-      "Delivered predictive maintenance platform for JAFZA manufacturing facility.",
+      "Implemented document automation and knowledge management systems for industrial operations.",
     icon: Factory,
     colorKey: "green",
-    stats: { value: "60%", label: "Downtime reduction" },
+    stats: { value: "90%", label: "Time saved" },
   },
   {
     title: "Real Estate",
     slug: "real-estate",
     description:
-      "Modernize property management with smart building solutions, virtual tours, and real estate analytics platforms.",
+      "Property management platforms, digital business tools, and community engagement solutions.",
     caseStudy:
-      "Developed smart building management system for Dubai Marina property.",
+      "Built digital identity and community platforms for property management firms.",
     icon: Home,
     colorKey: "cyan",
-    stats: { value: "30%", label: "Energy savings" },
+    stats: { value: "500+", label: "Profiles created" },
   },
   {
     title: "Education",
     slug: "education",
     description:
-      "Enhance learning experiences with e-learning platforms, student analytics, and educational technology solutions.",
+      "Learning management systems, student support platforms, and educational technology solutions.",
     caseStudy:
-      "Created adaptive learning platform for UAE university, personalizing education for 10,000+ students.",
+      "Custom LMS platforms and counselling management systems for international schools.",
     icon: GraduationCap,
     colorKey: "cyan",
-    stats: { value: "25%", label: "Completion rate increase" },
+    stats: { value: "1000+", label: "Students managed" },
   },
 ];
 
