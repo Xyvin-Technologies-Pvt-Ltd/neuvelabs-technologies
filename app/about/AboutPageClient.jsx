@@ -21,6 +21,7 @@ import {
   RetroCTA,
 } from "@/components/RetroPageTemplate";
 import GlowButton from "@/components/ui/GlowButton";
+import WorldMap from "@/components/WorldMap";
 
 export default function AboutPageClient() {
   const t = useTranslations("about");
@@ -31,7 +32,7 @@ export default function AboutPageClient() {
 
   const stats = [
     { label: t("stats.projectsDelivered"), value: "500+" },
-    { label: t("stats.globalReach"), value: "6+" },
+    { label: t("stats.globalReach"), value: "8+" },
     { label: t("stats.technologyPartnerships"), value: "10+" },
     { label: t("stats.clientSatisfaction"), value: "95%" },
   ];
@@ -298,7 +299,7 @@ export default function AboutPageClient() {
           opacity={0.15}
         />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -319,28 +320,18 @@ export default function AboutPageClient() {
                 {t("global.description")}
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  t("global.locations.rak"),
-                  t("global.locations.kochi"),
-                  t("global.locations.oman"),
-                  t("global.locations.singapore"),
-                ].map((location, index) => (
-                  <motion.div
-                    key={location}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="p-4 bg-surface/50 border-2 border-border text-center hover:border-neon-green transition-colors"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-neon-green mx-auto mb-2 animate-pulse" />
-                    <div className="text-sm font-mono text-muted">
-                      {location}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              <WorldMap
+                labels={{
+                  rak: t("global.locations.rak"),
+                  kochi: t("global.locations.kochi"),
+                  oman: t("global.locations.oman"),
+                  singapore: t("global.locations.singapore"),
+                  australia: t("global.locations.australia"),
+                  belgium: t("global.locations.belgium"),
+                  netherlands: t("global.locations.netherlands"),
+                  usa: t("global.locations.usa"),
+                }}
+              />
             </motion.div>
           </div>
         </div>

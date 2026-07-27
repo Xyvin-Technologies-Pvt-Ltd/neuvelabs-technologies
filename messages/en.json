@@ -210,12 +210,16 @@
       "badge": "Our Reach",
       "title": "Serving Clients Across",
       "titleHighlight": "Multiple Regions",
-      "description": "Headquartered in UAE with delivery capabilities across Asia, Middle East, and Europe. Our distributed team model lets us serve clients wherever they operate.",
+      "description": "Headquartered in UAE with delivery capabilities across Asia, Middle East, Europe, and beyond. Our reach spans UAE, Oman, India, Singapore, Australia, Netherlands, Belgium, and strategic US partnerships.",
       "locations": {
         "rak": "RAK, UAE",
         "kochi": "Kochi, India",
         "oman": "Oman",
-        "singapore": "Singapore"
+        "singapore": "Singapore",
+        "australia": "Australia",
+        "belgium": "Belgium",
+        "netherlands": "Netherlands",
+        "usa": "United States"
       }
     },
     "cta": {
